@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class ActorMovie extends Pivot
 {
     use HasFactory;
+
     protected $table = 'actor_movies';
 
 }

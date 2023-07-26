@@ -20,12 +20,12 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-                'title' => fake()->title(),
-                'description' => fake()->text(),
-                'adult' => fake()->boolean(),
-                'release_date_at' => fake()->date(),
-                'genre_id'=> Genre::all()->random()->id,
-                'director_id'=> Director::all()->random()->id
+            'title' => fake()->title(),
+            'description' => fake()->text(),
+            'adult' => fake()->boolean(),
+            'release_date_at' => fake()->date(),
+            'genre_id' => Genre::all()->random()->id,
+            'director_id' => Director::all()->random()->id
         ];
     }
 }

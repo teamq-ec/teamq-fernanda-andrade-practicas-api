@@ -28,9 +28,10 @@ class Controller extends BaseController
         return Movie::create($request->all());
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $movie = Movie::finOrFail($id);
-        $movie ->update ($request->all());
+        $movie->update($request->all());
 
         return $movie;
     }
@@ -38,7 +39,7 @@ class Controller extends BaseController
     public function delete(Request $request, $id): int
     {
         $movie = Movie::findOrFail($id);
-        $movie ->delete();
+        $movie->delete();
 
         return 204;
     }
