@@ -9,7 +9,7 @@ class Genre extends Model
 {
     use HasFactory;
 
-   protected $fillable = ['genre'];
+    protected $fillable = ['genre'];
 
     public function movie(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
