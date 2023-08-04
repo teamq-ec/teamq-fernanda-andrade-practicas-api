@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MovieActorController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\MovieRentController;
@@ -53,6 +54,8 @@ Route::get('movies/{movie}/rents',[\App\Http\Controllers\MovieRentController::cl
 Route::post('movies/{movie}/rents',[MovieRentController::class,'add']);
 Route::delete('movies/{movie}/rents',[MovieRentController::class,'remove']);
 
+Route::post('auth',[AuthController::class,'login']);
+Route::delete('/auth/{user}', [AuthController::class, 'destroy']);
 
 
 

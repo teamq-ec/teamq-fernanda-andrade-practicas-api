@@ -47,7 +47,7 @@ class User extends Authenticatable
         return $this->hasMany(Rent::class);
     }
 
-    public function roles(): BelongsToMany
+    public function roles(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Role::class);
     }
