@@ -7,15 +7,12 @@ use App\Http\Requests\DirectorRequest;
 use App\Http\Resources\DirectorResource;
 use App\Models\Director;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
 use Symfony\Component\HttpFoundation\Response;
 
 class DirectorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Director management")]
     public function index()
     {
         $director= Director::all();
@@ -23,37 +20,21 @@ class DirectorController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return DirectorResource
-     */
+    #[Group("Director management")]
     public function store(ActorRequest $request)
     {
         $director = Director::query()->create($request->validated());
         return new DirectorResource($director);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Director  $director
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Director management")]
     public function show(Director $director)
     {
         return response()->json($director);
     }
 
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Director  $director
-     * @return DirectorResource
-     */
+    #[Group("Director management")]
     public function update(DirectorRequest $request, Director $director)
     {
         $director->fill($request->validated());
@@ -61,12 +42,7 @@ class DirectorController extends Controller
         return new DirectorResource($director);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Director  $director
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Director management")]
     public function destroy(Director $director)
     {
         $director->delete();

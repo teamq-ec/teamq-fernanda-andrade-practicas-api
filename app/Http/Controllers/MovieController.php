@@ -6,15 +6,12 @@ use App\Http\Requests\MovieRequest;
 use App\Http\Resources\MovieResource;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
 use Symfony\Component\HttpFoundation\Response;
 
 class MovieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Movie management")]
     public function index()
     {
         $movie= Movie::all();
@@ -22,37 +19,21 @@ class MovieController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return MovieResource
-     */
+    #[Group("Movie management")]
     public function store(MovieRequest $request)
     {
         $movie = Movie::query()->create($request->validated());
         return new MovieResource($movie);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Movie  $movie
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Movie management")]
     public function show(Movie $movie)
     {
         return response()->json($movie);
     }
 
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Movie  $movie
-     * @return MovieResource
-     */
+    #[Group("Movie management")]
     public function update(MovieRequest $request, Movie $movie)
     {
         $movie->fill($request->validated());
@@ -60,12 +41,7 @@ class MovieController extends Controller
         return new MovieResource($movie);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Movie  $movie
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Movie management")]
     public function destroy(Movie $movie)
     {
         $movie->delete();

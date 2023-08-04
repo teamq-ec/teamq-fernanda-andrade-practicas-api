@@ -1,0 +1,1246 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "03ecfc12-7dc6-49aa-b4f6-9401b9d41f0e",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Actor management",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/actors",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/actors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/actors"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Tom\",\"last_name\":\"Holland\",\"created_at\":\"2023-08-03T16:17:31.000000Z\",\"updated_at\":\"2023-08-03T16:17:34.000000Z\"},{\"id\":2,\"name\":\"Andrew\",\"last_name\":\"Garfiel\",\"created_at\":\"2023-08-03T17:13:25.000000Z\",\"updated_at\":\"2023-08-03T17:13:28.000000Z\"},{\"id\":3,\"name\":\"Tobey\",\"last_name\":\"Maguire\",\"created_at\":\"2023-08-03T17:13:50.000000Z\",\"updated_at\":\"2023-08-03T17:13:51.000000Z\"},{\"id\":4,\"name\":\"Zendaya\",\"last_name\":\"Maree\",\"created_at\":\"2023-08-03T22:39:48.000000Z\",\"updated_at\":\"2023-08-03T22:39:48.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/actors\/{actor_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/actors\/:actor_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/actors\/:actor_id",
+                            "variable": [
+                                {
+                                    "id": "actor_id",
+                                    "key": "actor_id",
+                                    "value": "1",
+                                    "description": "The ID of the actor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"name\":\"Tom\",\"last_name\":\"Holland\",\"created_at\":\"2023-08-03T16:17:31.000000Z\",\"updated_at\":\"2023-08-03T16:17:34.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/actors",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/actors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/actors"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"mxkeyicrpzqvqynsqoyubxiisrmokoogwjcsawcvmnuzftcfsn\",\"last_name\":\"xjjxqknrvtsryipxdbiwxgsvhjaqcgucgvawqfpexflfpmnzemjfpqua\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/actors\/{actor_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/actors\/:actor_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/actors\/:actor_id",
+                            "variable": [
+                                {
+                                    "id": "actor_id",
+                                    "key": "actor_id",
+                                    "value": "1",
+                                    "description": "The ID of the actor."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"kfijwnywqhyjmubuvadrjmgadezrqgydsdirewgbvgdawibsrypdunss\",\"last_name\":\"ngnvsogfnofwzpfvndoxozhlnl\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/actors\/{actor_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/actors\/:actor_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/actors\/:actor_id",
+                            "variable": [
+                                {
+                                    "id": "actor_id",
+                                    "key": "actor_id",
+                                    "value": "1",
+                                    "description": "The ID of the actor."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Director management",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/directors",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/directors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directors"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Jon\",\"last_name\":\"Watts\",\"created_at\":\"2023-08-03T19:57:29.000000Z\",\"updated_at\":\"2023-08-03T19:57:31.000000Z\"},{\"id\":2,\"name\":\"Jon\",\"last_name\":\"Favreau\",\"created_at\":\"2023-08-03T19:58:10.000000Z\",\"updated_at\":\"2023-08-03T19:58:11.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/directors\/{director_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/directors\/:director_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directors\/:director_id",
+                            "variable": [
+                                {
+                                    "id": "director_id",
+                                    "key": "director_id",
+                                    "value": "1",
+                                    "description": "The ID of the director."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"name\":\"Jon\",\"last_name\":\"Watts\",\"created_at\":\"2023-08-03T19:57:29.000000Z\",\"updated_at\":\"2023-08-03T19:57:31.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/directors",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/directors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directors"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"gdgvwdbwnojnvktetxzqxsufrzwhamhilsljvkjpjxzjr\",\"last_name\":\"fjibllekpofgrdhcrkcnnkkpakbgienhsrmoifhsdqrfuqqttpvubexdqmtboehuplz\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/directors\/{director_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/directors\/:director_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directors\/:director_id",
+                            "variable": [
+                                {
+                                    "id": "director_id",
+                                    "key": "director_id",
+                                    "value": "1",
+                                    "description": "The ID of the director."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"xmiestsuntxhqgthwmgsnnvkqyxnunnlkgtrerzgwlgspuvy\",\"last_name\":\"hvbuvqknrlsirnvgwcctz\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/directors\/{director_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/directors\/:director_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directors\/:director_id",
+                            "variable": [
+                                {
+                                    "id": "director_id",
+                                    "key": "director_id",
+                                    "value": "1",
+                                    "description": "The ID of the director."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Movie management",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"title\":\"Spider-Man\",\"description\":\"Welcome home\",\"genre\":\"ACCION\",\"publish_at\":\"2023-08-03\",\"director_id\":1,\"created_at\":\"2023-08-03T19:59:01.000000Z\",\"updated_at\":\"2023-08-03T19:59:02.000000Z\"},{\"id\":2,\"title\":\"Iroma\",\"description\":\"Soldado del Invierno\",\"genre\":\"ACCION\",\"publish_at\":\"2020-08-03\",\"director_id\":2,\"created_at\":\"2023-08-03T20:08:10.000000Z\",\"updated_at\":\"2023-08-03T20:08:14.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/movies\/{movie_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"title\":\"Spider-Man\",\"description\":\"Welcome home\",\"genre\":\"ACCION\",\"publish_at\":\"2023-08-03\",\"director_id\":1,\"created_at\":\"2023-08-03T19:59:01.000000Z\",\"updated_at\":\"2023-08-03T19:59:02.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"ejncextvszdaaaeutumkhgxcntfnrsoryytpoeprpabpvdvsvqeigystfqhg\",\"description\":\"pariatur\",\"genre\":\"gitgtthrvirpdyy\",\"publish_at\":\"2023-08-04T20:57:00\",\"director_id\":\"ut\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/movies\/{movie_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"ozoqcouocjwuoucqaqqjihusvkmrkhpniecxifdibtdlzmvooxgk\",\"description\":\"sit\",\"genre\":\"ypjnwyucumkhygqruveaqjbmutnetawotjypslxgfrdcdmsfxhrrqtpeqwrngjhrckjnirfnleapracgakajdqnufp\",\"publish_at\":\"2023-08-04T20:57:00\",\"director_id\":\"labore\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/movie\/{movie_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie\/:movie_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie\/:movie_id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actors",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/movies\/{movie_id}\/actors",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/actors",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/actors",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "x-ratelimit-limit",
+                                            "value": "60"
+                                        },
+                                        {
+                                            "key": "x-ratelimit-remaining",
+                                            "value": "51"
+                                        },
+                                        {
+                                            "key": "access-control-allow-origin",
+                                            "value": "*"
+                                        }
+                                    ],
+                                    "code": 200,
+                                    "body": "{\"data\":[{\"id\":1,\"name\":\"Tom\",\"lastName\":\"Holland\",\"createdAt\":\"2023-08-03T16:17:31.000000Z\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "POST api\/movies\/{movie_id}\/actors",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/actors",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/actors",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"actors\":[\"dolore\"]}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "DELETE api\/movies\/{movie_id}\/actors",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/actors",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/actors",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"actors\":[\"nam\"]}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Rents",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/movies\/{movie_id}\/rents",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/rents",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/rents",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "x-ratelimit-limit",
+                                            "value": "60"
+                                        },
+                                        {
+                                            "key": "x-ratelimit-remaining",
+                                            "value": "50"
+                                        },
+                                        {
+                                            "key": "access-control-allow-origin",
+                                            "value": "*"
+                                        }
+                                    ],
+                                    "code": 200,
+                                    "body": "{\"data\":[{\"id\":1,\"deadlineAt\":\"2023-08-03\",\"returnDateAt\":\"2023-08-03\",\"actualDateAt\":\"2023-08-03\",\"userId\":1}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "POST api\/movies\/{movie_id}\/rents",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/rents",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/rents",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"rents\":[\"deserunt\"]}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "DELETE api\/movies\/{movie_id}\/rents",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/movies\/:movie_id\/rents",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/rents",
+                                    "variable": [
+                                        {
+                                            "id": "movie_id",
+                                            "key": "movie_id",
+                                            "value": "1",
+                                            "description": "The ID of the movie."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"rents\":[\"dolorum\"]}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rent management",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/rents",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/rents",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/rents"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"deadline_at\":\"2023-08-03\",\"return_date_at\":\"2023-08-03\",\"actual_date_at\":\"2023-08-03\",\"user_id\":1,\"created_at\":null,\"updated_at\":null}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/rents\/{rent_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/rents\/:rent_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/rents\/:rent_id",
+                            "variable": [
+                                {
+                                    "id": "rent_id",
+                                    "key": "rent_id",
+                                    "value": "1",
+                                    "description": "The ID of the rent."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"deadline_at\":\"2023-08-03\",\"return_date_at\":\"2023-08-03\",\"actual_date_at\":\"2023-08-03\",\"user_id\":1,\"created_at\":null,\"updated_at\":null}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/rents",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/rents",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/rents"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"deadline_at\":\"2023-08-04T20:57:00\",\"return_date_at\":\"2023-08-04T20:57:00\",\"actual_date_at\":\"2023-08-04T20:57:00\",\"user_id\":\"autem\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/rents\/{rent_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/rents\/:rent_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/rents\/:rent_id",
+                            "variable": [
+                                {
+                                    "id": "rent_id",
+                                    "key": "rent_id",
+                                    "value": "1",
+                                    "description": "The ID of the rent."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"deadline_at\":\"2023-08-04T20:57:00\",\"return_date_at\":\"2023-08-04T20:57:00\",\"actual_date_at\":\"2023-08-04T20:57:00\",\"user_id\":\"qui\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/rents\/{rent_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/rents\/:rent_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/rents\/:rent_id",
+                            "variable": [
+                                {
+                                    "id": "rent_id",
+                                    "key": "rent_id",
+                                    "value": "1",
+                                    "description": "The ID of the rent."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

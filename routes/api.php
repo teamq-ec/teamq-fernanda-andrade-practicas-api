@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+  //  return $request->user();
+//});
 
 Route::get('/actors', [\App\Http\Controllers\ActorController::class, 'index']);
 Route::get('/actors/{actor}', [\App\Http\Controllers\ActorController::class, 'show']);

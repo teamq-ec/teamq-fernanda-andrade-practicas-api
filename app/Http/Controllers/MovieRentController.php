@@ -10,12 +10,15 @@ use App\Http\Resources\RentResource;
 use App\Models\Actor;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
 
 class MovieRentController extends Controller
 {
 
-
+    #[Group("Movie management")]
+    #[SubGroup("Rents")]
     public function rent(Movie $movie,Request $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         return  RentResource::collection(
@@ -26,7 +29,8 @@ class MovieRentController extends Controller
         );
     }
 
-
+    #[Group("Movie management")]
+    #[SubGroup("Rents")]
     public function add(Movie $movie,MovieRentRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         $rentIds = $request->get('rents');
@@ -37,7 +41,8 @@ class MovieRentController extends Controller
         );
     }
 
-
+    #[Group("Movie management")]
+    #[SubGroup("Rents")]
     public function remove(Movie $movie,MovieRentRequest $request): \Illuminate\Http\JsonResponse
     {
         $rentIds = $request->get('rents');
