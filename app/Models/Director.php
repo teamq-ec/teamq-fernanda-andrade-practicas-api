@@ -9,11 +9,11 @@ class Director extends Model
 {
     use HasFactory;
 
-   protected $fillable = ['name','last_name'];
+    protected $fillable = ['name', 'last_name'];
 
-
-    public function movie(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function movies(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Movie::class);
     }
+
 }

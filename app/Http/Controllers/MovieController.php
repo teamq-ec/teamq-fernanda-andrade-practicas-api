@@ -2,41 +2,73 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MovieRequest;
+use App\Http\Resources\MovieResource;
 use App\Models\Movie;
-use http\Env\Response;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class MovieController extends Controller
 {
-
-    public function index(): \Illuminate\Database\Eloquent\Collection
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function index()
     {
-        return Movie::all();
+        $movie= Movie::all();
+        return response()->json($movie);
     }
 
-    public function show($id)
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return MovieResource
+     */
+    public function store(MovieRequest $request)
     {
-        return Movie::find($id);
+        $movie = Movie::query()->create($request->validated());
+        return new MovieResource($movie);
     }
 
-    public function store(Request $request): \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Builder
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Movie  $movie
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function show(Movie $movie)
     {
-        return Movie::create($request->all());
+        return response()->json($movie);
     }
 
-    public function update(Request $request, $id){
-        $movie = Movie::findOrFail($id);
-        $movie ->update ($request->all());
 
-        return $movie;
-    }
-
-    public function delete(Request $request, $id): int
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Movie  $movie
+     * @return MovieResource
+     */
+    public function update(MovieRequest $request, Movie $movie)
     {
-        $movie = Movie::findOrFail($id);
-        $movie ->delete();
-
-        return 204;
+        $movie->fill($request->validated());
+        $movie->save();
+        return new MovieResource($movie);
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Movie  $movie
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy(Movie $movie)
+    {
+        $movie->delete();
+        return response()->json(null,Response::HTTP_NO_CONTENT);
+    }
 }

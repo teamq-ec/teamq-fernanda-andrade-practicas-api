@@ -9,33 +9,21 @@ class Movie extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','description','adult','release_date_at','genre_id','director_id'];
-
-    public static function create(array $data)
-    {
-        return self::query()->create($data);
-
-    }
-
-
-    public function genre(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(Genre::class);
-    }
+    protected $fillable = ['title', 'description','genre','publish_at','director_id'];
 
     public function director(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Director::class);
     }
 
-    public function actor(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(Actor::class);
-    }
-
     public function actors(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(Actor::class, 'actors_movies', 'movie_id', 'actor_id');
+        return $this->belongsToMany(Actor::class, 'actor_movie', 'actor_id', 'movie_id');
+    }
+
+    public function rent(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Rent::class,'movie_rent', 'rent_id', 'movie_id');
     }
 
 }
