@@ -54,6 +54,8 @@ Route::get('movies/{movie}/rents',[\App\Http\Controllers\MovieRentController::cl
 Route::post('movies/{movie}/rents',[MovieRentController::class,'add']);
 Route::delete('movies/{movie}/rents',[MovieRentController::class,'remove']);
 
+Route::post('/user', [\App\Http\Controllers\UserController::class, 'store']);
+
 Route::post('auth/users',[AuthController::class,'login']);
 Route::put('/auth/{user}', [AuthController::class, 'update']);
 Route::delete('/auth/{user}', [AuthController::class, 'destroy']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AuthRequest;
+use App\Http\Requests\UserRequest;
 use App\Http\Resources\AuthResource;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -28,15 +29,9 @@ class AuthController extends Controller
 
     }
 
-
-    public function index()
-    {
-        $user= User::all();
-        return response()->json($user);
-    }
     #[Group("User management")]
     #[SubGroup("User")]
-    public function update(AuthRequest $request,User $user)
+    public function update(UserRequest $request,User $user)
     {
         $user->fill($request->validated());
         $user->save();

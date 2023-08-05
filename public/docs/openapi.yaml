@@ -74,11 +74,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ndialowcnxrdcjunsputkmgazjzogknnmanvoptszrjzmunhxbyt
+                  example: xzyih
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: zcmjkiatbidnyljljjghuxhtrrykafuoipcygotphsxboafaod
+                  example: qydswbedhvjokdsaxduqsjxsdqupm
               required:
                 - name
                 - last_name
@@ -139,11 +139,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: kswaijazdvtdgvdvyomztvojknqfdjmyygocpxkjmrjgmpywgwumh
+                  example: xiufvbjkymegirmbmxl
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: hihsrjerjrnwmjrxlseuwifibfcfpdahuwbitiatorimezxqidxunjhcknoajpy
+                  example: lqaricqhwqjtusppxbpkoij
               required:
                 - name
                 - last_name
@@ -215,11 +215,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: qsopajhwqjofknyqjswrspsffpmddyquumelbxqdputuxxitjkggodfxi
+                  example: ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: uirxrxzgtpqyropkydhhmtixzrlzzgjututwvwelwvuvaclapilk
+                  example: gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu
               required:
                 - name
                 - last_name
@@ -280,11 +280,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: nbittsmacfwnnqfcrohqdmbypsgaogmbxpqixqqbthplubqt
+                  example: meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: fggzerkcn
+                  example: urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt
               required:
                 - name
                 - last_name
@@ -371,23 +371,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ipwtgakmtydbmjybdujxjaejliunvoprpcnsllxbtpildybxczcjqjndssqnnnuse
+                  example: mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare
                 description:
                   type: string
                   description: ''
-                  example: quia
+                  example: accusamus
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: lvlgekrepvnolgrntlue
+                  example: trqddxdroecfhybqsmjheh
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 director_id:
                   type: string
                   description: ''
-                  example: sequi
+                  example: blanditiis
               required:
                 - title
                 - description
@@ -463,7 +463,7 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: qsmucdorczlzofpytwvmujlopvw
+                  example: zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy
                 description:
                   type: string
                   description: ''
@@ -471,15 +471,15 @@ paths:
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: vjmydqmdagevfayzgpcbvyvevkfkzqtnyimqjwattryspbsrxskxumhdoymncslicnwbkblhlqwmcjaf
+                  example: hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 director_id:
                   type: string
                   description: ''
-                  example: perspiciatis
+                  example: assumenda
               required:
                 - title
                 - description
@@ -673,7 +673,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - eum
+                    - ipsam
                   items:
                     type: string
               required:
@@ -698,7 +698,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - nemo
+                    - eos
                   items:
                     type: string
               required:
@@ -876,7 +876,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - accusamus
+                    - officia
                   items:
                     type: string
               required:
@@ -901,7 +901,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - est
+                    - qui
                   items:
                     type: string
               required:
@@ -961,19 +961,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 user_id:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: rerum
               required:
                 - deadline_at
                 - return_date_at
@@ -1044,19 +1044,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T00:45:49'
+                  example: '2023-08-05T01:29:36'
                 user_id:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: tempora
               required:
                 - deadline_at
                 - return_date_at
@@ -1097,20 +1097,53 @@ paths:
             schema:
               type: object
               properties:
-                name:
-                  type: string
-                  description: ''
-                  example: commodi
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lauretta.cartwright@example.com
+                  example: summer.lang@example.com
                 password:
                   type: string
                   description: ''
-                  example: nisi
+                  example: laborum
+              required:
+                - email
+                - password
+      security: []
+  /api/user:
+    post:
+      summary: ''
+      operationId: postApiUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: error
+                age:
+                  type: string
+                  description: ''
+                  example: qui
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: pschowalter@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: voluptatem
               required:
                 - name
+                - age
                 - email
                 - password
       security: []
@@ -1133,17 +1166,22 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: nemo
+                  example: molestias
+                age:
+                  type: string
+                  description: ''
+                  example: vel
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: eldora.hahn@example.com
+                  example: yhuels@example.com
                 password:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: aut
               required:
                 - name
+                - age
                 - email
                 - password
       security: []

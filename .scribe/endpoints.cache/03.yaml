@@ -118,35 +118,35 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: deleniti
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-05T00:45:49'
-      return_date_at: '2023-08-05T00:45:49'
-      actual_date_at: '2023-08-05T00:45:49'
-      user_id: deleniti
+      deadline_at: '2023-08-05T01:29:36'
+      return_date_at: '2023-08-05T01:29:36'
+      actual_date_at: '2023-08-05T01:29:36'
+      user_id: rerum
     fileParameters: []
     responses: []
     responseFields: []
@@ -188,35 +188,35 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T00:45:49'
+        example: '2023-08-05T01:29:36'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: laboriosam
+        example: tempora
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-05T00:45:49'
-      return_date_at: '2023-08-05T00:45:49'
-      actual_date_at: '2023-08-05T00:45:49'
-      user_id: laboriosam
+      deadline_at: '2023-08-05T01:29:36'
+      return_date_at: '2023-08-05T01:29:36'
+      actual_date_at: '2023-08-05T01:29:36'
+      user_id: tempora
     fileParameters: []
     responses: []
     responseFields: []

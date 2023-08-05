@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "6a756fb5-c755-4c89-b4b9-3134c34a0f53",
+        "_postman_id": "85c2be14-48b2-4981-a5ec-dd413fd17c31",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -161,7 +161,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ndialowcnxrdcjunsputkmgazjzogknnmanvoptszrjzmunhxbyt\",\"last_name\":\"zcmjkiatbidnyljljjghuxhtrrykafuoipcygotphsxboafaod\"}"
+                            "raw": "{\"name\":\"xzyih\",\"last_name\":\"qydswbedhvjokdsaxduqsjxsdqupm\"}"
                         },
                         "description": "",
                         "auth": {
@@ -200,7 +200,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"kswaijazdvtdgvdvyomztvojknqfdjmyygocpxkjmrjgmpywgwumh\",\"last_name\":\"hihsrjerjrnwmjrxlseuwifibfcfpdahuwbitiatorimezxqidxunjhcknoajpy\"}"
+                            "raw": "{\"name\":\"xiufvbjkymegirmbmxl\",\"last_name\":\"lqaricqhwqjtusppxbpkoij\"}"
                         },
                         "description": "",
                         "auth": {
@@ -393,7 +393,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"qsopajhwqjofknyqjswrspsffpmddyquumelbxqdputuxxitjkggodfxi\",\"last_name\":\"uirxrxzgtpqyropkydhhmtixzrlzzgjututwvwelwvuvaclapilk\"}"
+                            "raw": "{\"name\":\"ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu\",\"last_name\":\"gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu\"}"
                         },
                         "description": "",
                         "auth": {
@@ -432,7 +432,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"nbittsmacfwnnqfcrohqdmbypsgaogmbxpqixqqbthplubqt\",\"last_name\":\"fggzerkcn\"}"
+                            "raw": "{\"name\":\"meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp\",\"last_name\":\"urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -625,7 +625,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ipwtgakmtydbmjybdujxjaejliunvoprpcnsllxbtpildybxczcjqjndssqnnnuse\",\"description\":\"quia\",\"genre\":\"lvlgekrepvnolgrntlue\",\"publish_at\":\"2023-08-05T00:45:49\",\"director_id\":\"sequi\"}"
+                            "raw": "{\"title\":\"mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare\",\"description\":\"accusamus\",\"genre\":\"trqddxdroecfhybqsmjheh\",\"publish_at\":\"2023-08-05T01:29:36\",\"director_id\":\"blanditiis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -664,7 +664,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"qsmucdorczlzofpytwvmujlopvw\",\"description\":\"voluptas\",\"genre\":\"vjmydqmdagevfayzgpcbvyvevkfkzqtnyimqjwattryspbsrxskxumhdoymncslicnwbkblhlqwmcjaf\",\"publish_at\":\"2023-08-05T00:45:49\",\"director_id\":\"perspiciatis\"}"
+                            "raw": "{\"title\":\"zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy\",\"description\":\"voluptas\",\"genre\":\"hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg\",\"publish_at\":\"2023-08-05T01:29:36\",\"director_id\":\"assumenda\"}"
                         },
                         "description": "",
                         "auth": {
@@ -807,7 +807,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"eum\"]}"
+                                    "raw": "{\"actors\":[\"ipsam\"]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -846,7 +846,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"nemo\"]}"
+                                    "raw": "{\"actors\":[\"eos\"]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -955,7 +955,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"accusamus\"]}"
+                                    "raw": "{\"rents\":[\"officia\"]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -994,7 +994,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"est\"]}"
+                                    "raw": "{\"rents\":[\"qui\"]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1153,7 +1153,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T00:45:49\",\"return_date_at\":\"2023-08-05T00:45:49\",\"actual_date_at\":\"2023-08-05T00:45:49\",\"user_id\":\"deleniti\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-05T01:29:36\",\"return_date_at\":\"2023-08-05T01:29:36\",\"actual_date_at\":\"2023-08-05T01:29:36\",\"user_id\":\"rerum\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1192,7 +1192,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T00:45:49\",\"return_date_at\":\"2023-08-05T00:45:49\",\"actual_date_at\":\"2023-08-05T00:45:49\",\"user_id\":\"laboriosam\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-05T01:29:36\",\"return_date_at\":\"2023-08-05T01:29:36\",\"actual_date_at\":\"2023-08-05T01:29:36\",\"user_id\":\"tempora\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1269,7 +1269,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"commodi\",\"email\":\"lauretta.cartwright@example.com\",\"password\":\"nisi\"}"
+                                    "raw": "{\"email\":\"summer.lang@example.com\",\"password\":\"laborum\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1286,6 +1286,37 @@
             "name": "User management",
             "description": "",
             "item": [
+                {
+                    "name": "POST api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"error\",\"age\":\"qui\",\"email\":\"pschowalter@example.com\",\"password\":\"voluptatem\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
                 {
                     "name": "User",
                     "description": "",
@@ -1320,7 +1351,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"nemo\",\"email\":\"eldora.hahn@example.com\",\"password\":\"molestiae\"}"
+                                    "raw": "{\"name\":\"molestias\",\"age\":\"vel\",\"email\":\"yhuels@example.com\",\"password\":\"aut\"}"
                                 },
                                 "description": "",
                                 "auth": {

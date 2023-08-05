@@ -39,7 +39,7 @@ class MovieRentController extends Controller
             $movie->rent()->whereIn('id',$rentIds)->get()
         );
     }
-    
+
     #[Group("Movie management")]
     #[SubGroup("Rent")]
     public function remove(Movie $movie,MovieRentRequest $request): \Illuminate\Http\JsonResponse
