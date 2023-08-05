@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+  //  return $request->user();
+//});
 
 Route::get('/actors', [\App\Http\Controllers\ActorController::class, 'index']);
 Route::get('/actors/{actor}', [\App\Http\Controllers\ActorController::class, 'show']);
@@ -54,8 +54,10 @@ Route::get('movies/{movie}/rents',[\App\Http\Controllers\MovieRentController::cl
 Route::post('movies/{movie}/rents',[MovieRentController::class,'add']);
 Route::delete('movies/{movie}/rents',[MovieRentController::class,'remove']);
 
-Route::post('auth',[AuthController::class,'login']);
+Route::post('auth/users',[AuthController::class,'login']);
+Route::put('/auth/{user}', [AuthController::class, 'update']);
 Route::delete('/auth/{user}', [AuthController::class, 'destroy']);
+
 
 
 

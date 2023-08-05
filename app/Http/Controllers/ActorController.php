@@ -6,28 +6,20 @@ use App\Http\Requests\ActorRequest;
 use App\Http\Resources\ActorResource;
 use App\Models\Actor;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
 
 class ActorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Actor management")]
     public function index()
     {
         $actor= Actor::all();
         return response()->json($actor);
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return ActorResource
-     */
+    #[Group("Actor management")]
     public function store(ActorRequest $request)
     {
         $actor = Actor::query()->create($request->validated());
@@ -35,25 +27,14 @@ class ActorController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Actor  $actor
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Actor management")]
     public function show(Actor $actor)
     {
         return response()->json($actor);
     }
 
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Actor  $actor
-     * @return ActorResource
-     */
+    #[Group("Actor management")]
     public function update(ActorRequest $request, Actor $actor)
     {
         $actor->fill($request->validated());
@@ -61,12 +42,7 @@ class ActorController extends Controller
         return new ActorResource($actor);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Actor  $actor
-     * @return \Illuminate\Http\JsonResponse
-     */
+    #[Group("Actor management")]
     public function destroy(Actor $actor)
     {
         $actor->delete();

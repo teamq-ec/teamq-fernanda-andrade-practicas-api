@@ -1,0 +1,57 @@
+name: 'Security management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/users
+    metadata:
+      groupName: 'Security management'
+      groupDescription: ''
+      subgroup: Auth
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: commodi
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: lauretta.cartwright@example.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: nisi
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: commodi
+      email: lauretta.cartwright@example.com
+      password: nisi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

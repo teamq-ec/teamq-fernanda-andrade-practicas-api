@@ -24,6 +24,7 @@ class AuthRequest extends FormRequest
     public function rules()
     {
         return [
+            'name'=>['required'],
             'email'=>['required','email'],//ese correo electronico exista
             'password'=>['required']
         ];
