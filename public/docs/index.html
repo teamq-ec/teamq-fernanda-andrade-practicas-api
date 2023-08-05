@@ -191,8 +191,8 @@
                                 <a href="#security-management-auth">Auth</a>
                             </li>
                                                             <ul id="tocify-subheader-security-management-auth" class="tocify-subheader">
-                                                                            <li class="tocify-item level-3" data-unique="security-management-POSTapi-auth-users">
-                                            <a href="#security-management-POSTapi-auth-users">POST api/auth/users</a>
+                                                                            <li class="tocify-item level-3" data-unique="security-management-POSTapi-auth">
+                                            <a href="#security-management-POSTapi-auth">POST api/auth</a>
                                         </li>
                                                                     </ul>
                                                                         </ul>
@@ -252,6 +252,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                                 <h2 id="actor-management-GETapi-actors">GET api/actors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -286,7 +287,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-actors">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -294,48 +295,12 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Tom&quot;,
-        &quot;last_name&quot;: &quot;Holland&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T16:17:31.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T16:17:34.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Andrew&quot;,
-        &quot;last_name&quot;: &quot;Garfiel&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T17:13:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T17:13:28.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;name&quot;: &quot;Tobey&quot;,
-        &quot;last_name&quot;: &quot;Maguire&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T17:13:50.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T17:13:51.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 4,
-        &quot;name&quot;: &quot;Zendaya&quot;,
-        &quot;last_name&quot;: &quot;Maree&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T22:39:48.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T22:39:48.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Robert&quot;,
-        &quot;last_name&quot;: &quot;Downey&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T21:05:51.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T21:05:51.000000Z&quot;
-    }
-]</code>
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-actors" hidden>
@@ -355,7 +320,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-actors" data-method="GET"
       data-path="api/actors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -412,6 +377,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="actor-management-GETapi-actors--actor_id-">GET api/actors/{actor_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -446,7 +412,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-actors--actor_id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -454,17 +420,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Tom&quot;,
-    &quot;last_name&quot;: &quot;Holland&quot;,
-    &quot;created_at&quot;: &quot;2023-08-03T16:17:31.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T16:17:34.000000Z&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -485,7 +445,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-actors--actor_id-" data-method="GET"
       data-path="api/actors/{actor_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -554,6 +514,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="actor-management-POSTapi-actors">POST api/actors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -568,8 +529,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"xzyih\",
-    \"last_name\": \"qydswbedhvjokdsaxduqsjxsdqupm\"
+    \"name\": \"gbnavvxdijtvhkqmtnuwtmjogasxkvyn\",
+    \"last_name\": \"rnqdkgmjyooubzrlgku\"
 }"
 </code></pre></div>
 
@@ -585,8 +546,8 @@ const headers = {
 };
 
 let body = {
-    "name": "xzyih",
-    "last_name": "qydswbedhvjokdsaxduqsjxsdqupm"
+    "name": "gbnavvxdijtvhkqmtnuwtmjogasxkvyn",
+    "last_name": "rnqdkgmjyooubzrlgku"
 };
 
 fetch(url, {
@@ -616,7 +577,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-actors" data-method="POST"
       data-path="api/actors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -675,10 +636,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-actors"
-               value="xzyih"
+               value="gbnavvxdijtvhkqmtnuwtmjogasxkvyn"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>xzyih</code></p>
+<p>Must be at least 3 characters. Example: <code>gbnavvxdijtvhkqmtnuwtmjogasxkvyn</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -686,16 +647,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-actors"
-               value="qydswbedhvjokdsaxduqsjxsdqupm"
+               value="rnqdkgmjyooubzrlgku"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>qydswbedhvjokdsaxduqsjxsdqupm</code></p>
+<p>Must be at least 3 characters. Example: <code>rnqdkgmjyooubzrlgku</code></p>
         </div>
         </form>
 
                     <h2 id="actor-management-PUTapi-actors--actor_id-">PUT api/actors/{actor_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -710,8 +672,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"xiufvbjkymegirmbmxl\",
-    \"last_name\": \"lqaricqhwqjtusppxbpkoij\"
+    \"name\": \"szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas\",
+    \"last_name\": \"hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr\"
 }"
 </code></pre></div>
 
@@ -727,8 +689,8 @@ const headers = {
 };
 
 let body = {
-    "name": "xiufvbjkymegirmbmxl",
-    "last_name": "lqaricqhwqjtusppxbpkoij"
+    "name": "szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas",
+    "last_name": "hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr"
 };
 
 fetch(url, {
@@ -758,7 +720,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-actors--actor_id-" data-method="PUT"
       data-path="api/actors/{actor_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -829,10 +791,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="xiufvbjkymegirmbmxl"
+               value="szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>xiufvbjkymegirmbmxl</code></p>
+<p>Must be at least 3 characters. Example: <code>szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -840,16 +802,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="lqaricqhwqjtusppxbpkoij"
+               value="hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>lqaricqhwqjtusppxbpkoij</code></p>
+<p>Must be at least 3 characters. Example: <code>hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr</code></p>
         </div>
         </form>
 
                     <h2 id="actor-management-DELETEapi-actors--actor_id-">DELETE api/actors/{actor_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -901,7 +864,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-actors--actor_id-" data-method="DELETE"
       data-path="api/actors/{actor_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -974,6 +937,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="director-management-GETapi-directors">GET api/directors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1008,7 +972,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-directors">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1016,27 +980,12 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Jon&quot;,
-        &quot;last_name&quot;: &quot;Watts&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T19:57:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T19:57:31.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Jon&quot;,
-        &quot;last_name&quot;: &quot;Favreau&quot;,
-        &quot;created_at&quot;: &quot;2023-08-03T19:58:10.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T19:58:11.000000Z&quot;
-    }
-]</code>
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-directors" hidden>
@@ -1056,7 +1005,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-directors" data-method="GET"
       data-path="api/directors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1113,6 +1062,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="director-management-GETapi-directors--director_id-">GET api/directors/{director_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1147,7 +1097,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-directors--director_id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1155,17 +1105,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Jon&quot;,
-    &quot;last_name&quot;: &quot;Watts&quot;,
-    &quot;created_at&quot;: &quot;2023-08-03T19:57:29.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T19:57:31.000000Z&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -1186,7 +1130,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-directors--director_id-" data-method="GET"
       data-path="api/directors/{director_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1255,6 +1199,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="director-management-POSTapi-directors">POST api/directors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1269,8 +1214,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu\",
-    \"last_name\": \"gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu\"
+    \"name\": \"uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi\",
+    \"last_name\": \"gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr\"
 }"
 </code></pre></div>
 
@@ -1286,8 +1231,8 @@ const headers = {
 };
 
 let body = {
-    "name": "ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu",
-    "last_name": "gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu"
+    "name": "uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi",
+    "last_name": "gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr"
 };
 
 fetch(url, {
@@ -1317,7 +1262,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-directors" data-method="POST"
       data-path="api/directors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1376,10 +1321,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-directors"
-               value="ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu"
+               value="uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu</code></p>
+<p>Must be at least 3 characters. Example: <code>uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1387,16 +1332,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-directors"
-               value="gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu"
+               value="gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu</code></p>
+<p>Must be at least 3 characters. Example: <code>gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr</code></p>
         </div>
         </form>
 
                     <h2 id="director-management-PUTapi-directors--director_id-">PUT api/directors/{director_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1411,8 +1357,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp\",
-    \"last_name\": \"urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt\"
+    \"name\": \"leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn\",
+    \"last_name\": \"rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz\"
 }"
 </code></pre></div>
 
@@ -1428,8 +1374,8 @@ const headers = {
 };
 
 let body = {
-    "name": "meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp",
-    "last_name": "urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt"
+    "name": "leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn",
+    "last_name": "rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz"
 };
 
 fetch(url, {
@@ -1459,7 +1405,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-directors--director_id-" data-method="PUT"
       data-path="api/directors/{director_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1530,10 +1476,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-directors--director_id-"
-               value="meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp"
+               value="leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp</code></p>
+<p>Must be at least 3 characters. Example: <code>leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1541,16 +1487,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-directors--director_id-"
-               value="urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt"
+               value="rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt</code></p>
+<p>Must be at least 3 characters. Example: <code>rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz</code></p>
         </div>
         </form>
 
                     <h2 id="director-management-DELETEapi-directors--director_id-">DELETE api/directors/{director_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1602,7 +1549,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-directors--director_id-" data-method="DELETE"
       data-path="api/directors/{director_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1675,6 +1622,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="movie-management-GETapi-movies">GET api/movies</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1709,7 +1657,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-movies">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1717,43 +1665,12 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;title&quot;: &quot;Spider-Man&quot;,
-        &quot;description&quot;: &quot;Welcome home&quot;,
-        &quot;genre&quot;: &quot;ACCION&quot;,
-        &quot;publish_at&quot;: &quot;2023-08-03&quot;,
-        &quot;director_id&quot;: 1,
-        &quot;created_at&quot;: &quot;2023-08-03T19:59:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T19:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 2,
-        &quot;title&quot;: &quot;Iroma&quot;,
-        &quot;description&quot;: &quot;Soldado del Invierno&quot;,
-        &quot;genre&quot;: &quot;ACCION&quot;,
-        &quot;publish_at&quot;: &quot;2020-08-03&quot;,
-        &quot;director_id&quot;: 2,
-        &quot;created_at&quot;: &quot;2023-08-03T20:08:10.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-03T20:08:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;title&quot;: &quot;Transformers&quot;,
-        &quot;description&quot;: &quot;Transformers es una serie de pel&iacute;culas de acci&oacute;n y ciencia ficci&oacute;n estadounidense&quot;,
-        &quot;genre&quot;: &quot;ACCION&quot;,
-        &quot;publish_at&quot;: &quot;2023-08-05&quot;,
-        &quot;director_id&quot;: 2,
-        &quot;created_at&quot;: &quot;2023-08-05T00:36:40.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T00:38:16.000000Z&quot;
-    }
-]</code>
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-movies" hidden>
@@ -1773,7 +1690,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-movies" data-method="GET"
       data-path="api/movies"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1830,6 +1747,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-GETapi-movies--movie_id-">GET api/movies/{movie_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1864,7 +1782,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-movies--movie_id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1872,20 +1790,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;title&quot;: &quot;Spider-Man&quot;,
-    &quot;description&quot;: &quot;Welcome home&quot;,
-    &quot;genre&quot;: &quot;ACCION&quot;,
-    &quot;publish_at&quot;: &quot;2023-08-03&quot;,
-    &quot;director_id&quot;: 1,
-    &quot;created_at&quot;: &quot;2023-08-03T19:59:01.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T19:59:02.000000Z&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -1906,7 +1815,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-movies--movie_id-" data-method="GET"
       data-path="api/movies/{movie_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1975,6 +1884,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-POSTapi-movies">POST api/movies</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1989,11 +1899,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare\",
-    \"description\": \"accusamus\",
-    \"genre\": \"trqddxdroecfhybqsmjheh\",
-    \"publish_at\": \"2023-08-05T01:29:36\",
-    \"director_id\": \"blanditiis\"
+    \"title\": \"pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa\",
+    \"description\": \"fuga\",
+    \"genre\": \"eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag\",
+    \"publish_at\": \"2023-08-05T02:09:06\",
+    \"director_id\": \"dolorem\"
 }"
 </code></pre></div>
 
@@ -2009,11 +1919,11 @@ const headers = {
 };
 
 let body = {
-    "title": "mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare",
-    "description": "accusamus",
-    "genre": "trqddxdroecfhybqsmjheh",
-    "publish_at": "2023-08-05T01:29:36",
-    "director_id": "blanditiis"
+    "title": "pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa",
+    "description": "fuga",
+    "genre": "eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag",
+    "publish_at": "2023-08-05T02:09:06",
+    "director_id": "dolorem"
 };
 
 fetch(url, {
@@ -2043,7 +1953,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-movies" data-method="POST"
       data-path="api/movies"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2102,10 +2012,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-movies"
-               value="mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare"
+               value="pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare</code></p>
+<p>Must be at least 3 characters. Example: <code>pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2113,10 +2023,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-movies"
-               value="accusamus"
+               value="fuga"
                data-component="body">
     <br>
-<p>Example: <code>accusamus</code></p>
+<p>Example: <code>fuga</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -2124,10 +2034,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="POSTapi-movies"
-               value="trqddxdroecfhybqsmjheh"
+               value="eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>trqddxdroecfhybqsmjheh</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -2135,10 +2045,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="POSTapi-movies"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -2146,16 +2056,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="POSTapi-movies"
-               value="blanditiis"
+               value="dolorem"
                data-component="body">
     <br>
-<p>Example: <code>blanditiis</code></p>
+<p>Example: <code>dolorem</code></p>
         </div>
         </form>
 
                     <h2 id="movie-management-PUTapi-movies--movie_id-">PUT api/movies/{movie_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2170,11 +2081,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy\",
-    \"description\": \"voluptas\",
-    \"genre\": \"hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg\",
-    \"publish_at\": \"2023-08-05T01:29:36\",
-    \"director_id\": \"assumenda\"
+    \"title\": \"eseqgrolhsdpjawkdwwsdbacjvs\",
+    \"description\": \"autem\",
+    \"genre\": \"nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov\",
+    \"publish_at\": \"2023-08-05T02:09:06\",
+    \"director_id\": \"et\"
 }"
 </code></pre></div>
 
@@ -2190,11 +2101,11 @@ const headers = {
 };
 
 let body = {
-    "title": "zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy",
-    "description": "voluptas",
-    "genre": "hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg",
-    "publish_at": "2023-08-05T01:29:36",
-    "director_id": "assumenda"
+    "title": "eseqgrolhsdpjawkdwwsdbacjvs",
+    "description": "autem",
+    "genre": "nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov",
+    "publish_at": "2023-08-05T02:09:06",
+    "director_id": "et"
 };
 
 fetch(url, {
@@ -2224,7 +2135,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-movies--movie_id-" data-method="PUT"
       data-path="api/movies/{movie_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2295,10 +2206,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-movies--movie_id-"
-               value="zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy"
+               value="eseqgrolhsdpjawkdwwsdbacjvs"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy</code></p>
+<p>Must be at least 3 characters. Example: <code>eseqgrolhsdpjawkdwwsdbacjvs</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2306,10 +2217,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-movies--movie_id-"
-               value="voluptas"
+               value="autem"
                data-component="body">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>autem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -2317,10 +2228,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="PUTapi-movies--movie_id-"
-               value="hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg"
+               value="nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -2328,10 +2239,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="PUTapi-movies--movie_id-"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -2339,16 +2250,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="PUTapi-movies--movie_id-"
-               value="assumenda"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>assumenda</code></p>
+<p>Example: <code>et</code></p>
         </div>
         </form>
 
                     <h2 id="movie-management-DELETEapi-movie--movie_id-">DELETE api/movie/{movie_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2400,7 +2312,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-movie--movie_id-" data-method="DELETE"
       data-path="api/movie/{movie_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2470,6 +2382,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                                     <h2 id="movie-management-GETapi-movies--movie_id--actors">GET api/movies/{movie_id}/actors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2504,7 +2417,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-movies--movie_id--actors">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2512,52 +2425,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Tom&quot;,
-            &quot;lastName&quot;: &quot;Holland&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-03T16:17:31.000000Z&quot;
-        }
-    ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/movies/1/actors?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/movies/1/actors?page=1&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: null
-    },
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
-        &quot;last_page&quot;: 1,
-        &quot;links&quot;: [
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies/1/actors?page=1&quot;,
-                &quot;label&quot;: &quot;1&quot;,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                &quot;active&quot;: false
-            }
-        ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/movies/1/actors&quot;,
-        &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
-    }
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -2578,7 +2450,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-movies--movie_id--actors" data-method="GET"
       data-path="api/movies/{movie_id}/actors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2647,6 +2519,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-POSTapi-movies--movie_id--actors">POST api/movies/{movie_id}/actors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2662,7 +2535,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"actors\": [
-        \"ipsam\"
+        \"quaerat\"
     ]
 }"
 </code></pre></div>
@@ -2680,7 +2553,7 @@ const headers = {
 
 let body = {
     "actors": [
-        "ipsam"
+        "quaerat"
     ]
 };
 
@@ -2711,7 +2584,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-movies--movie_id--actors" data-method="POST"
       data-path="api/movies/{movie_id}/actors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2794,6 +2667,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-DELETEapi-movies--movie_id--actors">DELETE api/movies/{movie_id}/actors</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2809,7 +2683,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"actors\": [
-        \"eos\"
+        \"rem\"
     ]
 }"
 </code></pre></div>
@@ -2827,7 +2701,7 @@ const headers = {
 
 let body = {
     "actors": [
-        "eos"
+        "rem"
     ]
 };
 
@@ -2858,7 +2732,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-movies--movie_id--actors" data-method="DELETE"
       data-path="api/movies/{movie_id}/actors"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2942,6 +2816,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                                     <h2 id="movie-management-GETapi-movies--movie_id--rents">GET api/movies/{movie_id}/rents</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2976,7 +2851,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-movies--movie_id--rents">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2984,53 +2859,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;deadlineAt&quot;: &quot;2023-08-03&quot;,
-            &quot;returnDateAt&quot;: &quot;2023-08-03&quot;,
-            &quot;actualDateAt&quot;: &quot;2023-08-03&quot;,
-            &quot;userId&quot;: 1
-        }
-    ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/movies/1/rents?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/movies/1/rents?page=1&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: null
-    },
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
-        &quot;last_page&quot;: 1,
-        &quot;links&quot;: [
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies/1/rents?page=1&quot;,
-                &quot;label&quot;: &quot;1&quot;,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                &quot;active&quot;: false
-            }
-        ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/movies/1/rents&quot;,
-        &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
-    }
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -3051,7 +2884,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-movies--movie_id--rents" data-method="GET"
       data-path="api/movies/{movie_id}/rents"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3120,6 +2953,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-POSTapi-movies--movie_id--rents">POST api/movies/{movie_id}/rents</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3135,7 +2969,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"rents\": [
-        \"officia\"
+        \"ratione\"
     ]
 }"
 </code></pre></div>
@@ -3153,7 +2987,7 @@ const headers = {
 
 let body = {
     "rents": [
-        "officia"
+        "ratione"
     ]
 };
 
@@ -3184,7 +3018,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-movies--movie_id--rents" data-method="POST"
       data-path="api/movies/{movie_id}/rents"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3267,6 +3101,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="movie-management-DELETEapi-movies--movie_id--rents">DELETE api/movies/{movie_id}/rents</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3282,7 +3117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"rents\": [
-        \"qui\"
+        \"dolor\"
     ]
 }"
 </code></pre></div>
@@ -3300,7 +3135,7 @@ const headers = {
 
 let body = {
     "rents": [
-        "qui"
+        "dolor"
     ]
 };
 
@@ -3331,7 +3166,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-movies--movie_id--rents" data-method="DELETE"
       data-path="api/movies/{movie_id}/rents"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3418,6 +3253,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="rent-management-GETapi-rents">GET api/rents</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3452,7 +3288,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-rents">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3460,22 +3296,12 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;deadline_at&quot;: &quot;2023-08-03&quot;,
-        &quot;return_date_at&quot;: &quot;2023-08-03&quot;,
-        &quot;actual_date_at&quot;: &quot;2023-08-03&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;created_at&quot;: null,
-        &quot;updated_at&quot;: null
-    }
-]</code>
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-rents" hidden>
@@ -3495,7 +3321,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-rents" data-method="GET"
       data-path="api/rents"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3552,6 +3378,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="rent-management-GETapi-rents--rent_id-">GET api/rents/{rent_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3586,7 +3413,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-rents--rent_id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3594,19 +3421,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;deadline_at&quot;: &quot;2023-08-03&quot;,
-    &quot;return_date_at&quot;: &quot;2023-08-03&quot;,
-    &quot;actual_date_at&quot;: &quot;2023-08-03&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;created_at&quot;: null,
-    &quot;updated_at&quot;: null
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -3627,7 +3446,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-rents--rent_id-" data-method="GET"
       data-path="api/rents/{rent_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3696,6 +3515,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="rent-management-POSTapi-rents">POST api/rents</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3710,10 +3530,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"deadline_at\": \"2023-08-05T01:29:36\",
-    \"return_date_at\": \"2023-08-05T01:29:36\",
-    \"actual_date_at\": \"2023-08-05T01:29:36\",
-    \"user_id\": \"rerum\"
+    \"deadline_at\": \"2023-08-05T02:09:06\",
+    \"return_date_at\": \"2023-08-05T02:09:06\",
+    \"actual_date_at\": \"2023-08-05T02:09:06\",
+    \"user_id\": \"blanditiis\"
 }"
 </code></pre></div>
 
@@ -3729,10 +3549,10 @@ const headers = {
 };
 
 let body = {
-    "deadline_at": "2023-08-05T01:29:36",
-    "return_date_at": "2023-08-05T01:29:36",
-    "actual_date_at": "2023-08-05T01:29:36",
-    "user_id": "rerum"
+    "deadline_at": "2023-08-05T02:09:06",
+    "return_date_at": "2023-08-05T02:09:06",
+    "actual_date_at": "2023-08-05T02:09:06",
+    "user_id": "blanditiis"
 };
 
 fetch(url, {
@@ -3762,7 +3582,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-rents" data-method="POST"
       data-path="api/rents"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3821,10 +3641,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -3832,10 +3652,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -3843,10 +3663,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -3854,16 +3674,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-rents"
-               value="rerum"
+               value="blanditiis"
                data-component="body">
     <br>
-<p>Example: <code>rerum</code></p>
+<p>Example: <code>blanditiis</code></p>
         </div>
         </form>
 
                     <h2 id="rent-management-PUTapi-rents--rent_id-">PUT api/rents/{rent_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3878,10 +3699,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"deadline_at\": \"2023-08-05T01:29:36\",
-    \"return_date_at\": \"2023-08-05T01:29:36\",
-    \"actual_date_at\": \"2023-08-05T01:29:36\",
-    \"user_id\": \"tempora\"
+    \"deadline_at\": \"2023-08-05T02:09:06\",
+    \"return_date_at\": \"2023-08-05T02:09:06\",
+    \"actual_date_at\": \"2023-08-05T02:09:06\",
+    \"user_id\": \"impedit\"
 }"
 </code></pre></div>
 
@@ -3897,10 +3718,10 @@ const headers = {
 };
 
 let body = {
-    "deadline_at": "2023-08-05T01:29:36",
-    "return_date_at": "2023-08-05T01:29:36",
-    "actual_date_at": "2023-08-05T01:29:36",
-    "user_id": "tempora"
+    "deadline_at": "2023-08-05T02:09:06",
+    "return_date_at": "2023-08-05T02:09:06",
+    "actual_date_at": "2023-08-05T02:09:06",
+    "user_id": "impedit"
 };
 
 fetch(url, {
@@ -3930,7 +3751,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-rents--rent_id-" data-method="PUT"
       data-path="api/rents/{rent_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4001,10 +3822,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -4012,10 +3833,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -4023,10 +3844,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-05T01:29:36"
+               value="2023-08-05T02:09:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-05T01:29:36</code></p>
+<p>Must be a valid date. Example: <code>2023-08-05T02:09:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -4034,16 +3855,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="PUTapi-rents--rent_id-"
-               value="tempora"
+               value="impedit"
                data-component="body">
     <br>
-<p>Example: <code>tempora</code></p>
+<p>Example: <code>impedit</code></p>
         </div>
         </form>
 
                     <h2 id="rent-management-DELETEapi-rents--rent_id-">DELETE api/rents/{rent_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -4095,7 +3917,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-rents--rent_id-" data-method="DELETE"
       data-path="api/rents/{rent_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4166,32 +3988,32 @@ You can check the Dev Tools console for debugging information.</code></pre>
     
 
                         <h2 id="security-management-auth">Auth</h2>
-                                                    <h2 id="security-management-POSTapi-auth-users">POST api/auth/users</h2>
+                                                    <h2 id="security-management-POSTapi-auth">POST api/auth</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-auth-users">
+<span id="example-requests-POSTapi-auth">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/users" \
+    "http://localhost:8000/api/auth" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"summer.lang@example.com\",
-    \"password\": \"laborum\"
+    \"email\": \"russell88@example.net\",
+    \"password\": \"delectus\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/users"
+    "http://localhost:8000/api/auth"
 );
 
 const headers = {
@@ -4200,8 +4022,8 @@ const headers = {
 };
 
 let body = {
-    "email": "summer.lang@example.com",
-    "password": "laborum"
+    "email": "russell88@example.net",
+    "password": "delectus"
 };
 
 fetch(url, {
@@ -4212,45 +4034,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-auth-users">
+<span id="example-responses-POSTapi-auth">
 </span>
-<span id="execution-results-POSTapi-auth-users" hidden>
+<span id="execution-results-POSTapi-auth" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-auth-users"></span>:
+                id="execution-response-status-POSTapi-auth"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-auth-users"
+    <pre class="json"><code id="execution-response-content-POSTapi-auth"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-auth-users" hidden>
+<span id="execution-error-POSTapi-auth" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-auth-users">
+    <pre><code id="execution-error-message-POSTapi-auth">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-auth-users" data-method="POST"
-      data-path="api/auth/users"
+<form id="form-POSTapi-auth" data-method="POST"
+      data-path="api/auth"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-users', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-auth-users"
-                    onclick="tryItOut('POSTapi-auth-users');">Try it out ⚡
+                    id="btn-tryout-POSTapi-auth"
+                    onclick="tryItOut('POSTapi-auth');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-auth-users"
-                    onclick="cancelTryOut('POSTapi-auth-users');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-auth"
+                    onclick="cancelTryOut('POSTapi-auth');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-auth-users"
+                    id="btn-executetryout-POSTapi-auth"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -4258,7 +4080,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/auth/users</code></b>
+            <b><code>api/auth</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -4266,7 +4088,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-auth-users"
+                              name="Content-Type"                data-endpoint="POSTapi-auth"
                value="application/json"
                data-component="header">
     <br>
@@ -4277,7 +4099,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-auth-users"
+                              name="Accept"                data-endpoint="POSTapi-auth"
                value="application/json"
                data-component="header">
     <br>
@@ -4289,22 +4111,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="email"                data-endpoint="POSTapi-auth-users"
-               value="summer.lang@example.com"
+                              name="email"                data-endpoint="POSTapi-auth"
+               value="russell88@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>summer.lang@example.com</code></p>
+<p>Must be a valid email address. Example: <code>russell88@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="password"                data-endpoint="POSTapi-auth-users"
-               value="laborum"
+                              name="password"                data-endpoint="POSTapi-auth"
+               value="delectus"
                data-component="body">
     <br>
-<p>Example: <code>laborum</code></p>
+<p>Example: <code>delectus</code></p>
         </div>
         </form>
 
@@ -4315,6 +4137,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="user-management-POSTapi-user">POST api/user</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -4329,10 +4152,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"error\",
-    \"age\": \"qui\",
-    \"email\": \"pschowalter@example.com\",
-    \"password\": \"voluptatem\"
+    \"name\": \"suscipit\",
+    \"age\": \"vitae\",
+    \"email\": \"wendell41@example.net\",
+    \"password\": \"non\"
 }"
 </code></pre></div>
 
@@ -4348,10 +4171,10 @@ const headers = {
 };
 
 let body = {
-    "name": "error",
-    "age": "qui",
-    "email": "pschowalter@example.com",
-    "password": "voluptatem"
+    "name": "suscipit",
+    "age": "vitae",
+    "email": "wendell41@example.net",
+    "password": "non"
 };
 
 fetch(url, {
@@ -4381,7 +4204,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-user" data-method="POST"
       data-path="api/user"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4440,10 +4263,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-user"
-               value="error"
+               value="suscipit"
                data-component="body">
     <br>
-<p>Example: <code>error</code></p>
+<p>Example: <code>suscipit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -4451,10 +4274,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="POSTapi-user"
-               value="qui"
+               value="vitae"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>vitae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -4462,10 +4285,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-user"
-               value="pschowalter@example.com"
+               value="wendell41@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>pschowalter@example.com</code></p>
+<p>Must be a valid email address. Example: <code>wendell41@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4473,10 +4296,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-user"
-               value="voluptatem"
+               value="non"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>non</code></p>
         </div>
         </form>
 
@@ -4484,6 +4307,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                                     <h2 id="user-management-PUTapi-auth--user_id-">PUT api/auth/{user_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -4498,10 +4322,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"molestias\",
-    \"age\": \"vel\",
-    \"email\": \"yhuels@example.com\",
-    \"password\": \"aut\"
+    \"name\": \"excepturi\",
+    \"age\": \"dolore\",
+    \"email\": \"macejkovic.lois@example.com\",
+    \"password\": \"eum\"
 }"
 </code></pre></div>
 
@@ -4517,10 +4341,10 @@ const headers = {
 };
 
 let body = {
-    "name": "molestias",
-    "age": "vel",
-    "email": "yhuels@example.com",
-    "password": "aut"
+    "name": "excepturi",
+    "age": "dolore",
+    "email": "macejkovic.lois@example.com",
+    "password": "eum"
 };
 
 fetch(url, {
@@ -4550,7 +4374,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-auth--user_id-" data-method="PUT"
       data-path="api/auth/{user_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4621,10 +4445,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-auth--user_id-"
-               value="molestias"
+               value="excepturi"
                data-component="body">
     <br>
-<p>Example: <code>molestias</code></p>
+<p>Example: <code>excepturi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -4632,10 +4456,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="PUTapi-auth--user_id-"
-               value="vel"
+               value="dolore"
                data-component="body">
     <br>
-<p>Example: <code>vel</code></p>
+<p>Example: <code>dolore</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -4643,10 +4467,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-auth--user_id-"
-               value="yhuels@example.com"
+               value="macejkovic.lois@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>yhuels@example.com</code></p>
+<p>Must be a valid email address. Example: <code>macejkovic.lois@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4654,16 +4478,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTapi-auth--user_id-"
-               value="aut"
+               value="eum"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>eum</code></p>
         </div>
         </form>
 
                     <h2 id="user-management-DELETEapi-auth--user_id-">DELETE api/auth/{user_id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -4715,7 +4540,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-auth--user_id-" data-method="DELETE"
       data-path="api/auth/{user_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"

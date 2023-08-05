@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/auth/users
+    uri: api/auth
     metadata:
       groupName: 'Security management'
       groupDescription: ''
@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: summer.lang@example.com
+        example: russell88@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: laborum
+        example: delectus
         type: string
         custom: []
     cleanBodyParameters:
-      email: summer.lang@example.com
-      password: laborum
+      email: russell88@example.net
+      password: delectus
     fileParameters: []
     responses: []
     responseFields: []

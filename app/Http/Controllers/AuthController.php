@@ -8,16 +8,17 @@ use App\Http\Resources\AuthResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
 
 class AuthController extends Controller
 {
+
     #[Group("Security management")]
     #[SubGroup("Auth")]
     public function login(AuthRequest $request){
-
         if(Auth::attempt($request->validated())){//si el usuario y contraseña se pueden autenticar
             $user = \auth()->user();
             return \response([
@@ -26,11 +27,11 @@ class AuthController extends Controller
         }
 
         return response()->json(['msg'=>'clave incorrecta'], Response::HTTP_UNAUTHORIZED);
-
     }
 
     #[Group("User management")]
     #[SubGroup("User")]
+    #[Authenticated]
     public function update(UserRequest $request,User $user)
     {
         $user->fill($request->validated());
@@ -41,6 +42,7 @@ class AuthController extends Controller
 
     #[Group("User management")]
     #[SubGroup("User")]
+    #[Authenticated]
     public function destroy(User $user)
     {
         $user->delete();

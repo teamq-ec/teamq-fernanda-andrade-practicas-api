@@ -6,6 +6,7 @@ use App\Http\Requests\ActorRequest;
 use App\Http\Resources\ActorResource;
 use App\Models\Actor;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ActorController extends Controller
 {
     #[Group("Actor management")]
+    #[Authenticated]
     public function index()
     {
         $actor= Actor::all();
@@ -20,6 +22,7 @@ class ActorController extends Controller
     }
 
     #[Group("Actor management")]
+    #[Authenticated]
     public function store(ActorRequest $request)
     {
         $actor = Actor::query()->create($request->validated());
@@ -28,6 +31,7 @@ class ActorController extends Controller
     }
 
     #[Group("Actor management")]
+    #[Authenticated]
     public function show(Actor $actor)
     {
         return response()->json($actor);
@@ -35,6 +39,7 @@ class ActorController extends Controller
 
 
     #[Group("Actor management")]
+    #[Authenticated]
     public function update(ActorRequest $request, Actor $actor)
     {
         $actor->fill($request->validated());
@@ -43,6 +48,7 @@ class ActorController extends Controller
     }
 
     #[Group("Actor management")]
+    #[Authenticated]
     public function destroy(Actor $actor)
     {
         $actor->delete();

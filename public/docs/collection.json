@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "85c2be14-48b2-4981-a5ec-dd413fd17c31",
+        "_postman_id": "16999116-1ff4-4c37-9e0d-1b8985e403ed",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -40,10 +40,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -57,20 +54,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"name\":\"Tom\",\"last_name\":\"Holland\",\"created_at\":\"2023-08-03T16:17:31.000000Z\",\"updated_at\":\"2023-08-03T16:17:34.000000Z\"},{\"id\":2,\"name\":\"Andrew\",\"last_name\":\"Garfiel\",\"created_at\":\"2023-08-03T17:13:25.000000Z\",\"updated_at\":\"2023-08-03T17:13:28.000000Z\"},{\"id\":3,\"name\":\"Tobey\",\"last_name\":\"Maguire\",\"created_at\":\"2023-08-03T17:13:50.000000Z\",\"updated_at\":\"2023-08-03T17:13:51.000000Z\"},{\"id\":4,\"name\":\"Zendaya\",\"last_name\":\"Maree\",\"created_at\":\"2023-08-03T22:39:48.000000Z\",\"updated_at\":\"2023-08-03T22:39:48.000000Z\"},{\"id\":6,\"name\":\"Robert\",\"last_name\":\"Downey\",\"created_at\":\"2023-08-04T21:05:51.000000Z\",\"updated_at\":\"2023-08-04T21:05:51.000000Z\"}]",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -104,10 +93,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -121,20 +107,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"id\":1,\"name\":\"Tom\",\"last_name\":\"Holland\",\"created_at\":\"2023-08-03T16:17:31.000000Z\",\"updated_at\":\"2023-08-03T16:17:34.000000Z\"}",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -161,12 +139,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xzyih\",\"last_name\":\"qydswbedhvjokdsaxduqsjxsdqupm\"}"
+                            "raw": "{\"name\":\"gbnavvxdijtvhkqmtnuwtmjogasxkvyn\",\"last_name\":\"rnqdkgmjyooubzrlgku\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -200,12 +175,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xiufvbjkymegirmbmxl\",\"last_name\":\"lqaricqhwqjtusppxbpkoij\"}"
+                            "raw": "{\"name\":\"szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas\",\"last_name\":\"hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -238,10 +210,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
@@ -272,10 +241,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -289,20 +255,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "57"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"name\":\"Jon\",\"last_name\":\"Watts\",\"created_at\":\"2023-08-03T19:57:29.000000Z\",\"updated_at\":\"2023-08-03T19:57:31.000000Z\"},{\"id\":2,\"name\":\"Jon\",\"last_name\":\"Favreau\",\"created_at\":\"2023-08-03T19:58:10.000000Z\",\"updated_at\":\"2023-08-03T19:58:11.000000Z\"}]",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -336,10 +294,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -353,20 +308,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"id\":1,\"name\":\"Jon\",\"last_name\":\"Watts\",\"created_at\":\"2023-08-03T19:57:29.000000Z\",\"updated_at\":\"2023-08-03T19:57:31.000000Z\"}",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -393,12 +340,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu\",\"last_name\":\"gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu\"}"
+                            "raw": "{\"name\":\"uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi\",\"last_name\":\"gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -432,12 +376,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp\",\"last_name\":\"urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt\"}"
+                            "raw": "{\"name\":\"leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn\",\"last_name\":\"rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -470,10 +411,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
@@ -504,10 +442,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -521,20 +456,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "55"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"title\":\"Spider-Man\",\"description\":\"Welcome home\",\"genre\":\"ACCION\",\"publish_at\":\"2023-08-03\",\"director_id\":1,\"created_at\":\"2023-08-03T19:59:01.000000Z\",\"updated_at\":\"2023-08-03T19:59:02.000000Z\"},{\"id\":2,\"title\":\"Iroma\",\"description\":\"Soldado del Invierno\",\"genre\":\"ACCION\",\"publish_at\":\"2020-08-03\",\"director_id\":2,\"created_at\":\"2023-08-03T20:08:10.000000Z\",\"updated_at\":\"2023-08-03T20:08:14.000000Z\"},{\"id\":3,\"title\":\"Transformers\",\"description\":\"Transformers es una serie de pel\\u00edculas de acci\\u00f3n y ciencia ficci\\u00f3n estadounidense\",\"genre\":\"ACCION\",\"publish_at\":\"2023-08-05\",\"director_id\":2,\"created_at\":\"2023-08-05T00:36:40.000000Z\",\"updated_at\":\"2023-08-05T00:38:16.000000Z\"}]",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -568,10 +495,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -585,20 +509,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "54"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"id\":1,\"title\":\"Spider-Man\",\"description\":\"Welcome home\",\"genre\":\"ACCION\",\"publish_at\":\"2023-08-03\",\"director_id\":1,\"created_at\":\"2023-08-03T19:59:01.000000Z\",\"updated_at\":\"2023-08-03T19:59:02.000000Z\"}",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -625,12 +541,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare\",\"description\":\"accusamus\",\"genre\":\"trqddxdroecfhybqsmjheh\",\"publish_at\":\"2023-08-05T01:29:36\",\"director_id\":\"blanditiis\"}"
+                            "raw": "{\"title\":\"pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa\",\"description\":\"fuga\",\"genre\":\"eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag\",\"publish_at\":\"2023-08-05T02:09:06\",\"director_id\":\"dolorem\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -664,12 +577,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy\",\"description\":\"voluptas\",\"genre\":\"hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg\",\"publish_at\":\"2023-08-05T01:29:36\",\"director_id\":\"assumenda\"}"
+                            "raw": "{\"title\":\"eseqgrolhsdpjawkdwwsdbacjvs\",\"description\":\"autem\",\"genre\":\"nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov\",\"publish_at\":\"2023-08-05T02:09:06\",\"director_id\":\"et\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -702,10 +612,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -742,10 +649,7 @@
                                     }
                                 ],
                                 "body": null,
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": [
                                 {
@@ -759,20 +663,12 @@
                                             "value": "application\/json"
                                         },
                                         {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "51"
-                                        },
-                                        {
                                             "key": "access-control-allow-origin",
                                             "value": "*"
                                         }
                                     ],
-                                    "code": 200,
-                                    "body": "{\"data\":[{\"id\":1,\"name\":\"Tom\",\"lastName\":\"Holland\",\"createdAt\":\"2023-08-03T16:17:31.000000Z\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/actors\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
                                     "name": ""
                                 }
                             ]
@@ -807,12 +703,9 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"ipsam\"]}"
+                                    "raw": "{\"actors\":[\"quaerat\"]}"
                                 },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         },
@@ -846,12 +739,9 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"eos\"]}"
+                                    "raw": "{\"actors\":[\"rem\"]}"
                                 },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         }
@@ -890,10 +780,7 @@
                                     }
                                 ],
                                 "body": null,
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": [
                                 {
@@ -907,20 +794,12 @@
                                             "value": "application\/json"
                                         },
                                         {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "50"
-                                        },
-                                        {
                                             "key": "access-control-allow-origin",
                                             "value": "*"
                                         }
                                     ],
-                                    "code": 200,
-                                    "body": "{\"data\":[{\"id\":1,\"deadlineAt\":\"2023-08-03\",\"returnDateAt\":\"2023-08-03\",\"actualDateAt\":\"2023-08-03\",\"userId\":1}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/rents\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
                                     "name": ""
                                 }
                             ]
@@ -955,12 +834,9 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"officia\"]}"
+                                    "raw": "{\"rents\":[\"ratione\"]}"
                                 },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         },
@@ -994,12 +870,9 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"qui\"]}"
+                                    "raw": "{\"rents\":[\"dolor\"]}"
                                 },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         }
@@ -1032,10 +905,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1049,20 +919,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "53"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"deadline_at\":\"2023-08-03\",\"return_date_at\":\"2023-08-03\",\"actual_date_at\":\"2023-08-03\",\"user_id\":1,\"created_at\":null,\"updated_at\":null}]",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -1096,10 +958,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1113,20 +972,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "52"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"id\":1,\"deadline_at\":\"2023-08-03\",\"return_date_at\":\"2023-08-03\",\"actual_date_at\":\"2023-08-03\",\"user_id\":1,\"created_at\":null,\"updated_at\":null}",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]
@@ -1153,12 +1004,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T01:29:36\",\"return_date_at\":\"2023-08-05T01:29:36\",\"actual_date_at\":\"2023-08-05T01:29:36\",\"user_id\":\"rerum\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-05T02:09:06\",\"return_date_at\":\"2023-08-05T02:09:06\",\"actual_date_at\":\"2023-08-05T02:09:06\",\"user_id\":\"blanditiis\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -1192,12 +1040,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T01:29:36\",\"return_date_at\":\"2023-08-05T01:29:36\",\"actual_date_at\":\"2023-08-05T01:29:36\",\"user_id\":\"tempora\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-05T02:09:06\",\"return_date_at\":\"2023-08-05T02:09:06\",\"actual_date_at\":\"2023-08-05T02:09:06\",\"user_id\":\"impedit\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -1230,10 +1075,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
@@ -1248,13 +1090,13 @@
                     "description": "",
                     "item": [
                         {
-                            "name": "POST api\/auth\/users",
+                            "name": "POST api\/auth",
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/auth\/users",
+                                    "path": "api\/auth",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/auth\/users"
+                                    "raw": "{{baseUrl}}\/api\/auth"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -1269,7 +1111,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"email\":\"summer.lang@example.com\",\"password\":\"laborum\"}"
+                                    "raw": "{\"email\":\"russell88@example.net\",\"password\":\"delectus\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1308,12 +1150,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"error\",\"age\":\"qui\",\"email\":\"pschowalter@example.com\",\"password\":\"voluptatem\"}"
+                            "raw": "{\"name\":\"suscipit\",\"age\":\"vitae\",\"email\":\"wendell41@example.net\",\"password\":\"non\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -1351,12 +1190,9 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"molestias\",\"age\":\"vel\",\"email\":\"yhuels@example.com\",\"password\":\"aut\"}"
+                                    "raw": "{\"name\":\"excepturi\",\"age\":\"dolore\",\"email\":\"macejkovic.lois@example.com\",\"password\":\"eum\"}"
                                 },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         },
@@ -1389,10 +1225,7 @@
                                     }
                                 ],
                                 "body": null,
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
+                                "description": ""
                             },
                             "response": []
                         }

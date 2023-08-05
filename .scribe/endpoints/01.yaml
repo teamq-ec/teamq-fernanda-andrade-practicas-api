@@ -12,7 +12,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -26,13 +26,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '[{"id":1,"name":"Jon","last_name":"Watts","created_at":"2023-08-03T19:57:29.000000Z","updated_at":"2023-08-03T19:57:31.000000Z"},{"id":2,"name":"Jon","last_name":"Favreau","created_at":"2023-08-03T19:58:10.000000Z","updated_at":"2023-08-03T19:58:11.000000Z"}]'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -53,7 +51,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -75,13 +73,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"id":1,"name":"Jon","last_name":"Watts","created_at":"2023-08-03T19:57:29.000000Z","updated_at":"2023-08-03T19:57:31.000000Z"}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -102,7 +98,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -116,19 +112,19 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu
+        example: uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu
+        example: gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr
         type: string
         custom: []
     cleanBodyParameters:
-      name: ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu
-      last_name: gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu
+      name: uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi
+      last_name: gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr
     fileParameters: []
     responses: []
     responseFields: []
@@ -148,7 +144,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -170,19 +166,19 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp
+        example: leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt
+        example: rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz
         type: string
         custom: []
     cleanBodyParameters:
-      name: meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp
-      last_name: urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt
+      name: leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn
+      last_name: rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz
     fileParameters: []
     responses: []
     responseFields: []
@@ -202,7 +198,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json

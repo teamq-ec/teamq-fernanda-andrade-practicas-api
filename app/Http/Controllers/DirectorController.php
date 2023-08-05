@@ -7,12 +7,14 @@ use App\Http\Requests\DirectorRequest;
 use App\Http\Resources\DirectorResource;
 use App\Models\Director;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Symfony\Component\HttpFoundation\Response;
 
 class DirectorController extends Controller
 {
     #[Group("Director management")]
+    #[Authenticated]
     public function index()
     {
         $director= Director::all();
@@ -21,6 +23,7 @@ class DirectorController extends Controller
 
 
     #[Group("Director management")]
+    #[Authenticated]
     public function store(ActorRequest $request)
     {
         $director = Director::query()->create($request->validated());
@@ -28,6 +31,7 @@ class DirectorController extends Controller
     }
 
     #[Group("Director management")]
+    #[Authenticated]
     public function show(Director $director)
     {
         return response()->json($director);
@@ -35,6 +39,7 @@ class DirectorController extends Controller
 
 
     #[Group("Director management")]
+    #[Authenticated]
     public function update(DirectorRequest $request, Director $director)
     {
         $director->fill($request->validated());
@@ -42,6 +47,7 @@ class DirectorController extends Controller
         return new DirectorResource($director);
     }
     #[Group("Director management")]
+    #[Authenticated]
     public function destroy(Director $director)
     {
         $director->delete();

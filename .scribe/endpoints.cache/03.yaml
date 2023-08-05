@@ -14,7 +14,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -28,13 +28,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '[{"id":1,"deadline_at":"2023-08-03","return_date_at":"2023-08-03","actual_date_at":"2023-08-03","user_id":1,"created_at":null,"updated_at":null}]'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -55,7 +53,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -77,13 +75,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"id":1,"deadline_at":"2023-08-03","return_date_at":"2023-08-03","actual_date_at":"2023-08-03","user_id":1,"created_at":null,"updated_at":null}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -104,7 +100,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -118,35 +114,35 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: rerum
+        example: blanditiis
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-05T01:29:36'
-      return_date_at: '2023-08-05T01:29:36'
-      actual_date_at: '2023-08-05T01:29:36'
-      user_id: rerum
+      deadline_at: '2023-08-05T02:09:06'
+      return_date_at: '2023-08-05T02:09:06'
+      actual_date_at: '2023-08-05T02:09:06'
+      user_id: blanditiis
     fileParameters: []
     responses: []
     responseFields: []
@@ -166,7 +162,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -188,35 +184,35 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-05T01:29:36'
+        example: '2023-08-05T02:09:06'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: tempora
+        example: impedit
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-05T01:29:36'
-      return_date_at: '2023-08-05T01:29:36'
-      actual_date_at: '2023-08-05T01:29:36'
-      user_id: tempora
+      deadline_at: '2023-08-05T02:09:06'
+      return_date_at: '2023-08-05T02:09:06'
+      actual_date_at: '2023-08-05T02:09:06'
+      user_id: impedit
     fileParameters: []
     responses: []
     responseFields: []
@@ -236,7 +232,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json

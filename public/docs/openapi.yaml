@@ -14,48 +14,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
+                type: object
                 example:
-                  -
-                    id: 1
-                    name: Tom
-                    last_name: Holland
-                    created_at: '2023-08-03T16:17:31.000000Z'
-                    updated_at: '2023-08-03T16:17:34.000000Z'
-                  -
-                    id: 2
-                    name: Andrew
-                    last_name: Garfiel
-                    created_at: '2023-08-03T17:13:25.000000Z'
-                    updated_at: '2023-08-03T17:13:28.000000Z'
-                  -
-                    id: 3
-                    name: Tobey
-                    last_name: Maguire
-                    created_at: '2023-08-03T17:13:50.000000Z'
-                    updated_at: '2023-08-03T17:13:51.000000Z'
-                  -
-                    id: 4
-                    name: Zendaya
-                    last_name: Maree
-                    created_at: '2023-08-03T22:39:48.000000Z'
-                    updated_at: '2023-08-03T22:39:48.000000Z'
-                  -
-                    id: 6
-                    name: Robert
-                    last_name: Downey
-                    created_at: '2023-08-04T21:05:51.000000Z'
-                    updated_at: '2023-08-04T21:05:51.000000Z'
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Actor management'
-      security: []
     post:
       summary: ''
       operationId: postApiActors
@@ -74,15 +46,14 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: xzyih
+                  example: gbnavvxdijtvhkqmtnuwtmjogasxkvyn
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: qydswbedhvjokdsaxduqsjxsdqupm
+                  example: rnqdkgmjyooubzrlgku
               required:
                 - name
                 - last_name
-      security: []
   '/api/actors/{actor_id}':
     get:
       summary: ''
@@ -90,37 +61,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  id: 1
-                  name: Tom
-                  last_name: Holland
-                  created_at: '2023-08-03T16:17:31.000000Z'
-                  updated_at: '2023-08-03T16:17:34.000000Z'
+                  message: Unauthenticated.
                 properties:
-                  id:
-                    type: integer
-                    example: 1
-                  name:
+                  message:
                     type: string
-                    example: Tom
-                  last_name:
-                    type: string
-                    example: Holland
-                  created_at:
-                    type: string
-                    example: '2023-08-03T16:17:31.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-08-03T16:17:34.000000Z'
+                    example: Unauthenticated.
       tags:
         - 'Actor management'
-      security: []
     put:
       summary: ''
       operationId: putApiActorsActor_id
@@ -139,15 +93,14 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: xiufvbjkymegirmbmxl
+                  example: szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: lqaricqhwqjtusppxbpkoij
+                  example: hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr
               required:
                 - name
                 - last_name
-      security: []
     delete:
       summary: ''
       operationId: deleteApiActorsActor_id
@@ -156,7 +109,6 @@ paths:
       responses: {  }
       tags:
         - 'Actor management'
-      security: []
     parameters:
       -
         in: path
@@ -173,30 +125,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
+                type: object
                 example:
-                  -
-                    id: 1
-                    name: Jon
-                    last_name: Watts
-                    created_at: '2023-08-03T19:57:29.000000Z'
-                    updated_at: '2023-08-03T19:57:31.000000Z'
-                  -
-                    id: 2
-                    name: Jon
-                    last_name: Favreau
-                    created_at: '2023-08-03T19:58:10.000000Z'
-                    updated_at: '2023-08-03T19:58:11.000000Z'
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Director management'
-      security: []
     post:
       summary: ''
       operationId: postApiDirectors
@@ -215,15 +157,14 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ngglnwhwlrqrkeoqidncqljwibpvlageyvrkoipgltbpkzbxxumocmryu
+                  example: uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: gjjvjvrrwwmmmfkwumtrvetlxqynuslugxohqrdxaaqamcbsojuuyzptlmfoxmu
+                  example: gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr
               required:
                 - name
                 - last_name
-      security: []
   '/api/directors/{director_id}':
     get:
       summary: ''
@@ -231,37 +172,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  id: 1
-                  name: Jon
-                  last_name: Watts
-                  created_at: '2023-08-03T19:57:29.000000Z'
-                  updated_at: '2023-08-03T19:57:31.000000Z'
+                  message: Unauthenticated.
                 properties:
-                  id:
-                    type: integer
-                    example: 1
-                  name:
+                  message:
                     type: string
-                    example: Jon
-                  last_name:
-                    type: string
-                    example: Watts
-                  created_at:
-                    type: string
-                    example: '2023-08-03T19:57:29.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-08-03T19:57:31.000000Z'
+                    example: Unauthenticated.
       tags:
         - 'Director management'
-      security: []
     put:
       summary: ''
       operationId: putApiDirectorsDirector_id
@@ -280,15 +204,14 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: meqxefkwtrrxdoyuzemrixkdezxauoytxnbobgbiwykvdvpqyfpxrgvakryfwkwfegzp
+                  example: leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: urcatwgtxgspskdxxanuclfrafdwksoavqipswvmkcvedoyhvypiwihlxjfzyhfkktgyt
+                  example: rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz
               required:
                 - name
                 - last_name
-      security: []
     delete:
       summary: ''
       operationId: deleteApiDirectorsDirector_id
@@ -297,7 +220,6 @@ paths:
       responses: {  }
       tags:
         - 'Director management'
-      security: []
     parameters:
       -
         in: path
@@ -314,45 +236,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
+                type: object
                 example:
-                  -
-                    id: 1
-                    title: Spider-Man
-                    description: 'Welcome home'
-                    genre: ACCION
-                    publish_at: '2023-08-03'
-                    director_id: 1
-                    created_at: '2023-08-03T19:59:01.000000Z'
-                    updated_at: '2023-08-03T19:59:02.000000Z'
-                  -
-                    id: 2
-                    title: Iroma
-                    description: 'Soldado del Invierno'
-                    genre: ACCION
-                    publish_at: '2020-08-03'
-                    director_id: 2
-                    created_at: '2023-08-03T20:08:10.000000Z'
-                    updated_at: '2023-08-03T20:08:14.000000Z'
-                  -
-                    id: 3
-                    title: Transformers
-                    description: 'Transformers es una serie de películas de acción y ciencia ficción estadounidense'
-                    genre: ACCION
-                    publish_at: '2023-08-05'
-                    director_id: 2
-                    created_at: '2023-08-05T00:36:40.000000Z'
-                    updated_at: '2023-08-05T00:38:16.000000Z'
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Movie management'
-      security: []
     post:
       summary: ''
       operationId: postApiMovies
@@ -371,30 +268,29 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: mgnuukflcujvublkxjioffanxdcocqnmqsezpifdqyklyenhfpydrkztfysrseprbteaabmukare
+                  example: pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa
                 description:
                   type: string
                   description: ''
-                  example: accusamus
+                  example: fuga
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: trqddxdroecfhybqsmjheh
+                  example: eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 director_id:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: dolorem
               required:
                 - title
                 - description
                 - genre
                 - publish_at
                 - director_id
-      security: []
   '/api/movies/{movie_id}':
     get:
       summary: ''
@@ -402,49 +298,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  id: 1
-                  title: Spider-Man
-                  description: 'Welcome home'
-                  genre: ACCION
-                  publish_at: '2023-08-03'
-                  director_id: 1
-                  created_at: '2023-08-03T19:59:01.000000Z'
-                  updated_at: '2023-08-03T19:59:02.000000Z'
+                  message: Unauthenticated.
                 properties:
-                  id:
-                    type: integer
-                    example: 1
-                  title:
+                  message:
                     type: string
-                    example: Spider-Man
-                  description:
-                    type: string
-                    example: 'Welcome home'
-                  genre:
-                    type: string
-                    example: ACCION
-                  publish_at:
-                    type: string
-                    example: '2023-08-03'
-                  director_id:
-                    type: integer
-                    example: 1
-                  created_at:
-                    type: string
-                    example: '2023-08-03T19:59:01.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-08-03T19:59:02.000000Z'
+                    example: Unauthenticated.
       tags:
         - 'Movie management'
-      security: []
     put:
       summary: ''
       operationId: putApiMoviesMovie_id
@@ -463,30 +330,29 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: zlwaixtmcsnxhrkyivwcyfuafqrrtgjsmbcxxkiqryusmfwmfcwyqmvuepgtonfgsigtsrezycy
+                  example: eseqgrolhsdpjawkdwwsdbacjvs
                 description:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: autem
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: hhubhhcjgzcwuvwndpqdzarmdywkertdinehebjonwg
+                  example: nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 director_id:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: et
               required:
                 - title
                 - description
                 - genre
                 - publish_at
                 - director_id
-      security: []
     parameters:
       -
         in: path
@@ -505,7 +371,6 @@ paths:
       responses: {  }
       tags:
         - 'Movie management'
-      security: []
     parameters:
       -
         in: path
@@ -522,138 +387,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    -
-                      id: 1
-                      name: Tom
-                      lastName: Holland
-                      createdAt: '2023-08-03T16:17:31.000000Z'
-                  links:
-                    first: 'http://localhost:8000/api/movies/1/actors?page=1'
-                    last: 'http://localhost:8000/api/movies/1/actors?page=1'
-                    prev: null
-                    next: null
-                  meta:
-                    current_page: 1
-                    from: 1
-                    last_page: 1
-                    links:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost:8000/api/movies/1/actors?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    path: 'http://localhost:8000/api/movies/1/actors'
-                    per_page: 15
-                    to: 1
-                    total: 1
+                  message: Unauthenticated.
                 properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        name: Tom
-                        lastName: Holland
-                        createdAt: '2023-08-03T16:17:31.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        name:
-                          type: string
-                          example: Tom
-                        lastName:
-                          type: string
-                          example: Holland
-                        createdAt:
-                          type: string
-                          example: '2023-08-03T16:17:31.000000Z'
-                  links:
-                    type: object
-                    properties:
-                      first:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/actors?page=1'
-                      last:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/actors?page=1'
-                      prev:
-                        type: string
-                        example: null
-                      next:
-                        type: string
-                        example: null
-                  meta:
-                    type: object
-                    properties:
-                      current_page:
-                        type: integer
-                        example: 1
-                      from:
-                        type: integer
-                        example: 1
-                      last_page:
-                        type: integer
-                        example: 1
-                      links:
-                        type: array
-                        example:
-                          -
-                            url: null
-                            label: '&laquo; Previous'
-                            active: false
-                          -
-                            url: 'http://localhost:8000/api/movies/1/actors?page=1'
-                            label: '1'
-                            active: true
-                          -
-                            url: null
-                            label: 'Next &raquo;'
-                            active: false
-                        items:
-                          type: object
-                          properties:
-                            url:
-                              type: string
-                              example: null
-                            label:
-                              type: string
-                              example: '&laquo; Previous'
-                            active:
-                              type: boolean
-                              example: false
-                      path:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/actors'
-                      per_page:
-                        type: integer
-                        example: 15
-                      to:
-                        type: integer
-                        example: 1
-                      total:
-                        type: integer
-                        example: 1
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Movie management'
-      security: []
     post:
       summary: ''
       operationId: postApiMoviesMovie_idActors
@@ -673,12 +420,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - ipsam
+                    - quaerat
                   items:
                     type: string
               required:
                 - actors
-      security: []
     delete:
       summary: ''
       operationId: deleteApiMoviesMovie_idActors
@@ -698,12 +444,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - eos
+                    - rem
                   items:
                     type: string
               required:
                 - actors
-      security: []
     parameters:
       -
         in: path
@@ -720,143 +465,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    -
-                      id: 1
-                      deadlineAt: '2023-08-03'
-                      returnDateAt: '2023-08-03'
-                      actualDateAt: '2023-08-03'
-                      userId: 1
-                  links:
-                    first: 'http://localhost:8000/api/movies/1/rents?page=1'
-                    last: 'http://localhost:8000/api/movies/1/rents?page=1'
-                    prev: null
-                    next: null
-                  meta:
-                    current_page: 1
-                    from: 1
-                    last_page: 1
-                    links:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost:8000/api/movies/1/rents?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    path: 'http://localhost:8000/api/movies/1/rents'
-                    per_page: 15
-                    to: 1
-                    total: 1
+                  message: Unauthenticated.
                 properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        deadlineAt: '2023-08-03'
-                        returnDateAt: '2023-08-03'
-                        actualDateAt: '2023-08-03'
-                        userId: 1
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        deadlineAt:
-                          type: string
-                          example: '2023-08-03'
-                        returnDateAt:
-                          type: string
-                          example: '2023-08-03'
-                        actualDateAt:
-                          type: string
-                          example: '2023-08-03'
-                        userId:
-                          type: integer
-                          example: 1
-                  links:
-                    type: object
-                    properties:
-                      first:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/rents?page=1'
-                      last:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/rents?page=1'
-                      prev:
-                        type: string
-                        example: null
-                      next:
-                        type: string
-                        example: null
-                  meta:
-                    type: object
-                    properties:
-                      current_page:
-                        type: integer
-                        example: 1
-                      from:
-                        type: integer
-                        example: 1
-                      last_page:
-                        type: integer
-                        example: 1
-                      links:
-                        type: array
-                        example:
-                          -
-                            url: null
-                            label: '&laquo; Previous'
-                            active: false
-                          -
-                            url: 'http://localhost:8000/api/movies/1/rents?page=1'
-                            label: '1'
-                            active: true
-                          -
-                            url: null
-                            label: 'Next &raquo;'
-                            active: false
-                        items:
-                          type: object
-                          properties:
-                            url:
-                              type: string
-                              example: null
-                            label:
-                              type: string
-                              example: '&laquo; Previous'
-                            active:
-                              type: boolean
-                              example: false
-                      path:
-                        type: string
-                        example: 'http://localhost:8000/api/movies/1/rents'
-                      per_page:
-                        type: integer
-                        example: 15
-                      to:
-                        type: integer
-                        example: 1
-                      total:
-                        type: integer
-                        example: 1
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Movie management'
-      security: []
     post:
       summary: ''
       operationId: postApiMoviesMovie_idRents
@@ -876,12 +498,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - officia
+                    - ratione
                   items:
                     type: string
               required:
                 - rents
-      security: []
     delete:
       summary: ''
       operationId: deleteApiMoviesMovie_idRents
@@ -901,12 +522,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - qui
+                    - dolor
                   items:
                     type: string
               required:
                 - rents
-      security: []
     parameters:
       -
         in: path
@@ -923,26 +543,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
+                type: object
                 example:
-                  -
-                    id: 1
-                    deadline_at: '2023-08-03'
-                    return_date_at: '2023-08-03'
-                    actual_date_at: '2023-08-03'
-                    user_id: 1
-                    created_at: null
-                    updated_at: null
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - 'Rent management'
-      security: []
     post:
       summary: ''
       operationId: postApiRents
@@ -961,25 +575,24 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 user_id:
                   type: string
                   description: ''
-                  example: rerum
+                  example: blanditiis
               required:
                 - deadline_at
                 - return_date_at
                 - actual_date_at
                 - user_id
-      security: []
   '/api/rents/{rent_id}':
     get:
       summary: ''
@@ -987,45 +600,20 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  id: 1
-                  deadline_at: '2023-08-03'
-                  return_date_at: '2023-08-03'
-                  actual_date_at: '2023-08-03'
-                  user_id: 1
-                  created_at: null
-                  updated_at: null
+                  message: Unauthenticated.
                 properties:
-                  id:
-                    type: integer
-                    example: 1
-                  deadline_at:
+                  message:
                     type: string
-                    example: '2023-08-03'
-                  return_date_at:
-                    type: string
-                    example: '2023-08-03'
-                  actual_date_at:
-                    type: string
-                    example: '2023-08-03'
-                  user_id:
-                    type: integer
-                    example: 1
-                  created_at:
-                    type: string
-                    example: null
-                  updated_at:
-                    type: string
-                    example: null
+                    example: Unauthenticated.
       tags:
         - 'Rent management'
-      security: []
     put:
       summary: ''
       operationId: putApiRentsRent_id
@@ -1044,25 +632,24 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T01:29:36'
+                  example: '2023-08-05T02:09:06'
                 user_id:
                   type: string
                   description: ''
-                  example: tempora
+                  example: impedit
               required:
                 - deadline_at
                 - return_date_at
                 - actual_date_at
                 - user_id
-      security: []
     delete:
       summary: ''
       operationId: deleteApiRentsRent_id
@@ -1071,7 +658,6 @@ paths:
       responses: {  }
       tags:
         - 'Rent management'
-      security: []
     parameters:
       -
         in: path
@@ -1081,10 +667,10 @@ paths:
         required: true
         schema:
           type: integer
-  /api/auth/users:
+  /api/auth:
     post:
       summary: ''
-      operationId: postApiAuthUsers
+      operationId: postApiAuth
       description: ''
       parameters: []
       responses: {  }
@@ -1100,11 +686,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: summer.lang@example.com
+                  example: russell88@example.net
                 password:
                   type: string
                   description: ''
-                  example: laborum
+                  example: delectus
               required:
                 - email
                 - password
@@ -1128,25 +714,24 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: error
+                  example: suscipit
                 age:
                   type: string
                   description: ''
-                  example: qui
+                  example: vitae
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: pschowalter@example.com
+                  example: wendell41@example.net
                 password:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: non
               required:
                 - name
                 - age
                 - email
                 - password
-      security: []
   '/api/auth/{user_id}':
     put:
       summary: ''
@@ -1166,25 +751,24 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: molestias
+                  example: excepturi
                 age:
                   type: string
                   description: ''
-                  example: vel
+                  example: dolore
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: yhuels@example.com
+                  example: macejkovic.lois@example.com
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: eum
               required:
                 - name
                 - age
                 - email
                 - password
-      security: []
     delete:
       summary: ''
       operationId: deleteApiAuthUser_id
@@ -1193,7 +777,6 @@ paths:
       responses: {  }
       tags:
         - 'User management'
-      security: []
     parameters:
       -
         in: path

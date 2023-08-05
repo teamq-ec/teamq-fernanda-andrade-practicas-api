@@ -12,7 +12,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -26,35 +26,35 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: error
+        example: suscipit
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-        example: qui
+        example: vitae
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: pschowalter@example.com
+        example: wendell41@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: voluptatem
+        example: non
         type: string
         custom: []
     cleanBodyParameters:
-      name: error
-      age: qui
-      email: pschowalter@example.com
-      password: voluptatem
+      name: suscipit
+      age: vitae
+      email: wendell41@example.net
+      password: non
     fileParameters: []
     responses: []
     responseFields: []
@@ -74,7 +74,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -96,35 +96,35 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: molestias
+        example: excepturi
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-        example: vel
+        example: dolore
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: yhuels@example.com
+        example: macejkovic.lois@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: aut
+        example: eum
         type: string
         custom: []
     cleanBodyParameters:
-      name: molestias
-      age: vel
-      email: yhuels@example.com
-      password: aut
+      name: excepturi
+      age: dolore
+      email: macejkovic.lois@example.com
+      password: eum
     fileParameters: []
     responses: []
     responseFields: []
@@ -144,7 +144,7 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json

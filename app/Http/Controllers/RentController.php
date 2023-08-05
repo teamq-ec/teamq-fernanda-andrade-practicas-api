@@ -6,12 +6,14 @@ use App\Http\Requests\RentRequest;
 use App\Http\Resources\RentResource;
 use App\Models\Rent;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Symfony\Component\HttpFoundation\Response;
 
 class RentController extends Controller
 {
     #[Group("Rent management")]
+    #[Authenticated]
     public function index()
     {
         $rent= Rent::all();
@@ -19,6 +21,7 @@ class RentController extends Controller
     }
 
     #[Group("Rent management")]
+    #[Authenticated]
     public function store(RentRequest $request)
     {
         $rent = Rent::query()->create($request->validated());
@@ -26,6 +29,7 @@ class RentController extends Controller
     }
 
     #[Group("Rent management")]
+    #[Authenticated]
     public function show(Rent $rent)
     {
         return response()->json($rent);
@@ -33,6 +37,7 @@ class RentController extends Controller
 
 
     #[Group("Rent management")]
+    #[Authenticated]
     public function update(RentRequest $request, Rent $rent)
     {
         $rent->fill($request->validated());
@@ -41,6 +46,7 @@ class RentController extends Controller
     }
 
     #[Group("Rent management")]
+    #[Authenticated]
     public function destroy(Rent $rent)
     {
         $rent->delete();
