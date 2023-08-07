@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AuthRequest;
 use App\Http\Requests\UserRequest;
 use App\Http\Resources\AuthResource;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,14 @@ class AuthController extends Controller
         }
 
         return response()->json(['msg'=>'clave incorrecta'], Response::HTTP_UNAUTHORIZED);
+    }
+
+
+    #[SubGroup("Auth")]
+    public function register(UserRequest $request)
+    {
+        $user = User::query()->create($request->validated());
+        return new UserResource($user);
     }
 
     #[Group("User management")]

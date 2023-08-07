@@ -13,9 +13,17 @@ class UserController extends Controller
 {
     #[Group("User management")]
     #[Authenticated]
-    public function store(UserRequest $request)
+    public function index()
     {
-        $user = User::query()->create($request->validated());
-        return new UserResource($user);
+        $user= User::all();
+        return response()->json($user);
     }
+
+    #[Group("User management")]
+    #[Authenticated]
+    public function show(User $user)
+    {
+        return response()->json($user);
+    }
+
 }

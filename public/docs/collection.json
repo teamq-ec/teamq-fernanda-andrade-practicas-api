@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "16999116-1ff4-4c37-9e0d-1b8985e403ed",
+        "_postman_id": "60b5063c-794b-400a-b02e-ad6fba586c69",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -139,7 +139,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gbnavvxdijtvhkqmtnuwtmjogasxkvyn\",\"last_name\":\"rnqdkgmjyooubzrlgku\"}"
+                            "raw": "{\"name\":\"gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl\",\"last_name\":\"pcqzvdqvarslvtcrrsjuruinshecbh\"}"
                         },
                         "description": ""
                     },
@@ -175,7 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas\",\"last_name\":\"hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr\"}"
+                            "raw": "{\"name\":\"rkffhmogknuxykckjwxxzcb\",\"last_name\":\"ogvxpytwhqewntpdwejxlvzatukzm\"}"
                         },
                         "description": ""
                     },
@@ -340,7 +340,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi\",\"last_name\":\"gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr\"}"
+                            "raw": "{\"name\":\"kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf\",\"last_name\":\"nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle\"}"
                         },
                         "description": ""
                     },
@@ -376,7 +376,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn\",\"last_name\":\"rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz\"}"
+                            "raw": "{\"name\":\"xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl\",\"last_name\":\"istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr\"}"
                         },
                         "description": ""
                     },
@@ -414,6 +414,49 @@
                         "description": ""
                     },
                     "response": []
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Auth",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST api\/register",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/register",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/register"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"quae\",\"age\":\"in\",\"email\":\"paige97@example.org\",\"password\":\"atque\"}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
                 }
             ]
         },
@@ -541,7 +584,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa\",\"description\":\"fuga\",\"genre\":\"eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag\",\"publish_at\":\"2023-08-05T02:09:06\",\"director_id\":\"dolorem\"}"
+                            "raw": "{\"title\":\"hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm\",\"description\":\"consequatur\",\"genre\":\"gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"eum\"}"
                         },
                         "description": ""
                     },
@@ -577,7 +620,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"eseqgrolhsdpjawkdwwsdbacjvs\",\"description\":\"autem\",\"genre\":\"nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov\",\"publish_at\":\"2023-08-05T02:09:06\",\"director_id\":\"et\"}"
+                            "raw": "{\"title\":\"bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp\",\"description\":\"impedit\",\"genre\":\"qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"tempora\"}"
                         },
                         "description": ""
                     },
@@ -703,7 +746,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"quaerat\"]}"
+                                    "raw": "{\"actors\":[\"maiores\"]}"
                                 },
                                 "description": ""
                             },
@@ -739,7 +782,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"rem\"]}"
+                                    "raw": "{\"actors\":[\"incidunt\"]}"
                                 },
                                 "description": ""
                             },
@@ -834,7 +877,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"ratione\"]}"
+                                    "raw": "{\"rents\":[\"dicta\"]}"
                                 },
                                 "description": ""
                             },
@@ -870,7 +913,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"dolor\"]}"
+                                    "raw": "{\"rents\":[\"sed\"]}"
                                 },
                                 "description": ""
                             },
@@ -1004,7 +1047,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T02:09:06\",\"return_date_at\":\"2023-08-05T02:09:06\",\"actual_date_at\":\"2023-08-05T02:09:06\",\"user_id\":\"blanditiis\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"tenetur\"}"
                         },
                         "description": ""
                     },
@@ -1040,7 +1083,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-05T02:09:06\",\"return_date_at\":\"2023-08-05T02:09:06\",\"actual_date_at\":\"2023-08-05T02:09:06\",\"user_id\":\"impedit\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"aut\"}"
                         },
                         "description": ""
                     },
@@ -1111,7 +1154,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"email\":\"russell88@example.net\",\"password\":\"delectus\"}"
+                                    "raw": "{\"email\":\"alfred66@example.org\",\"password\":\"quas\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1128,34 +1171,6 @@
             "name": "User management",
             "description": "",
             "item": [
-                {
-                    "name": "POST api\/user",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/user"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"suscipit\",\"age\":\"vitae\",\"email\":\"wendell41@example.net\",\"password\":\"non\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
                 {
                     "name": "User",
                     "description": "",
@@ -1190,7 +1205,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"excepturi\",\"age\":\"dolore\",\"email\":\"macejkovic.lois@example.com\",\"password\":\"eum\"}"
+                                    "raw": "{\"name\":\"vel\",\"age\":\"et\",\"email\":\"reece22@example.org\",\"password\":\"omnis\"}"
                                 },
                                 "description": ""
                             },
@@ -1228,6 +1243,59 @@
                                 "description": ""
                             },
                             "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/users",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Juan\",\"age\":32,\"email\":\"juan.hahn@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:47:59.000000Z\"},{\"id\":2,\"name\":\"Marta\",\"age\":23,\"email\":\"marta.devora@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:49:21.000000Z\"},{\"id\":3,\"name\":\"Willy Effertz\",\"age\":45,\"email\":\"chandler23@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":4,\"name\":\"Gail Koch\",\"age\":56,\"email\":\"uhartmann@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":5,\"name\":\"Pete Boehm\",\"age\":56,\"email\":\"dillon.smitham@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":6,\"name\":\"Raul Padberg\",\"age\":34,\"email\":\"mboyle@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":7,\"name\":\"Katelin Casper\",\"age\":23,\"email\":\"desiree61@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":8,\"name\":\"Bryce Cummerata I\",\"age\":23,\"email\":\"lswift@example.org\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":9,\"name\":\"Murray Auer\",\"age\":23,\"email\":\"uschmeler@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":10,\"name\":\"Prof. Loren Flatley MD\",\"age\":23,\"email\":\"dolores.schoen@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":12,\"name\":\"Hector\",\"age\":22,\"email\":\"Hector.noble@example.net\",\"email_verified_at\":\"2023-08-04T20:27:37.000000Z\",\"created_at\":\"2023-08-05T01:11:49.000000Z\",\"updated_at\":\"2023-08-05T01:11:49.000000Z\"},{\"id\":13,\"name\":\"Joselyn\",\"age\":19,\"email\":\"joselyn19@example.com\",\"email_verified_at\":null,\"created_at\":\"2023-08-05T01:31:18.000000Z\",\"updated_at\":\"2023-08-05T01:31:18.000000Z\"}]",
+                            "name": ""
                         }
                     ]
                 }

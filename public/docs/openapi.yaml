@@ -46,11 +46,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: gbnavvxdijtvhkqmtnuwtmjogasxkvyn
+                  example: gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: rnqdkgmjyooubzrlgku
+                  example: pcqzvdqvarslvtcrrsjuruinshecbh
               required:
                 - name
                 - last_name
@@ -93,11 +93,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: szjolzehsgimnkffazhxldwqrkiamasyhdatdctvcvosaobjawmtowcpeoacoqvbtogvibagebbawrywpwcoas
+                  example: rkffhmogknuxykckjwxxzcb
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: hlmqmavjkhxfpbffveotmvswbrqcpexqtdkjyfvajoaicrr
+                  example: ogvxpytwhqewntpdwejxlvzatukzm
               required:
                 - name
                 - last_name
@@ -157,11 +157,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: uhmddwgdlhcmsszhjqjksomhwrcvprnrnepwdbsjjtwdduyyhukyceqzi
+                  example: kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: gunbnzyvxtiimnkfbezsnsymraagqsyfbvrorjhtjjtssjfbgmszzyrevjhakpkmr
+                  example: nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle
               required:
                 - name
                 - last_name
@@ -204,11 +204,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: leipkbalkqywmnscpxwtpptnjzwvxibkjfdrheqgtpbyjktrajlunidn
+                  example: xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: rwzwkxzrwehjrbkopbfaarbuujojqlqlkxezicrnhlxdmhhtsyqsrjpqbrahlxrwz
+                  example: istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr
               required:
                 - name
                 - last_name
@@ -229,6 +229,44 @@ paths:
         required: true
         schema:
           type: integer
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quae
+                age:
+                  type: string
+                  description: ''
+                  example: in
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: paige97@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: atque
+              required:
+                - name
+                - age
+                - email
+                - password
+      security: []
   /api/movies:
     get:
       summary: ''
@@ -268,23 +306,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: pwmlowdwnatyjmvqyohnzsbpaabwdkwgjamxybxagauabcfbhmrkaozvvxxpokhnnwa
+                  example: hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm
                 description:
                   type: string
                   description: ''
-                  example: fuga
+                  example: consequatur
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: eeimygjhszzqsgiqvabyztevuosspvffclalbrmtexgkrrijmaxachqtdopfcymemczgyohevgwgwag
+                  example: gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 director_id:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: eum
               required:
                 - title
                 - description
@@ -330,23 +368,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: eseqgrolhsdpjawkdwwsdbacjvs
+                  example: bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp
                 description:
                   type: string
                   description: ''
-                  example: autem
+                  example: impedit
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: nvfemhzeafaqbbbocwpgcdwadlofeqfukkfwrilpsov
+                  example: qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 director_id:
                   type: string
                   description: ''
-                  example: et
+                  example: tempora
               required:
                 - title
                 - description
@@ -420,7 +458,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - quaerat
+                    - maiores
                   items:
                     type: string
               required:
@@ -444,7 +482,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - rem
+                    - incidunt
                   items:
                     type: string
               required:
@@ -498,7 +536,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - ratione
+                    - dicta
                   items:
                     type: string
               required:
@@ -522,7 +560,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - dolor
+                    - sed
                   items:
                     type: string
               required:
@@ -575,19 +613,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 user_id:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: tenetur
               required:
                 - deadline_at
                 - return_date_at
@@ -632,19 +670,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-05T02:09:06'
+                  example: '2023-08-07T20:24:59'
                 user_id:
                   type: string
                   description: ''
-                  example: impedit
+                  example: aut
               required:
                 - deadline_at
                 - return_date_at
@@ -686,52 +724,15 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: russell88@example.net
+                  example: alfred66@example.org
                 password:
                   type: string
                   description: ''
-                  example: delectus
+                  example: quas
               required:
                 - email
                 - password
       security: []
-  /api/user:
-    post:
-      summary: ''
-      operationId: postApiUser
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: suscipit
-                age:
-                  type: string
-                  description: ''
-                  example: vitae
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: wendell41@example.net
-                password:
-                  type: string
-                  description: ''
-                  example: non
-              required:
-                - name
-                - age
-                - email
-                - password
   '/api/auth/{user_id}':
     put:
       summary: ''
@@ -751,19 +752,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: excepturi
+                  example: vel
                 age:
                   type: string
                   description: ''
-                  example: dolore
+                  example: et
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: macejkovic.lois@example.com
+                  example: reece22@example.org
                 password:
                   type: string
                   description: ''
-                  example: eum
+                  example: omnis
               required:
                 - name
                 - age
@@ -786,12 +787,129 @@ paths:
         required: true
         schema:
           type: integer
+  /api/users:
+    get:
+      summary: ''
+      operationId: getApiUsers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: Juan
+                    age: 32
+                    email: juan.hahn@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-05T00:47:59.000000Z'
+                  -
+                    id: 2
+                    name: Marta
+                    age: 23
+                    email: marta.devora@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-05T00:49:21.000000Z'
+                  -
+                    id: 3
+                    name: 'Willy Effertz'
+                    age: 45
+                    email: chandler23@example.net
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 4
+                    name: 'Gail Koch'
+                    age: 56
+                    email: uhartmann@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 5
+                    name: 'Pete Boehm'
+                    age: 56
+                    email: dillon.smitham@example.net
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 6
+                    name: 'Raul Padberg'
+                    age: 34
+                    email: mboyle@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 7
+                    name: 'Katelin Casper'
+                    age: 23
+                    email: desiree61@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 8
+                    name: 'Bryce Cummerata I'
+                    age: 23
+                    email: lswift@example.org
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 9
+                    name: 'Murray Auer'
+                    age: 23
+                    email: uschmeler@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 10
+                    name: 'Prof. Loren Flatley MD'
+                    age: 23
+                    email: dolores.schoen@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 12
+                    name: Hector
+                    age: 22
+                    email: Hector.noble@example.net
+                    email_verified_at: '2023-08-04T20:27:37.000000Z'
+                    created_at: '2023-08-05T01:11:49.000000Z'
+                    updated_at: '2023-08-05T01:11:49.000000Z'
+                  -
+                    id: 13
+                    name: Joselyn
+                    age: 19
+                    email: joselyn19@example.com
+                    email_verified_at: null
+                    created_at: '2023-08-05T01:31:18.000000Z'
+                    updated_at: '2023-08-05T01:31:18.000000Z'
+      tags:
+        - 'User management'
 tags:
   -
     name: 'Actor management'
     description: ''
   -
     name: 'Director management'
+    description: ''
+  -
+    name: Endpoints
     description: ''
   -
     name: 'Movie management'
