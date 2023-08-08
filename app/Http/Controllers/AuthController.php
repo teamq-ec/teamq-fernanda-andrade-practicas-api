@@ -38,6 +38,13 @@ class AuthController extends Controller
         return new UserResource($user);
     }
 
+    #[SubGroup("Auth")]
+    public function user()
+    {
+        $user= User::all();
+        return response()->json($user);
+    }
+
     #[Group("User management")]
     #[SubGroup("User")]
     #[Authenticated]

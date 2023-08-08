@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-  //  return $request->user();
-//});
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
-//Route::group(['middleware'=>['auth:sanctum']],function () {
+Route::group(['middleware'=>['auth:sanctum']],function () {
 
     Route::get('/actors', [\App\Http\Controllers\ActorController::class, 'index']);
     Route::get('/actors/{actor}', [\App\Http\Controllers\ActorController::class, 'show']);
@@ -56,12 +56,12 @@ use Illuminate\Support\Facades\Route;
     Route::post('movies/{movie}/rents', [MovieRentController::class, 'add']);
     Route::delete('movies/{movie}/rents', [MovieRentController::class, 'remove']);
 
-    Route::get('/users', [\App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/users', [AuthController::class, 'user']);
     Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show']);
     Route::put('/auth/{user}', [AuthController::class, 'update']);
     Route::delete('/auth/{user}', [AuthController::class, 'destroy']);
 
-//});
+});
 
 Route::post('auth',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);

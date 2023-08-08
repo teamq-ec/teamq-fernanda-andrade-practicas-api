@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "60b5063c-794b-400a-b02e-ad6fba586c69",
+        "_postman_id": "6f07b4cb-70bc-4c27-a1ac-38cf7682b200",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -139,7 +139,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl\",\"last_name\":\"pcqzvdqvarslvtcrrsjuruinshecbh\"}"
+                            "raw": "{\"name\":\"epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti\",\"last_name\":\"soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq\"}"
                         },
                         "description": ""
                     },
@@ -175,7 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"rkffhmogknuxykckjwxxzcb\",\"last_name\":\"ogvxpytwhqewntpdwejxlvzatukzm\"}"
+                            "raw": "{\"name\":\"gyg\",\"last_name\":\"regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn\"}"
                         },
                         "description": ""
                     },
@@ -340,7 +340,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf\",\"last_name\":\"nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle\"}"
+                            "raw": "{\"name\":\"alwvvwifzgcbojokonwtwerslxkckhuqvuxy\",\"last_name\":\"pztusw\"}"
                         },
                         "description": ""
                     },
@@ -376,7 +376,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl\",\"last_name\":\"istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr\"}"
+                            "raw": "{\"name\":\"dmidkxymzrytxql\",\"last_name\":\"cfscvhqklf\"}"
                         },
                         "description": ""
                     },
@@ -422,9 +422,105 @@
             "description": "",
             "item": [
                 {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "Auth",
                     "description": "",
                     "item": [
+                        {
+                            "name": "GET api\/users",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "access-control-allow-origin",
+                                            "value": "*"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        },
                         {
                             "name": "POST api\/register",
                             "request": {
@@ -447,7 +543,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"quae\",\"age\":\"in\",\"email\":\"paige97@example.org\",\"password\":\"atque\"}"
+                                    "raw": "{\"name\":\"laboriosam\",\"age\":\"assumenda\",\"email\":\"atremblay@example.net\",\"password\":\"aut\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -584,7 +680,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm\",\"description\":\"consequatur\",\"genre\":\"gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"eum\"}"
+                            "raw": "{\"title\":\"mcsps\",\"description\":\"fugit\",\"genre\":\"blu\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"distinctio\"}"
                         },
                         "description": ""
                     },
@@ -620,7 +716,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp\",\"description\":\"impedit\",\"genre\":\"qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"tempora\"}"
+                            "raw": "{\"title\":\"nhetvgmmhfztohjnoqvuxy\",\"description\":\"et\",\"genre\":\"irhjndxctefzrpkgleccrvgowxo\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"quisquam\"}"
                         },
                         "description": ""
                     },
@@ -746,7 +842,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"maiores\"]}"
+                                    "raw": "{\"actors\":[\"vel\"]}"
                                 },
                                 "description": ""
                             },
@@ -782,7 +878,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"incidunt\"]}"
+                                    "raw": "{\"actors\":[\"autem\"]}"
                                 },
                                 "description": ""
                             },
@@ -877,7 +973,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"dicta\"]}"
+                                    "raw": "{\"rents\":[\"illum\"]}"
                                 },
                                 "description": ""
                             },
@@ -913,7 +1009,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"sed\"]}"
+                                    "raw": "{\"rents\":[\"hic\"]}"
                                 },
                                 "description": ""
                             },
@@ -1047,7 +1143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"tenetur\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"rerum\"}"
                         },
                         "description": ""
                     },
@@ -1083,7 +1179,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"aut\"}"
+                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"iste\"}"
                         },
                         "description": ""
                     },
@@ -1154,7 +1250,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"email\":\"alfred66@example.org\",\"password\":\"quas\"}"
+                                    "raw": "{\"email\":\"rstreich@example.net\",\"password\":\"doloribus\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1171,6 +1267,59 @@
             "name": "User management",
             "description": "",
             "item": [
+                {
+                    "name": "GET api\/user\/{user_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
                 {
                     "name": "User",
                     "description": "",
@@ -1205,7 +1354,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"vel\",\"age\":\"et\",\"email\":\"reece22@example.org\",\"password\":\"omnis\"}"
+                                    "raw": "{\"name\":\"eum\",\"age\":\"ut\",\"email\":\"oda33@example.net\",\"password\":\"quis\"}"
                                 },
                                 "description": ""
                             },
@@ -1245,64 +1394,18 @@
                             "response": []
                         }
                     ]
-                },
-                {
-                    "name": "GET api\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"name\":\"Juan\",\"age\":32,\"email\":\"juan.hahn@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:47:59.000000Z\"},{\"id\":2,\"name\":\"Marta\",\"age\":23,\"email\":\"marta.devora@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:49:21.000000Z\"},{\"id\":3,\"name\":\"Willy Effertz\",\"age\":45,\"email\":\"chandler23@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":4,\"name\":\"Gail Koch\",\"age\":56,\"email\":\"uhartmann@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":5,\"name\":\"Pete Boehm\",\"age\":56,\"email\":\"dillon.smitham@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":6,\"name\":\"Raul Padberg\",\"age\":34,\"email\":\"mboyle@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":7,\"name\":\"Katelin Casper\",\"age\":23,\"email\":\"desiree61@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":8,\"name\":\"Bryce Cummerata I\",\"age\":23,\"email\":\"lswift@example.org\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":9,\"name\":\"Murray Auer\",\"age\":23,\"email\":\"uschmeler@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":10,\"name\":\"Prof. Loren Flatley MD\",\"age\":23,\"email\":\"dolores.schoen@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":12,\"name\":\"Hector\",\"age\":22,\"email\":\"Hector.noble@example.net\",\"email_verified_at\":\"2023-08-04T20:27:37.000000Z\",\"created_at\":\"2023-08-05T01:11:49.000000Z\",\"updated_at\":\"2023-08-05T01:11:49.000000Z\"},{\"id\":13,\"name\":\"Joselyn\",\"age\":19,\"email\":\"joselyn19@example.com\",\"email_verified_at\":null,\"created_at\":\"2023-08-05T01:31:18.000000Z\",\"updated_at\":\"2023-08-05T01:31:18.000000Z\"}]",
-                            "name": ""
-                        }
-                    ]
                 }
             ]
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "key",
+                "value": null,
+                "type": "string"
+            }
+        ]
     }
 }
