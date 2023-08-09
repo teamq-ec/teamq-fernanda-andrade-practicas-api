@@ -12,7 +12,14 @@ paths:
       summary: ''
       operationId: getApiActors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -32,7 +39,14 @@ paths:
       summary: ''
       operationId: postApiActors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Actor management'
@@ -46,11 +60,19 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl
+<<<<<<< HEAD
+                  example: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: pcqzvdqvarslvtcrrsjuruinshecbh
+                  example: pmrd
+=======
+                  example: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
+                last_name:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - last_name
@@ -59,7 +81,14 @@ paths:
       summary: ''
       operationId: getApiActorsActor_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -79,7 +108,14 @@ paths:
       summary: ''
       operationId: putApiActorsActor_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Actor management'
@@ -93,11 +129,19 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: rkffhmogknuxykckjwxxzcb
+<<<<<<< HEAD
+                  example: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ogvxpytwhqewntpdwejxlvzatukzm
+                  example: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
+=======
+                  example: gyg
+                last_name:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - last_name
@@ -105,7 +149,14 @@ paths:
       summary: ''
       operationId: deleteApiActorsActor_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Actor management'
@@ -123,7 +174,14 @@ paths:
       summary: ''
       operationId: getApiDirectors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -143,7 +201,14 @@ paths:
       summary: ''
       operationId: postApiDirectors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Director management'
@@ -157,11 +222,19 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf
+<<<<<<< HEAD
+                  example: uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle
+                  example: imirusamqz
+=======
+                  example: alwvvwifzgcbojokonwtwerslxkckhuqvuxy
+                last_name:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: pztusw
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - last_name
@@ -170,7 +243,14 @@ paths:
       summary: ''
       operationId: getApiDirectorsDirector_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -190,7 +270,14 @@ paths:
       summary: ''
       operationId: putApiDirectorsDirector_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Director management'
@@ -204,11 +291,19 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl
+<<<<<<< HEAD
+                  example: ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr
+                  example: lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom
+=======
+                  example: dmidkxymzrytxql
+                last_name:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: cfscvhqklf
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - last_name
@@ -216,7 +311,14 @@ paths:
       summary: ''
       operationId: deleteApiDirectorsDirector_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Director management'
@@ -229,6 +331,50 @@ paths:
         required: true
         schema:
           type: integer
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/users:
+    get:
+      summary: ''
+      operationId: getApiUsers
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
   /api/register:
     post:
       summary: ''
@@ -248,19 +394,35 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: quae
+<<<<<<< HEAD
+                  example: exercitationem
                 age:
                   type: string
                   description: ''
-                  example: in
+                  example: nam
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: paige97@example.org
+                  example: candida53@example.net
                 password:
                   type: string
                   description: ''
-                  example: atque
+                  example: dolor
+=======
+                  example: laboriosam
+                age:
+                  type: string
+                  description: ''
+                  example: assumenda
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: atremblay@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: aut
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - age
@@ -272,7 +434,14 @@ paths:
       summary: ''
       operationId: getApiMovies
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -292,7 +461,14 @@ paths:
       summary: ''
       operationId: postApiMovies
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -306,23 +482,43 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm
+<<<<<<< HEAD
+                  example: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
                 description:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: quia
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli
+                  example: ubdscbhyzhhfahtmqfmbyoymmuze
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 director_id:
                   type: string
                   description: ''
-                  example: eum
+                  example: placeat
+=======
+                  example: mcsps
+                description:
+                  type: string
+                  description: ''
+                  example: fugit
+                genre:
+                  type: string
+                  description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
+                  example: blu
+                publish_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                director_id:
+                  type: string
+                  description: ''
+                  example: distinctio
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - title
                 - description
@@ -334,7 +530,14 @@ paths:
       summary: ''
       operationId: getApiMoviesMovie_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -354,7 +557,14 @@ paths:
       summary: ''
       operationId: putApiMoviesMovie_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -368,23 +578,43 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp
+<<<<<<< HEAD
+                  example: pqfounpeodmcuzrfywpovp
                 description:
                   type: string
                   description: ''
-                  example: impedit
+                  example: debitis
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt
+                  example: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 director_id:
                   type: string
                   description: ''
-                  example: tempora
+                  example: odio
+=======
+                  example: nhetvgmmhfztohjnoqvuxy
+                description:
+                  type: string
+                  description: ''
+                  example: et
+                genre:
+                  type: string
+                  description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
+                  example: irhjndxctefzrpkgleccrvgowxo
+                publish_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                director_id:
+                  type: string
+                  description: ''
+                  example: quisquam
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - title
                 - description
@@ -405,7 +635,14 @@ paths:
       summary: ''
       operationId: deleteApiMovieMovie_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -423,7 +660,14 @@ paths:
       summary: ''
       operationId: getApiMoviesMovie_idActors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -443,7 +687,14 @@ paths:
       summary: ''
       operationId: postApiMoviesMovie_idActors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -458,7 +709,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - maiores
+<<<<<<< HEAD
+                    - debitis
+=======
+                    - vel
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                   items:
                     type: string
               required:
@@ -467,7 +722,14 @@ paths:
       summary: ''
       operationId: deleteApiMoviesMovie_idActors
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -482,7 +744,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - incidunt
+<<<<<<< HEAD
+                    - suscipit
+=======
+                    - autem
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                   items:
                     type: string
               required:
@@ -501,7 +767,14 @@ paths:
       summary: ''
       operationId: getApiMoviesMovie_idRents
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -521,7 +794,14 @@ paths:
       summary: ''
       operationId: postApiMoviesMovie_idRents
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -536,7 +816,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - dicta
+<<<<<<< HEAD
+                    - alias
+=======
+                    - illum
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                   items:
                     type: string
               required:
@@ -545,7 +829,14 @@ paths:
       summary: ''
       operationId: deleteApiMoviesMovie_idRents
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Movie management'
@@ -560,7 +851,11 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - sed
+<<<<<<< HEAD
+                    - quis
+=======
+                    - hic
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                   items:
                     type: string
               required:
@@ -579,7 +874,14 @@ paths:
       summary: ''
       operationId: getApiRents
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -599,7 +901,14 @@ paths:
       summary: ''
       operationId: postApiRents
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Rent management'
@@ -613,19 +922,35 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+<<<<<<< HEAD
+                  example: '2023-08-09T23:13:19'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 user_id:
                   type: string
                   description: ''
-                  example: tenetur
+                  example: qui
+=======
+                  example: '2023-08-08T20:52:20'
+                return_date_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                actual_date_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                user_id:
+                  type: string
+                  description: ''
+                  example: rerum
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - deadline_at
                 - return_date_at
@@ -636,7 +961,14 @@ paths:
       summary: ''
       operationId: getApiRentsRent_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -656,7 +988,14 @@ paths:
       summary: ''
       operationId: putApiRentsRent_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Rent management'
@@ -670,19 +1009,35 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+<<<<<<< HEAD
+                  example: '2023-08-09T23:13:19'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-07T20:24:59'
+                  example: '2023-08-09T23:13:19'
                 user_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: voluptate
+=======
+                  example: '2023-08-08T20:52:20'
+                return_date_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                actual_date_at:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-08-08T20:52:20'
+                user_id:
+                  type: string
+                  description: ''
+                  example: iste
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - deadline_at
                 - return_date_at
@@ -692,7 +1047,14 @@ paths:
       summary: ''
       operationId: deleteApiRentsRent_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Rent management'
@@ -724,21 +1086,73 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: alfred66@example.org
+<<<<<<< HEAD
+                  example: deshawn03@example.org
                 password:
                   type: string
                   description: ''
-                  example: quas
+                  example: animi
+=======
+                  example: rstreich@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: doloribus
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - email
                 - password
       security: []
+  '/api/user/{user_id}':
+    get:
+      summary: ''
+      operationId: getApiUserUser_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User management'
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   '/api/auth/{user_id}':
     put:
       summary: ''
       operationId: putApiAuthUser_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'User management'
@@ -752,19 +1166,35 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: vel
+<<<<<<< HEAD
+                  example: asperiores
                 age:
                   type: string
                   description: ''
-                  example: et
+                  example: maiores
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: reece22@example.org
+                  example: albin.bogan@example.net
                 password:
                   type: string
                   description: ''
-                  example: omnis
+                  example: eum
+=======
+                  example: eum
+                age:
+                  type: string
+                  description: ''
+                  example: ut
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: oda33@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: quis
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
               required:
                 - name
                 - age
@@ -774,7 +1204,14 @@ paths:
       summary: ''
       operationId: deleteApiAuthUser_id
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'User management'
@@ -787,120 +1224,6 @@ paths:
         required: true
         schema:
           type: integer
-  /api/users:
-    get:
-      summary: ''
-      operationId: getApiUsers
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example:
-                  -
-                    id: 1
-                    name: Juan
-                    age: 32
-                    email: juan.hahn@example.com
-                    email_verified_at: '2023-08-04T01:12:20.000000Z'
-                    created_at: '2023-08-04T01:12:20.000000Z'
-                    updated_at: '2023-08-05T00:47:59.000000Z'
-                  -
-                    id: 2
-                    name: Marta
-                    age: 23
-                    email: marta.devora@example.com
-                    email_verified_at: '2023-08-04T01:12:20.000000Z'
-                    created_at: '2023-08-04T01:12:20.000000Z'
-                    updated_at: '2023-08-05T00:49:21.000000Z'
-                  -
-                    id: 3
-                    name: 'Willy Effertz'
-                    age: 45
-                    email: chandler23@example.net
-                    email_verified_at: '2023-08-04T01:12:20.000000Z'
-                    created_at: '2023-08-04T01:12:20.000000Z'
-                    updated_at: '2023-08-04T01:12:20.000000Z'
-                  -
-                    id: 4
-                    name: 'Gail Koch'
-                    age: 56
-                    email: uhartmann@example.com
-                    email_verified_at: '2023-08-04T01:12:20.000000Z'
-                    created_at: '2023-08-04T01:12:20.000000Z'
-                    updated_at: '2023-08-04T01:12:20.000000Z'
-                  -
-                    id: 5
-                    name: 'Pete Boehm'
-                    age: 56
-                    email: dillon.smitham@example.net
-                    email_verified_at: '2023-08-04T01:12:20.000000Z'
-                    created_at: '2023-08-04T01:12:20.000000Z'
-                    updated_at: '2023-08-04T01:12:20.000000Z'
-                  -
-                    id: 6
-                    name: 'Raul Padberg'
-                    age: 34
-                    email: mboyle@example.net
-                    email_verified_at: '2023-08-04T20:29:30.000000Z'
-                    created_at: '2023-08-04T20:29:30.000000Z'
-                    updated_at: '2023-08-04T20:29:30.000000Z'
-                  -
-                    id: 7
-                    name: 'Katelin Casper'
-                    age: 23
-                    email: desiree61@example.net
-                    email_verified_at: '2023-08-04T20:29:30.000000Z'
-                    created_at: '2023-08-04T20:29:30.000000Z'
-                    updated_at: '2023-08-04T20:29:30.000000Z'
-                  -
-                    id: 8
-                    name: 'Bryce Cummerata I'
-                    age: 23
-                    email: lswift@example.org
-                    email_verified_at: '2023-08-04T20:29:30.000000Z'
-                    created_at: '2023-08-04T20:29:30.000000Z'
-                    updated_at: '2023-08-04T20:29:30.000000Z'
-                  -
-                    id: 9
-                    name: 'Murray Auer'
-                    age: 23
-                    email: uschmeler@example.net
-                    email_verified_at: '2023-08-04T20:29:30.000000Z'
-                    created_at: '2023-08-04T20:29:30.000000Z'
-                    updated_at: '2023-08-04T20:29:30.000000Z'
-                  -
-                    id: 10
-                    name: 'Prof. Loren Flatley MD'
-                    age: 23
-                    email: dolores.schoen@example.net
-                    email_verified_at: '2023-08-04T20:29:30.000000Z'
-                    created_at: '2023-08-04T20:29:30.000000Z'
-                    updated_at: '2023-08-04T20:29:30.000000Z'
-                  -
-                    id: 12
-                    name: Hector
-                    age: 22
-                    email: Hector.noble@example.net
-                    email_verified_at: '2023-08-04T20:27:37.000000Z'
-                    created_at: '2023-08-05T01:11:49.000000Z'
-                    updated_at: '2023-08-05T01:11:49.000000Z'
-                  -
-                    id: 13
-                    name: Joselyn
-                    age: 19
-                    email: joselyn19@example.com
-                    email_verified_at: null
-                    created_at: '2023-08-05T01:31:18.000000Z'
-                    updated_at: '2023-08-05T01:31:18.000000Z'
-      tags:
-        - 'User management'
 tags:
   -
     name: 'Actor management'
@@ -923,3 +1246,12 @@ tags:
   -
     name: 'User management'
     description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

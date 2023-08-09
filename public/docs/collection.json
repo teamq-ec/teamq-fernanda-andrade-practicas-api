@@ -10,7 +10,11 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "60b5063c-794b-400a-b02e-ad6fba586c69",
+<<<<<<< HEAD
+        "_postman_id": "ab461c8b-61db-4e7c-8a3b-2740e2dc5363",
+=======
+        "_postman_id": "6f07b4cb-70bc-4c27-a1ac-38cf7682b200",
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -139,7 +143,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl\",\"last_name\":\"pcqzvdqvarslvtcrrsjuruinshecbh\"}"
+<<<<<<< HEAD
+                            "raw": "{\"name\":\"hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw\",\"last_name\":\"pmrd\"}"
+=======
+                            "raw": "{\"name\":\"epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti\",\"last_name\":\"soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -175,7 +183,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"rkffhmogknuxykckjwxxzcb\",\"last_name\":\"ogvxpytwhqewntpdwejxlvzatukzm\"}"
+<<<<<<< HEAD
+                            "raw": "{\"name\":\"jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf\",\"last_name\":\"xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo\"}"
+=======
+                            "raw": "{\"name\":\"gyg\",\"last_name\":\"regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -340,7 +352,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf\",\"last_name\":\"nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle\"}"
+<<<<<<< HEAD
+                            "raw": "{\"name\":\"uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn\",\"last_name\":\"imirusamqz\"}"
+=======
+                            "raw": "{\"name\":\"alwvvwifzgcbojokonwtwerslxkckhuqvuxy\",\"last_name\":\"pztusw\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -376,7 +392,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl\",\"last_name\":\"istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr\"}"
+<<<<<<< HEAD
+                            "raw": "{\"name\":\"ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut\",\"last_name\":\"lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom\"}"
+=======
+                            "raw": "{\"name\":\"dmidkxymzrytxql\",\"last_name\":\"cfscvhqklf\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -422,9 +442,105 @@
             "description": "",
             "item": [
                 {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "Auth",
                     "description": "",
                     "item": [
+                        {
+                            "name": "GET api\/users",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "access-control-allow-origin",
+                                            "value": "*"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        },
                         {
                             "name": "POST api\/register",
                             "request": {
@@ -447,7 +563,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"quae\",\"age\":\"in\",\"email\":\"paige97@example.org\",\"password\":\"atque\"}"
+<<<<<<< HEAD
+                                    "raw": "{\"name\":\"exercitationem\",\"age\":\"nam\",\"email\":\"candida53@example.net\",\"password\":\"dolor\"}"
+=======
+                                    "raw": "{\"name\":\"laboriosam\",\"age\":\"assumenda\",\"email\":\"atremblay@example.net\",\"password\":\"aut\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": "",
                                 "auth": {
@@ -584,7 +704,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm\",\"description\":\"consequatur\",\"genre\":\"gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"eum\"}"
+<<<<<<< HEAD
+                            "raw": "{\"title\":\"qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz\",\"description\":\"quia\",\"genre\":\"ubdscbhyzhhfahtmqfmbyoymmuze\",\"publish_at\":\"2023-08-09T23:13:19\",\"director_id\":\"placeat\"}"
+=======
+                            "raw": "{\"title\":\"mcsps\",\"description\":\"fugit\",\"genre\":\"blu\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"distinctio\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -620,7 +744,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp\",\"description\":\"impedit\",\"genre\":\"qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt\",\"publish_at\":\"2023-08-07T20:24:59\",\"director_id\":\"tempora\"}"
+<<<<<<< HEAD
+                            "raw": "{\"title\":\"pqfounpeodmcuzrfywpovp\",\"description\":\"debitis\",\"genre\":\"yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk\",\"publish_at\":\"2023-08-09T23:13:19\",\"director_id\":\"odio\"}"
+=======
+                            "raw": "{\"title\":\"nhetvgmmhfztohjnoqvuxy\",\"description\":\"et\",\"genre\":\"irhjndxctefzrpkgleccrvgowxo\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"quisquam\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -746,7 +874,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"maiores\"]}"
+<<<<<<< HEAD
+                                    "raw": "{\"actors\":[\"debitis\"]}"
+=======
+                                    "raw": "{\"actors\":[\"vel\"]}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": ""
                             },
@@ -782,7 +914,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"actors\":[\"incidunt\"]}"
+<<<<<<< HEAD
+                                    "raw": "{\"actors\":[\"suscipit\"]}"
+=======
+                                    "raw": "{\"actors\":[\"autem\"]}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": ""
                             },
@@ -877,7 +1013,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"dicta\"]}"
+<<<<<<< HEAD
+                                    "raw": "{\"rents\":[\"alias\"]}"
+=======
+                                    "raw": "{\"rents\":[\"illum\"]}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": ""
                             },
@@ -913,7 +1053,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"rents\":[\"sed\"]}"
+<<<<<<< HEAD
+                                    "raw": "{\"rents\":[\"quis\"]}"
+=======
+                                    "raw": "{\"rents\":[\"hic\"]}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": ""
                             },
@@ -1047,7 +1191,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"tenetur\"}"
+<<<<<<< HEAD
+                            "raw": "{\"deadline_at\":\"2023-08-09T23:13:19\",\"return_date_at\":\"2023-08-09T23:13:19\",\"actual_date_at\":\"2023-08-09T23:13:19\",\"user_id\":\"qui\"}"
+=======
+                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"rerum\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -1083,7 +1231,11 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"deadline_at\":\"2023-08-07T20:24:59\",\"return_date_at\":\"2023-08-07T20:24:59\",\"actual_date_at\":\"2023-08-07T20:24:59\",\"user_id\":\"aut\"}"
+<<<<<<< HEAD
+                            "raw": "{\"deadline_at\":\"2023-08-09T23:13:19\",\"return_date_at\":\"2023-08-09T23:13:19\",\"actual_date_at\":\"2023-08-09T23:13:19\",\"user_id\":\"voluptate\"}"
+=======
+                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"iste\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                         },
                         "description": ""
                     },
@@ -1154,7 +1306,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"email\":\"alfred66@example.org\",\"password\":\"quas\"}"
+<<<<<<< HEAD
+                                    "raw": "{\"email\":\"deshawn03@example.org\",\"password\":\"animi\"}"
+=======
+                                    "raw": "{\"email\":\"rstreich@example.net\",\"password\":\"doloribus\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": "",
                                 "auth": {
@@ -1171,6 +1327,59 @@
             "name": "User management",
             "description": "",
             "item": [
+                {
+                    "name": "GET api\/user\/{user_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
                 {
                     "name": "User",
                     "description": "",
@@ -1205,7 +1414,11 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"vel\",\"age\":\"et\",\"email\":\"reece22@example.org\",\"password\":\"omnis\"}"
+<<<<<<< HEAD
+                                    "raw": "{\"name\":\"asperiores\",\"age\":\"maiores\",\"email\":\"albin.bogan@example.net\",\"password\":\"eum\"}"
+=======
+                                    "raw": "{\"name\":\"eum\",\"age\":\"ut\",\"email\":\"oda33@example.net\",\"password\":\"quis\"}"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
                                 },
                                 "description": ""
                             },
@@ -1245,64 +1458,18 @@
                             "response": []
                         }
                     ]
-                },
-                {
-                    "name": "GET api\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[{\"id\":1,\"name\":\"Juan\",\"age\":32,\"email\":\"juan.hahn@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:47:59.000000Z\"},{\"id\":2,\"name\":\"Marta\",\"age\":23,\"email\":\"marta.devora@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-05T00:49:21.000000Z\"},{\"id\":3,\"name\":\"Willy Effertz\",\"age\":45,\"email\":\"chandler23@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":4,\"name\":\"Gail Koch\",\"age\":56,\"email\":\"uhartmann@example.com\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":5,\"name\":\"Pete Boehm\",\"age\":56,\"email\":\"dillon.smitham@example.net\",\"email_verified_at\":\"2023-08-04T01:12:20.000000Z\",\"created_at\":\"2023-08-04T01:12:20.000000Z\",\"updated_at\":\"2023-08-04T01:12:20.000000Z\"},{\"id\":6,\"name\":\"Raul Padberg\",\"age\":34,\"email\":\"mboyle@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":7,\"name\":\"Katelin Casper\",\"age\":23,\"email\":\"desiree61@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":8,\"name\":\"Bryce Cummerata I\",\"age\":23,\"email\":\"lswift@example.org\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":9,\"name\":\"Murray Auer\",\"age\":23,\"email\":\"uschmeler@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":10,\"name\":\"Prof. Loren Flatley MD\",\"age\":23,\"email\":\"dolores.schoen@example.net\",\"email_verified_at\":\"2023-08-04T20:29:30.000000Z\",\"created_at\":\"2023-08-04T20:29:30.000000Z\",\"updated_at\":\"2023-08-04T20:29:30.000000Z\"},{\"id\":12,\"name\":\"Hector\",\"age\":22,\"email\":\"Hector.noble@example.net\",\"email_verified_at\":\"2023-08-04T20:27:37.000000Z\",\"created_at\":\"2023-08-05T01:11:49.000000Z\",\"updated_at\":\"2023-08-05T01:11:49.000000Z\"},{\"id\":13,\"name\":\"Joselyn\",\"age\":19,\"email\":\"joselyn19@example.com\",\"email_verified_at\":null,\"created_at\":\"2023-08-05T01:31:18.000000Z\",\"updated_at\":\"2023-08-05T01:31:18.000000Z\"}]",
-                            "name": ""
-                        }
-                    ]
                 }
             ]
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "key",
+                "value": null,
+                "type": "string"
+            }
+        ]
     }
 }

@@ -1,12 +1,12 @@
-name: 'Rent management'
+name: 'Movie management'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/rents
+    uri: api/movies
     metadata:
-      groupName: 'Rent management'
+      groupName: 'Movie management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -15,6 +15,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -35,7 +36,14 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer gkc68fa64Ve31bhZEPda5Dv'
+=======
+      - 'Bearer 4Zv8k56dDEefcgP36Vbaah1'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -43,9 +51,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/rents/{rent_id}'
+    uri: 'api/movies/{movie_id}'
     metadata:
-      groupName: 'Rent management'
+      groupName: 'Movie management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -54,18 +62,19 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      rent_id:
-        name: rent_id
-        description: 'The ID of the rent.'
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      rent_id: 1
+      movie_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -82,7 +91,14 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer PaE654gd6Zab81f3kheDVvc'
+=======
+      - 'Bearer d3V4DefEaav5Z66cbg1Ph8k'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -90,9 +106,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/rents
+    uri: api/movies
     metadata:
-      groupName: 'Rent management'
+      groupName: 'Movie management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -101,6 +117,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -108,43 +125,86 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      deadline_at:
-        name: deadline_at
-        description: 'Must be a valid date.'
+      title:
+        name: title
+        description: 'Must be at least 3 characters.'
         required: true
-        example: '2023-08-07T20:24:59'
+<<<<<<< HEAD
+        example: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
+=======
+        example: mcsps
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         type: string
         custom: []
-      return_date_at:
-        name: return_date_at
-        description: 'Must be a valid date.'
-        required: true
-        example: '2023-08-07T20:24:59'
-        type: string
-        custom: []
-      actual_date_at:
-        name: actual_date_at
-        description: 'Must be a valid date.'
-        required: true
-        example: '2023-08-07T20:24:59'
-        type: string
-        custom: []
-      user_id:
-        name: user_id
+      description:
+        name: description
         description: ''
         required: true
-        example: tenetur
+<<<<<<< HEAD
+        example: quia
+=======
+        example: fugit
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      genre:
+        name: genre
+        description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
+        required: true
+<<<<<<< HEAD
+        example: ubdscbhyzhhfahtmqfmbyoymmuze
+=======
+        example: blu
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      publish_at:
+        name: publish_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      director_id:
+        name: director_id
+        description: ''
+        required: true
+<<<<<<< HEAD
+        example: placeat
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-07T20:24:59'
-      return_date_at: '2023-08-07T20:24:59'
-      actual_date_at: '2023-08-07T20:24:59'
-      user_id: tenetur
+      title: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
+      description: quia
+      genre: ubdscbhyzhhfahtmqfmbyoymmuze
+      publish_at: '2023-08-09T23:13:19'
+      director_id: placeat
+=======
+        example: distinctio
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: mcsps
+      description: fugit
+      genre: blu
+      publish_at: '2023-08-08T20:52:20'
+      director_id: distinctio
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 3d4hag6cPaZDek6bEfV158v'
+=======
+      - 'Bearer fdD8vPE15ea4bkV63Zahg6c'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -152,9 +212,9 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/rents/{rent_id}'
+    uri: 'api/movies/{movie_id}'
     metadata:
-      groupName: 'Rent management'
+      groupName: 'Movie management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -163,58 +223,102 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      rent_id:
-        name: rent_id
-        description: 'The ID of the rent.'
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      rent_id: 1
+      movie_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      deadline_at:
-        name: deadline_at
-        description: 'Must be a valid date.'
+      title:
+        name: title
+        description: 'Must be at least 3 characters.'
         required: true
-        example: '2023-08-07T20:24:59'
+<<<<<<< HEAD
+        example: pqfounpeodmcuzrfywpovp
+=======
+        example: nhetvgmmhfztohjnoqvuxy
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         type: string
         custom: []
-      return_date_at:
-        name: return_date_at
-        description: 'Must be a valid date.'
-        required: true
-        example: '2023-08-07T20:24:59'
-        type: string
-        custom: []
-      actual_date_at:
-        name: actual_date_at
-        description: 'Must be a valid date.'
-        required: true
-        example: '2023-08-07T20:24:59'
-        type: string
-        custom: []
-      user_id:
-        name: user_id
+      description:
+        name: description
         description: ''
         required: true
-        example: aut
+<<<<<<< HEAD
+        example: debitis
+=======
+        example: et
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      genre:
+        name: genre
+        description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
+        required: true
+<<<<<<< HEAD
+        example: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
+=======
+        example: irhjndxctefzrpkgleccrvgowxo
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      publish_at:
+        name: publish_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      director_id:
+        name: director_id
+        description: ''
+        required: true
+<<<<<<< HEAD
+        example: odio
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-07T20:24:59'
-      return_date_at: '2023-08-07T20:24:59'
-      actual_date_at: '2023-08-07T20:24:59'
-      user_id: aut
+      title: pqfounpeodmcuzrfywpovp
+      description: debitis
+      genre: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
+      publish_at: '2023-08-09T23:13:19'
+      director_id: odio
+=======
+        example: quisquam
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: nhetvgmmhfztohjnoqvuxy
+      description: et
+      genre: irhjndxctefzrpkgleccrvgowxo
+      publish_at: '2023-08-08T20:52:20'
+      director_id: quisquam
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer Peb166vkhaZc5gd4aE8V3fD'
+=======
+      - 'Bearer 16g48PDVecE6hvfabak3Zd5'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -222,9 +326,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/rents/{rent_id}'
+    uri: 'api/movie/{movie_id}'
     metadata:
-      groupName: 'Rent management'
+      groupName: 'Movie management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -233,18 +337,19 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      rent_id:
-        name: rent_id
-        description: 'The ID of the rent.'
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      rent_id: 1
+      movie_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -252,7 +357,380 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer hdZf846bVa3v5eaDc6Eg1kP'
+=======
+      - 'Bearer v46E5h1Ve6f3Zgb8dPDacka'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/movies/{movie_id}/actors'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Actors
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer VvE6D568beghcaPZ1f4da3k'
+=======
+      - 'Bearer 8vEb1P3khcVZ6a5gde6aDf4'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/movies/{movie_id}/actors'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Actors
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      actors:
+        name: actors
+        description: ''
+        required: true
+        example:
+<<<<<<< HEAD
+          - debitis
+=======
+          - vel
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      actors:
+<<<<<<< HEAD
+        - debitis
+=======
+        - vel
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 8dfaDec5Z1vghkP6b3Va46E'
+=======
+      - 'Bearer 5VhZec4Eba368DPvadk16fg'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/movies/{movie_id}/actors'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Actors
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      actors:
+        name: actors
+        description: ''
+        required: true
+        example:
+<<<<<<< HEAD
+          - suscipit
+=======
+          - autem
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      actors:
+<<<<<<< HEAD
+        - suscipit
+=======
+        - autem
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer gevh6c6a8afbdD1Z5VE3kP4'
+=======
+      - 'Bearer 5kEDve36f1Zg4bV86aPhdca'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/movies/{movie_id}/rents'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Rent
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 8Zah1fgkbaEd46VPv5ceD36'
+=======
+      - 'Bearer kcahV853Zb6g1dfaPeEv4D6'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/movies/{movie_id}/rents'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Rent
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      rents:
+        name: rents
+        description: ''
+        required: true
+        example:
+<<<<<<< HEAD
+          - alias
+=======
+          - illum
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      rents:
+<<<<<<< HEAD
+        - alias
+=======
+        - illum
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer bfhE3ekc646V8dv51aPZagD'
+=======
+      - 'Bearer bvakVfd6ca1534Z6E8PDehg'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/movies/{movie_id}/rents'
+    metadata:
+      groupName: 'Movie management'
+      groupDescription: ''
+      subgroup: Rent
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      movie_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      rents:
+        name: rents
+        description: ''
+        required: true
+        example:
+<<<<<<< HEAD
+          - quis
+=======
+          - hic
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      rents:
+<<<<<<< HEAD
+        - quis
+=======
+        - hic
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer Z3a6ehdE4vfb58gDck16aVP'
+=======
+      - 'Bearer E5VbPk4aev1h6ZfdDcg836a'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null

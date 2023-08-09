@@ -20,22 +20,47 @@ class AuthController extends Controller
     #[Group("Security management")]
     #[SubGroup("Auth")]
     public function login(AuthRequest $request){
-        if(Auth::attempt($request->validated())){//si el usuario y contraseña se pueden autenticar
-            $user = \auth()->user();
-            return \response([
-                'token' => $user->createToken(config('app.name'))->plainTextToken,//metodo de autenticacion y me devuelve un token
-            ]);
+        if(!Auth::attempt($request->only('email','password'))){
+
+            return response()->json(['msg'=>'clave incorrecta'], Response::HTTP_UNAUTHORIZED);
         }
 
-        return response()->json(['msg'=>'clave incorrecta'], Response::HTTP_UNAUTHORIZED);
+        $user = User::where('email',$request['email'])->firstOrFail();
+        $token = $user->createToken('authToken')->plainTextToken;
+
+        return \response()
+            ->json([
+                'message'=>'Hi ',$user->name,
+                'accessToken'=>$token,
+                'token_type'=>'Bearer',
+                'user'=>$user
+            ]);
+
     }
 
-
+    #[Group("Security management")]
     #[SubGroup("Auth")]
     public function register(UserRequest $request)
     {
         $user = User::query()->create($request->validated());
-        return new UserResource($user);
+      //  return new UserResource($user);
+        $token = $user->createToken('authToken')->plainTextToken;
+        return response()
+            ->json(['data'=>$user,'access_token'=>$token,'Bearer',]);
+    }
+    #[Group("User management")]
+    #[SubGroup("Auth")]
+    public function user()
+    {
+        $user= User::all();
+        return response()->json($user);
+    }
+
+    #[SubGroup("Auth")]
+    public function user()
+    {
+        $user= User::all();
+        return response()->json($user);
     }
 
     #[Group("User management")]

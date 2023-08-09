@@ -21,7 +21,7 @@
 
     <style id="language-style">
         /* starts out as display none and is replaced with js later  */
-                    body .content .bash-example code { display: none; }
+                    body .content .php-example code { display: none; }
                     body .content .javascript-example code { display: none; }
             </style>
 
@@ -36,7 +36,7 @@
 
 </head>
 
-<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<body data-languages="[&quot;php&quot;,&quot;javascript&quot;]">
 
 <a href="#" id="nav-button">
     <span>
@@ -47,7 +47,7 @@
 <div class="tocify-wrapper">
     
             <div class="lang-selector">
-                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
                                             <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
                     </div>
     
@@ -115,10 +115,16 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-auth">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
+                                <a href="#endpoints-GETapi-user">GET api/user</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-auth">
                                 <a href="#endpoints-auth">Auth</a>
                             </li>
                                                             <ul id="tocify-subheader-endpoints-auth" class="tocify-subheader">
+                                                                            <li class="tocify-item level-3" data-unique="endpoints-GETapi-users">
+                                            <a href="#endpoints-GETapi-users">GET api/users</a>
+                                        </li>
                                                                             <li class="tocify-item level-3" data-unique="endpoints-POSTapi-register">
                                             <a href="#endpoints-POSTapi-register">POST api/register</a>
                                         </li>
@@ -217,7 +223,10 @@
                     <a href="#user-management">User management</a>
                 </li>
                                     <ul id="tocify-subheader-user-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="user-management-user">
+                                                    <li class="tocify-item level-2" data-unique="user-management-GETapi-user--user_id-">
+                                <a href="#user-management-GETapi-user--user_id-">GET api/user/{user_id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-management-user">
                                 <a href="#user-management-user">User</a>
                             </li>
                                                             <ul id="tocify-subheader-user-management-user" class="tocify-subheader">
@@ -228,9 +237,6 @@
                                             <a href="#user-management-DELETEapi-auth--user_id-">DELETE api/auth/{user_id}</a>
                                         </li>
                                                                     </ul>
-                                                                                <li class="tocify-item level-2" data-unique="user-management-GETapi-users">
-                                <a href="#user-management-GETapi-users">GET api/users</a>
-                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -242,7 +248,11 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 7, 2023</li>
+<<<<<<< HEAD
+        <li>Last updated: August 9, 2023</li>
+=======
+        <li>Last updated: August 8, 2023</li>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     </ul>
 </div>
 
@@ -253,12 +263,13 @@
 <aside>
     <strong>Base URL</strong>: <code>http://localhost:8000</code>
 </aside>
-<p>This documentation aims to provide all the information you need to work with our API.</p>
-<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<p>Api-Rest para TeamQ</p>
+<aside>Documentacion de Endpoints</aside>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is not authenticated.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
         <h1 id="actor-management">Actor management</h1>
 
@@ -276,11 +287,20 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/actors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/actors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -289,6 +309,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -366,6 +387,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-actors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -401,11 +433,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/actors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/actors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -414,6 +455,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -491,6 +533,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-actors--actor_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -538,16 +591,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/actors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl\",
-    \"last_name\": \"pcqzvdqvarslvtcrrsjuruinshecbh\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/actors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw',
+            'last_name' =&gt; 'pmrd',
+=======
+            'name' =&gt; 'epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti',
+            'last_name' =&gt; 'soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -556,13 +622,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "name": "gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl",
-    "last_name": "pcqzvdqvarslvtcrrsjuruinshecbh"
+<<<<<<< HEAD
+    "name": "hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw",
+    "last_name": "pmrd"
+=======
+    "name": "epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti",
+    "last_name": "soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -623,6 +695,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-actors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -651,10 +734,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-actors"
-               value="gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl"
+<<<<<<< HEAD
+               value="hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>gonxnzuwbsafgiitctmrzjbvwgirgbquadsoqqzsumwchfiltvofeliffuhsuhqnmyplmdtvcwbaheadxmpdkggl</code></p>
+<p>Must be at least 3 characters. Example: <code>hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw</code></p>
+=======
+               value="epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -662,10 +752,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-actors"
-               value="pcqzvdqvarslvtcrrsjuruinshecbh"
+<<<<<<< HEAD
+               value="pmrd"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>pcqzvdqvarslvtcrrsjuruinshecbh</code></p>
+<p>Must be at least 3 characters. Example: <code>pmrd</code></p>
+=======
+               value="soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -681,16 +778,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/actors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"rkffhmogknuxykckjwxxzcb\",
-    \"last_name\": \"ogvxpytwhqewntpdwejxlvzatukzm\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/actors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf',
+            'last_name' =&gt; 'xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo',
+=======
+            'name' =&gt; 'gyg',
+            'last_name' =&gt; 'regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -699,13 +809,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "name": "rkffhmogknuxykckjwxxzcb",
-    "last_name": "ogvxpytwhqewntpdwejxlvzatukzm"
+<<<<<<< HEAD
+    "name": "jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf",
+    "last_name": "xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo"
+=======
+    "name": "gyg",
+    "last_name": "regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -766,6 +882,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-actors--actor_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -806,10 +933,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="rkffhmogknuxykckjwxxzcb"
+<<<<<<< HEAD
+               value="jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>rkffhmogknuxykckjwxxzcb</code></p>
+<p>Must be at least 3 characters. Example: <code>jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf</code></p>
+=======
+               value="gyg"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>gyg</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -817,10 +951,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="ogvxpytwhqewntpdwejxlvzatukzm"
+<<<<<<< HEAD
+               value="xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>ogvxpytwhqewntpdwejxlvzatukzm</code></p>
+<p>Must be at least 3 characters. Example: <code>xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo</code></p>
+=======
+               value="regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -836,11 +977,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/actors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/actors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -849,6 +999,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -910,6 +1061,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-actors--actor_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -961,11 +1123,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/directors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/directors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -974,6 +1145,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1051,6 +1223,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-directors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1086,11 +1269,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/directors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/directors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1099,6 +1291,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1176,6 +1369,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-directors--director_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1223,16 +1427,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/directors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf\",
-    \"last_name\": \"nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/directors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn',
+            'last_name' =&gt; 'imirusamqz',
+=======
+            'name' =&gt; 'alwvvwifzgcbojokonwtwerslxkckhuqvuxy',
+            'last_name' =&gt; 'pztusw',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1241,13 +1458,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "name": "kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf",
-    "last_name": "nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle"
+<<<<<<< HEAD
+    "name": "uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn",
+    "last_name": "imirusamqz"
+=======
+    "name": "alwvvwifzgcbojokonwtwerslxkckhuqvuxy",
+    "last_name": "pztusw"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -1308,6 +1531,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-directors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1336,10 +1570,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-directors"
-               value="kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf"
+<<<<<<< HEAD
+               value="uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf</code></p>
+<p>Must be at least 3 characters. Example: <code>uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn</code></p>
+=======
+               value="alwvvwifzgcbojokonwtwerslxkckhuqvuxy"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>alwvvwifzgcbojokonwtwerslxkckhuqvuxy</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1347,10 +1588,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-directors"
-               value="nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle"
+<<<<<<< HEAD
+               value="imirusamqz"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle</code></p>
+<p>Must be at least 3 characters. Example: <code>imirusamqz</code></p>
+=======
+               value="pztusw"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>pztusw</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -1366,16 +1614,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/directors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl\",
-    \"last_name\": \"istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/directors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut',
+            'last_name' =&gt; 'lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom',
+=======
+            'name' =&gt; 'dmidkxymzrytxql',
+            'last_name' =&gt; 'cfscvhqklf',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1384,13 +1645,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "name": "xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl",
-    "last_name": "istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr"
+<<<<<<< HEAD
+    "name": "ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut",
+    "last_name": "lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom"
+=======
+    "name": "dmidkxymzrytxql",
+    "last_name": "cfscvhqklf"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -1451,6 +1718,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-directors--director_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1491,10 +1769,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-directors--director_id-"
-               value="xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl"
+<<<<<<< HEAD
+               value="ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl</code></p>
+<p>Must be at least 3 characters. Example: <code>ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut</code></p>
+=======
+               value="dmidkxymzrytxql"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>dmidkxymzrytxql</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1502,10 +1787,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-directors--director_id-"
-               value="istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr"
+<<<<<<< HEAD
+               value="lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr</code></p>
+<p>Must be at least 3 characters. Example: <code>lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom</code></p>
+=======
+               value="cfscvhqklf"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>cfscvhqklf</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -1521,11 +1813,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/directors/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/directors/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1534,6 +1835,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1595,6 +1897,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-directors--director_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1634,8 +1947,272 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                        <h2 id="endpoints-auth">Auth</h2>
-                                                    <h2 id="endpoints-POSTapi-register">POST api/register</h2>
+                                <h2 id="endpoints-GETapi-user">GET api/user</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user">
+<blockquote>Example request:</blockquote>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/user',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/user"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user" data-method="GET"
+      data-path="api/user"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user"
+                    onclick="tryItOut('GETapi-user');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user"
+                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                                <h2 id="endpoints-auth">Auth</h2>
+                                                    <h2 id="endpoints-GETapi-users">GET api/users</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/users',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-users" data-method="GET"
+      data-path="api/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users"
+                    onclick="tryItOut('GETapi-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users"
+                    onclick="cancelTryOut('GETapi-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-POSTapi-register">POST api/register</h2>
 
 <p>
 </p>
@@ -1646,18 +2223,32 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/register" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"quae\",
-    \"age\": \"in\",
-    \"email\": \"paige97@example.org\",
-    \"password\": \"atque\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/register',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'exercitationem',
+            'age' =&gt; 'nam',
+            'email' =&gt; 'candida53@example.net',
+            'password' =&gt; 'dolor',
+=======
+            'name' =&gt; 'laboriosam',
+            'age' =&gt; 'assumenda',
+            'email' =&gt; 'atremblay@example.net',
+            'password' =&gt; 'aut',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1671,10 +2262,17 @@ const headers = {
 };
 
 let body = {
-    "name": "quae",
-    "age": "in",
-    "email": "paige97@example.org",
-    "password": "atque"
+<<<<<<< HEAD
+    "name": "exercitationem",
+    "age": "nam",
+    "email": "candida53@example.net",
+    "password": "dolor"
+=======
+    "name": "laboriosam",
+    "age": "assumenda",
+    "email": "atremblay@example.net",
+    "password": "aut"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -1763,10 +2361,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="quae"
+<<<<<<< HEAD
+               value="exercitationem"
                data-component="body">
     <br>
-<p>Example: <code>quae</code></p>
+<p>Example: <code>exercitationem</code></p>
+=======
+               value="laboriosam"
+               data-component="body">
+    <br>
+<p>Example: <code>laboriosam</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -1774,10 +2379,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="POSTapi-register"
-               value="in"
+<<<<<<< HEAD
+               value="nam"
                data-component="body">
     <br>
-<p>Example: <code>in</code></p>
+<p>Example: <code>nam</code></p>
+=======
+               value="assumenda"
+               data-component="body">
+    <br>
+<p>Example: <code>assumenda</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1785,10 +2397,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="paige97@example.org"
+<<<<<<< HEAD
+               value="candida53@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>paige97@example.org</code></p>
+<p>Must be a valid email address. Example: <code>candida53@example.net</code></p>
+=======
+               value="atremblay@example.net"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>atremblay@example.net</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1796,10 +2415,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="atque"
+<<<<<<< HEAD
+               value="dolor"
                data-component="body">
     <br>
-<p>Example: <code>atque</code></p>
+<p>Example: <code>dolor</code></p>
+=======
+               value="aut"
+               data-component="body">
+    <br>
+<p>Example: <code>aut</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -1819,11 +2445,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/movies" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/movies',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1832,6 +2467,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1909,6 +2545,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-movies"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1944,11 +2591,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/movies/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/movies/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1957,6 +2613,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2034,6 +2691,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-movies--movie_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2081,19 +2749,35 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/movies" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"title\": \"hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm\",
-    \"description\": \"consequatur\",
-    \"genre\": \"gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli\",
-    \"publish_at\": \"2023-08-07T20:24:59\",
-    \"director_id\": \"eum\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/movies',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'title' =&gt; 'qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz',
+            'description' =&gt; 'quia',
+            'genre' =&gt; 'ubdscbhyzhhfahtmqfmbyoymmuze',
+            'publish_at' =&gt; '2023-08-09T23:13:19',
+            'director_id' =&gt; 'placeat',
+=======
+            'title' =&gt; 'mcsps',
+            'description' =&gt; 'fugit',
+            'genre' =&gt; 'blu',
+            'publish_at' =&gt; '2023-08-08T20:52:20',
+            'director_id' =&gt; 'distinctio',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2102,16 +2786,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "title": "hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm",
-    "description": "consequatur",
-    "genre": "gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli",
-    "publish_at": "2023-08-07T20:24:59",
-    "director_id": "eum"
+<<<<<<< HEAD
+    "title": "qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz",
+    "description": "quia",
+    "genre": "ubdscbhyzhhfahtmqfmbyoymmuze",
+    "publish_at": "2023-08-09T23:13:19",
+    "director_id": "placeat"
+=======
+    "title": "mcsps",
+    "description": "fugit",
+    "genre": "blu",
+    "publish_at": "2023-08-08T20:52:20",
+    "director_id": "distinctio"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -2172,6 +2865,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-movies"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2200,10 +2904,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-movies"
-               value="hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm"
+<<<<<<< HEAD
+               value="qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>hmdrplwpkoilmaeoxpbpdfcaysxiinqbfutyqslm</code></p>
+<p>Must be at least 3 characters. Example: <code>qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz</code></p>
+=======
+               value="mcsps"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>mcsps</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2211,10 +2922,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-movies"
-               value="consequatur"
+<<<<<<< HEAD
+               value="quia"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Example: <code>quia</code></p>
+=======
+               value="fugit"
+               data-component="body">
+    <br>
+<p>Example: <code>fugit</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -2222,10 +2940,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="POSTapi-movies"
-               value="gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli"
+<<<<<<< HEAD
+               value="ubdscbhyzhhfahtmqfmbyoymmuze"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>gapupqycvhzrvvftkhrkfbdkzqonspdkapvmcttffxbfcquariaotenhnmtyupwyfxghdnmtmkvtpwdcyli</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>ubdscbhyzhhfahtmqfmbyoymmuze</code></p>
+=======
+               value="blu"
+               data-component="body">
+    <br>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>blu</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -2233,10 +2958,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="POSTapi-movies"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -2244,10 +2976,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="POSTapi-movies"
-               value="eum"
+<<<<<<< HEAD
+               value="placeat"
                data-component="body">
     <br>
-<p>Example: <code>eum</code></p>
+<p>Example: <code>placeat</code></p>
+=======
+               value="distinctio"
+               data-component="body">
+    <br>
+<p>Example: <code>distinctio</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -2263,19 +3002,35 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/movies/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"title\": \"bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp\",
-    \"description\": \"impedit\",
-    \"genre\": \"qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt\",
-    \"publish_at\": \"2023-08-07T20:24:59\",
-    \"director_id\": \"tempora\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/movies/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'title' =&gt; 'pqfounpeodmcuzrfywpovp',
+            'description' =&gt; 'debitis',
+            'genre' =&gt; 'yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk',
+            'publish_at' =&gt; '2023-08-09T23:13:19',
+            'director_id' =&gt; 'odio',
+=======
+            'title' =&gt; 'nhetvgmmhfztohjnoqvuxy',
+            'description' =&gt; 'et',
+            'genre' =&gt; 'irhjndxctefzrpkgleccrvgowxo',
+            'publish_at' =&gt; '2023-08-08T20:52:20',
+            'director_id' =&gt; 'quisquam',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2284,16 +3039,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "title": "bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp",
-    "description": "impedit",
-    "genre": "qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt",
-    "publish_at": "2023-08-07T20:24:59",
-    "director_id": "tempora"
+<<<<<<< HEAD
+    "title": "pqfounpeodmcuzrfywpovp",
+    "description": "debitis",
+    "genre": "yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk",
+    "publish_at": "2023-08-09T23:13:19",
+    "director_id": "odio"
+=======
+    "title": "nhetvgmmhfztohjnoqvuxy",
+    "description": "et",
+    "genre": "irhjndxctefzrpkgleccrvgowxo",
+    "publish_at": "2023-08-08T20:52:20",
+    "director_id": "quisquam"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -2354,6 +3118,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-movies--movie_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2394,10 +3169,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-movies--movie_id-"
-               value="bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp"
+<<<<<<< HEAD
+               value="pqfounpeodmcuzrfywpovp"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>bsmcscfvxlkqaydpwazuqsmotfcceqnystbxbwykgkpbmgsozwpjhoohuixyrqepdxqkfvglciswzp</code></p>
+<p>Must be at least 3 characters. Example: <code>pqfounpeodmcuzrfywpovp</code></p>
+=======
+               value="nhetvgmmhfztohjnoqvuxy"
+               data-component="body">
+    <br>
+<p>Must be at least 3 characters. Example: <code>nhetvgmmhfztohjnoqvuxy</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2405,10 +3187,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-movies--movie_id-"
-               value="impedit"
+<<<<<<< HEAD
+               value="debitis"
                data-component="body">
     <br>
-<p>Example: <code>impedit</code></p>
+<p>Example: <code>debitis</code></p>
+=======
+               value="et"
+               data-component="body">
+    <br>
+<p>Example: <code>et</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -2416,10 +3205,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="PUTapi-movies--movie_id-"
-               value="qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt"
+<<<<<<< HEAD
+               value="yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>qxgpybcewvanvnmxcimsietnhhhwngasxyectlvixsdqtxzcdhtmwjrlsuptuwnbusfyfqcokmorfseerqywdvpt</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk</code></p>
+=======
+               value="irhjndxctefzrpkgleccrvgowxo"
+               data-component="body">
+    <br>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>irhjndxctefzrpkgleccrvgowxo</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -2427,10 +3223,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="PUTapi-movies--movie_id-"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -2438,10 +3241,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="PUTapi-movies--movie_id-"
-               value="tempora"
+<<<<<<< HEAD
+               value="odio"
                data-component="body">
     <br>
-<p>Example: <code>tempora</code></p>
+<p>Example: <code>odio</code></p>
+=======
+               value="quisquam"
+               data-component="body">
+    <br>
+<p>Example: <code>quisquam</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -2457,11 +3267,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/movie/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/movie/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2470,6 +3289,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2531,6 +3351,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-movie--movie_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2579,11 +3410,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/movies/1/actors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/movies/1/actors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2592,6 +3432,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2669,6 +3510,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-movies--movie_id--actors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2716,17 +3568,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/movies/1/actors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"actors\": [
-        \"maiores\"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/movies/1/actors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'actors' =&gt; [
+<<<<<<< HEAD
+                'debitis',
+=======
+                'vel',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+            ],
+        ],
     ]
-}"
-</code></pre></div>
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2735,13 +3599,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
     "actors": [
-        "maiores"
+<<<<<<< HEAD
+        "debitis"
+=======
+        "vel"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     ]
 };
 
@@ -2802,6 +3671,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/movies/{movie_id}/actors</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-movies--movie_id--actors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2864,17 +3744,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/movies/1/actors" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"actors\": [
-        \"incidunt\"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/movies/1/actors',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'actors' =&gt; [
+<<<<<<< HEAD
+                'suscipit',
+=======
+                'autem',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+            ],
+        ],
     ]
-}"
-</code></pre></div>
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2883,13 +3775,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
     "actors": [
-        "incidunt"
+<<<<<<< HEAD
+        "suscipit"
+=======
+        "autem"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     ]
 };
 
@@ -2950,6 +3847,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/movies/{movie_id}/actors</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-movies--movie_id--actors"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3013,11 +3921,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/movies/1/rents" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/movies/1/rents',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3026,6 +3943,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3103,6 +4021,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-movies--movie_id--rents"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3150,17 +4079,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/movies/1/rents" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"rents\": [
-        \"dicta\"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/movies/1/rents',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'rents' =&gt; [
+<<<<<<< HEAD
+                'alias',
+=======
+                'illum',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+            ],
+        ],
     ]
-}"
-</code></pre></div>
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3169,13 +4110,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
     "rents": [
-        "dicta"
+<<<<<<< HEAD
+        "alias"
+=======
+        "illum"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     ]
 };
 
@@ -3236,6 +4182,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/movies/{movie_id}/rents</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-movies--movie_id--rents"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3298,17 +4255,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/movies/1/rents" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"rents\": [
-        \"sed\"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/movies/1/rents',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'rents' =&gt; [
+<<<<<<< HEAD
+                'quis',
+=======
+                'hic',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+            ],
+        ],
     ]
-}"
-</code></pre></div>
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3317,13 +4286,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
     "rents": [
-        "sed"
+<<<<<<< HEAD
+        "quis"
+=======
+        "hic"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     ]
 };
 
@@ -3384,6 +4358,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/movies/{movie_id}/rents</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-movies--movie_id--rents"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3450,11 +4435,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/rents" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/rents',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3463,6 +4457,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3540,6 +4535,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-rents"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3575,11 +4581,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/rents/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/rents/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3588,6 +4603,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3665,6 +4681,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-rents--rent_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3712,18 +4739,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/rents" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"deadline_at\": \"2023-08-07T20:24:59\",
-    \"return_date_at\": \"2023-08-07T20:24:59\",
-    \"actual_date_at\": \"2023-08-07T20:24:59\",
-    \"user_id\": \"tenetur\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/rents',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'deadline_at' =&gt; '2023-08-09T23:13:19',
+            'return_date_at' =&gt; '2023-08-09T23:13:19',
+            'actual_date_at' =&gt; '2023-08-09T23:13:19',
+            'user_id' =&gt; 'qui',
+=======
+            'deadline_at' =&gt; '2023-08-08T20:52:20',
+            'return_date_at' =&gt; '2023-08-08T20:52:20',
+            'actual_date_at' =&gt; '2023-08-08T20:52:20',
+            'user_id' =&gt; 'rerum',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3732,15 +4774,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "deadline_at": "2023-08-07T20:24:59",
-    "return_date_at": "2023-08-07T20:24:59",
-    "actual_date_at": "2023-08-07T20:24:59",
-    "user_id": "tenetur"
+<<<<<<< HEAD
+    "deadline_at": "2023-08-09T23:13:19",
+    "return_date_at": "2023-08-09T23:13:19",
+    "actual_date_at": "2023-08-09T23:13:19",
+    "user_id": "qui"
+=======
+    "deadline_at": "2023-08-08T20:52:20",
+    "return_date_at": "2023-08-08T20:52:20",
+    "actual_date_at": "2023-08-08T20:52:20",
+    "user_id": "rerum"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -3801,6 +4851,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-rents"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3829,10 +4890,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -3840,10 +4908,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -3851,10 +4926,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -3862,10 +4944,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-rents"
-               value="tenetur"
+<<<<<<< HEAD
+               value="qui"
                data-component="body">
     <br>
-<p>Example: <code>tenetur</code></p>
+<p>Example: <code>qui</code></p>
+=======
+               value="rerum"
+               data-component="body">
+    <br>
+<p>Example: <code>rerum</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -3881,18 +4970,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/rents/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"deadline_at\": \"2023-08-07T20:24:59\",
-    \"return_date_at\": \"2023-08-07T20:24:59\",
-    \"actual_date_at\": \"2023-08-07T20:24:59\",
-    \"user_id\": \"aut\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/rents/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'deadline_at' =&gt; '2023-08-09T23:13:19',
+            'return_date_at' =&gt; '2023-08-09T23:13:19',
+            'actual_date_at' =&gt; '2023-08-09T23:13:19',
+            'user_id' =&gt; 'voluptate',
+=======
+            'deadline_at' =&gt; '2023-08-08T20:52:20',
+            'return_date_at' =&gt; '2023-08-08T20:52:20',
+            'actual_date_at' =&gt; '2023-08-08T20:52:20',
+            'user_id' =&gt; 'iste',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3901,15 +5005,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "deadline_at": "2023-08-07T20:24:59",
-    "return_date_at": "2023-08-07T20:24:59",
-    "actual_date_at": "2023-08-07T20:24:59",
-    "user_id": "aut"
+<<<<<<< HEAD
+    "deadline_at": "2023-08-09T23:13:19",
+    "return_date_at": "2023-08-09T23:13:19",
+    "actual_date_at": "2023-08-09T23:13:19",
+    "user_id": "voluptate"
+=======
+    "deadline_at": "2023-08-08T20:52:20",
+    "return_date_at": "2023-08-08T20:52:20",
+    "actual_date_at": "2023-08-08T20:52:20",
+    "user_id": "iste"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -3970,6 +5082,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-rents--rent_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -4010,10 +5133,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -4021,10 +5151,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -4032,10 +5169,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-07T20:24:59"
+<<<<<<< HEAD
+               value="2023-08-09T23:13:19"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-07T20:24:59</code></p>
+<p>Must be a valid date. Example: <code>2023-08-09T23:13:19</code></p>
+=======
+               value="2023-08-08T20:52:20"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2023-08-08T20:52:20</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -4043,10 +5187,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="PUTapi-rents--rent_id-"
-               value="aut"
+<<<<<<< HEAD
+               value="voluptate"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>voluptate</code></p>
+=======
+               value="iste"
+               data-component="body">
+    <br>
+<p>Example: <code>iste</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -4062,11 +5213,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/rents/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/rents/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -4075,6 +5235,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4136,6 +5297,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-rents--rent_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -4187,16 +5359,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"alfred66@example.org\",
-    \"password\": \"quas\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'email' =&gt; 'rstreich@example.net',
+            'password' =&gt; 'doloribus',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -4210,8 +5389,8 @@ const headers = {
 };
 
 let body = {
-    "email": "alfred66@example.org",
-    "password": "quas"
+    "email": "rstreich@example.net",
+    "password": "doloribus"
 };
 
 fetch(url, {
@@ -4300,10 +5479,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth"
-               value="alfred66@example.org"
+               value="rstreich@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>alfred66@example.org</code></p>
+<p>Must be a valid email address. Example: <code>rstreich@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4311,10 +5490,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth"
-               value="quas"
+               value="doloribus"
                data-component="body">
     <br>
-<p>Example: <code>quas</code></p>
+<p>Example: <code>doloribus</code></p>
         </div>
         </form>
 
@@ -4322,7 +5501,377 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                        <h2 id="user-management-user">User</h2>
+                                <h2 id="user-management-GETapi-user--user_id-">GET api/user/{user_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-user--user_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+<<<<<<< HEAD
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'email' =&gt; 'deshawn03@example.org',
+            'password' =&gt; 'animi',
+        ],
+=======
+$response = $client-&gt;get(
+    'http://localhost:8000/api/user/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/user/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+<<<<<<< HEAD
+let body = {
+    "email": "deshawn03@example.org",
+    "password": "animi"
+};
+
+=======
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user--user_id-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user--user_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user--user_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user--user_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user--user_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user--user_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user--user_id-" data-method="GET"
+      data-path="api/user/{user_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user--user_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user--user_id-"
+                    onclick="tryItOut('GETapi-user--user_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user--user_id-"
+                    onclick="cancelTryOut('GETapi-user--user_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user--user_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/{user_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-user--user_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+<<<<<<< HEAD
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-auth"
+               value="deshawn03@example.org"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>deshawn03@example.org</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-auth"
+               value="animi"
+               data-component="body">
+    <br>
+<p>Example: <code>animi</code></p>
+        </div>
+        </form>
+
+                <h1 id="user-management">User management</h1>
+
+    
+
+                                <h2 id="user-management-GETapi-user--user_id-">GET api/user/{user_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-user--user_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/user/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/user/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user--user_id-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user--user_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user--user_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user--user_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user--user_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user--user_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user--user_id-" data-method="GET"
+      data-path="api/user/{user_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user--user_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user--user_id-"
+                    onclick="tryItOut('GETapi-user--user_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user--user_id-"
+                    onclick="cancelTryOut('GETapi-user--user_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user--user_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/{user_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-user--user_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="user_id"                data-endpoint="GETapi-user--user_id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+=======
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="user_id"                data-endpoint="GETapi-user--user_id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                <h2 id="user-management-user">User</h2>
                                                     <h2 id="user-management-PUTapi-auth--user_id-">PUT api/auth/{user_id}</h2>
 
 <p>
@@ -4335,18 +5884,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/auth/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"vel\",
-    \"age\": \"et\",
-    \"email\": \"reece22@example.org\",
-    \"password\": \"omnis\"
-}"
-</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/auth/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+<<<<<<< HEAD
+            'name' =&gt; 'asperiores',
+            'age' =&gt; 'maiores',
+            'email' =&gt; 'albin.bogan@example.net',
+            'password' =&gt; 'eum',
+=======
+            'name' =&gt; 'eum',
+            'age' =&gt; 'ut',
+            'email' =&gt; 'oda33@example.net',
+            'password' =&gt; 'quis',
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -4355,15 +5919,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "name": "vel",
-    "age": "et",
-    "email": "reece22@example.org",
-    "password": "omnis"
+<<<<<<< HEAD
+    "name": "asperiores",
+    "age": "maiores",
+    "email": "albin.bogan@example.net",
+    "password": "eum"
+=======
+    "name": "eum",
+    "age": "ut",
+    "email": "oda33@example.net",
+    "password": "quis"
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
 };
 
 fetch(url, {
@@ -4424,6 +5996,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-auth--user_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -4464,10 +6047,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-auth--user_id-"
-               value="vel"
+<<<<<<< HEAD
+               value="asperiores"
                data-component="body">
     <br>
-<p>Example: <code>vel</code></p>
+<p>Example: <code>asperiores</code></p>
+=======
+               value="eum"
+               data-component="body">
+    <br>
+<p>Example: <code>eum</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -4475,10 +6065,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="PUTapi-auth--user_id-"
-               value="et"
+<<<<<<< HEAD
+               value="maiores"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>maiores</code></p>
+=======
+               value="ut"
+               data-component="body">
+    <br>
+<p>Example: <code>ut</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -4486,10 +6083,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-auth--user_id-"
-               value="reece22@example.org"
+<<<<<<< HEAD
+               value="albin.bogan@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>reece22@example.org</code></p>
+<p>Must be a valid email address. Example: <code>albin.bogan@example.net</code></p>
+=======
+               value="oda33@example.net"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>oda33@example.net</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4497,10 +6101,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTapi-auth--user_id-"
-               value="omnis"
+<<<<<<< HEAD
+               value="eum"
                data-component="body">
     <br>
-<p>Example: <code>omnis</code></p>
+<p>Example: <code>eum</code></p>
+=======
+               value="quis"
+               data-component="body">
+    <br>
+<p>Example: <code>quis</code></p>
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         </div>
         </form>
 
@@ -4516,11 +6127,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <blockquote>Example request:</blockquote>
 
 
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/auth/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/auth/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 
 <div class="javascript-example">
@@ -4529,6 +6149,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4590,6 +6211,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-auth--user_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -4625,247 +6257,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                                        <h2 id="user-management-GETapi-users">GET api/users</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETapi-users">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/users" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-users">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Juan&quot;,
-        &quot;age&quot;: 32,
-        &quot;email&quot;: &quot;juan.hahn@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T00:47:59.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Marta&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;marta.devora@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T00:49:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;name&quot;: &quot;Willy Effertz&quot;,
-        &quot;age&quot;: 45,
-        &quot;email&quot;: &quot;chandler23@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 4,
-        &quot;name&quot;: &quot;Gail Koch&quot;,
-        &quot;age&quot;: 56,
-        &quot;email&quot;: &quot;uhartmann@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 5,
-        &quot;name&quot;: &quot;Pete Boehm&quot;,
-        &quot;age&quot;: 56,
-        &quot;email&quot;: &quot;dillon.smitham@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Raul Padberg&quot;,
-        &quot;age&quot;: 34,
-        &quot;email&quot;: &quot;mboyle@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 7,
-        &quot;name&quot;: &quot;Katelin Casper&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;desiree61@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 8,
-        &quot;name&quot;: &quot;Bryce Cummerata I&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;lswift@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 9,
-        &quot;name&quot;: &quot;Murray Auer&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;uschmeler@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 10,
-        &quot;name&quot;: &quot;Prof. Loren Flatley MD&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;dolores.schoen@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 12,
-        &quot;name&quot;: &quot;Hector&quot;,
-        &quot;age&quot;: 22,
-        &quot;email&quot;: &quot;Hector.noble@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:27:37.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-05T01:11:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T01:11:49.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 13,
-        &quot;name&quot;: &quot;Joselyn&quot;,
-        &quot;age&quot;: 19,
-        &quot;email&quot;: &quot;joselyn19@example.com&quot;,
-        &quot;email_verified_at&quot;: null,
-        &quot;created_at&quot;: &quot;2023-08-05T01:31:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T01:31:18.000000Z&quot;
-    }
-]</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-users" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-users"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-users"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-users" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-users">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-users" data-method="GET"
-      data-path="api/users"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-users"
-                    onclick="tryItOut('GETapi-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-users"
-                    onclick="cancelTryOut('GETapi-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-users"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/users</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-users"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-users"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
             
 
         
     </div>
     <div class="dark-box">
                     <div class="lang-selector">
-                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
                                                         <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
                             </div>
             </div>

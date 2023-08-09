@@ -1,120 +1,12 @@
-name: 'User management'
+name: 'Rent management'
 description: ''
 endpoints:
   -
     httpMethods:
-      - PUT
-    uri: 'api/auth/{user_id}'
-    metadata:
-      groupName: 'User management'
-      groupDescription: ''
-      subgroup: User
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      user_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: vel
-        type: string
-        custom: []
-      age:
-        name: age
-        description: ''
-        required: true
-        example: et
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: reece22@example.org
-        type: string
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: omnis
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: vel
-      age: et
-      email: reece22@example.org
-      password: omnis
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/auth/{user_id}'
-    metadata:
-      groupName: 'User management'
-      groupDescription: ''
-      subgroup: User
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      user_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - GET
-    uri: api/users
+    uri: api/rents
     metadata:
-      groupName: 'User management'
+      groupName: 'Rent management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -123,6 +15,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -134,18 +27,318 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '[{"id":1,"name":"Juan","age":32,"email":"juan.hahn@example.com","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-05T00:47:59.000000Z"},{"id":2,"name":"Marta","age":23,"email":"marta.devora@example.com","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-05T00:49:21.000000Z"},{"id":3,"name":"Willy Effertz","age":45,"email":"chandler23@example.net","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-04T01:12:20.000000Z"},{"id":4,"name":"Gail Koch","age":56,"email":"uhartmann@example.com","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-04T01:12:20.000000Z"},{"id":5,"name":"Pete Boehm","age":56,"email":"dillon.smitham@example.net","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-04T01:12:20.000000Z"},{"id":6,"name":"Raul Padberg","age":34,"email":"mboyle@example.net","email_verified_at":"2023-08-04T20:29:30.000000Z","created_at":"2023-08-04T20:29:30.000000Z","updated_at":"2023-08-04T20:29:30.000000Z"},{"id":7,"name":"Katelin Casper","age":23,"email":"desiree61@example.net","email_verified_at":"2023-08-04T20:29:30.000000Z","created_at":"2023-08-04T20:29:30.000000Z","updated_at":"2023-08-04T20:29:30.000000Z"},{"id":8,"name":"Bryce Cummerata I","age":23,"email":"lswift@example.org","email_verified_at":"2023-08-04T20:29:30.000000Z","created_at":"2023-08-04T20:29:30.000000Z","updated_at":"2023-08-04T20:29:30.000000Z"},{"id":9,"name":"Murray Auer","age":23,"email":"uschmeler@example.net","email_verified_at":"2023-08-04T20:29:30.000000Z","created_at":"2023-08-04T20:29:30.000000Z","updated_at":"2023-08-04T20:29:30.000000Z"},{"id":10,"name":"Prof. Loren Flatley MD","age":23,"email":"dolores.schoen@example.net","email_verified_at":"2023-08-04T20:29:30.000000Z","created_at":"2023-08-04T20:29:30.000000Z","updated_at":"2023-08-04T20:29:30.000000Z"},{"id":12,"name":"Hector","age":22,"email":"Hector.noble@example.net","email_verified_at":"2023-08-04T20:27:37.000000Z","created_at":"2023-08-05T01:11:49.000000Z","updated_at":"2023-08-05T01:11:49.000000Z"},{"id":13,"name":"Joselyn","age":19,"email":"joselyn19@example.com","email_verified_at":null,"created_at":"2023-08-05T01:31:18.000000Z","updated_at":"2023-08-05T01:31:18.000000Z"}]'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer khEf1cdv63bag8DaZV6e45P'
+=======
+      - 'Bearer Pha86E56vVb3k1efD4gadZc'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/rents/{rent_id}'
+    metadata:
+      groupName: 'Rent management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      rent_id:
+        name: rent_id
+        description: 'The ID of the rent.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      rent_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 6cDh3eaVa8kgZf6d41vb5EP'
+=======
+      - 'Bearer b64V5gkf36caeP1DhEdZva8'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/rents
+    metadata:
+      groupName: 'Rent management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      deadline_at:
+        name: deadline_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      return_date_at:
+        name: return_date_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      actual_date_at:
+        name: actual_date_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      user_id:
+        name: user_id
+        description: ''
+        required: true
+<<<<<<< HEAD
+        example: qui
+        type: string
+        custom: []
+    cleanBodyParameters:
+      deadline_at: '2023-08-09T23:13:19'
+      return_date_at: '2023-08-09T23:13:19'
+      actual_date_at: '2023-08-09T23:13:19'
+      user_id: qui
+=======
+        example: rerum
+        type: string
+        custom: []
+    cleanBodyParameters:
+      deadline_at: '2023-08-08T20:52:20'
+      return_date_at: '2023-08-08T20:52:20'
+      actual_date_at: '2023-08-08T20:52:20'
+      user_id: rerum
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 6bgE18c3evZaDa6Vkh54dfP'
+=======
+      - 'Bearer ackgPvVhDf54e38E6b6Zd1a'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/rents/{rent_id}'
+    metadata:
+      groupName: 'Rent management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      rent_id:
+        name: rent_id
+        description: 'The ID of the rent.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      rent_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      deadline_at:
+        name: deadline_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      return_date_at:
+        name: return_date_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      actual_date_at:
+        name: actual_date_at
+        description: 'Must be a valid date.'
+        required: true
+<<<<<<< HEAD
+        example: '2023-08-09T23:13:19'
+=======
+        example: '2023-08-08T20:52:20'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        type: string
+        custom: []
+      user_id:
+        name: user_id
+        description: ''
+        required: true
+<<<<<<< HEAD
+        example: voluptate
+        type: string
+        custom: []
+    cleanBodyParameters:
+      deadline_at: '2023-08-09T23:13:19'
+      return_date_at: '2023-08-09T23:13:19'
+      actual_date_at: '2023-08-09T23:13:19'
+      user_id: voluptate
+=======
+        example: iste
+        type: string
+        custom: []
+    cleanBodyParameters:
+      deadline_at: '2023-08-08T20:52:20'
+      return_date_at: '2023-08-08T20:52:20'
+      actual_date_at: '2023-08-08T20:52:20'
+      user_id: iste
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer h1c6Ve86dabD5vZE4g3akPf'
+=======
+      - 'Bearer de3Pghca46EaV1Dv6b8Z5fk'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/rents/{rent_id}'
+    metadata:
+      groupName: 'Rent management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      rent_id:
+        name: rent_id
+        description: 'The ID of the rent.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      rent_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer EcZgPha3V4D8f6va61ebdk5'
+=======
+      - 'Bearer 6ka6ZE8cadv1D5gfe4P3hVb'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null

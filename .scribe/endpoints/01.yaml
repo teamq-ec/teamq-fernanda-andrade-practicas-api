@@ -1,12 +1,12 @@
-name: 'Director management'
+name: 'Actor management'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/directors
+    uri: api/actors
     metadata:
-      groupName: 'Director management'
+      groupName: 'Actor management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -15,6 +15,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -35,7 +36,14 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer 5hZEa6v1c3864VebfdgkPDa'
+=======
+      - 'Bearer 653bhD1faacVEP4dZvgk68e'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -43,9 +51,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/directors/{director_id}'
+    uri: 'api/actors/{actor_id}'
     metadata:
-      groupName: 'Director management'
+      groupName: 'Actor management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -54,18 +62,19 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      director_id:
-        name: director_id
-        description: 'The ID of the director.'
+      actor_id:
+        name: actor_id
+        description: 'The ID of the actor.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      director_id: 1
+      actor_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -82,7 +91,14 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer ch68abdZ564afEVevD3Pg1k'
+=======
+      - 'Bearer 5aZDbecE1Vga48vk3P6f6dh'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -90,9 +106,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/directors
+    uri: api/actors
     metadata:
-      groupName: 'Director management'
+      groupName: 'Actor management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -101,6 +117,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -112,23 +129,43 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf
+<<<<<<< HEAD
+        example: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
+=======
+        example: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle
+<<<<<<< HEAD
+        example: pmrd
         type: string
         custom: []
     cleanBodyParameters:
-      name: kavkhfiqlysejqxxfhsgmcjmmrfuzbxdpnnicyuzyasudkwynbwslsrxxgdihmgkf
-      last_name: nxwgwfglwznqfzdwzqjnkvtubkmxrpwlnuyrieemeejylfinqhsbxthhmdulelpyle
+      name: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
+      last_name: pmrd
+=======
+        example: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
+      last_name: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer dVeDPa14cafbvg3685Z6Ehk'
+=======
+      - 'Bearer e1cE8f5bhVDg6Pvk36adZa4'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -136,9 +173,9 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/directors/{director_id}'
+    uri: 'api/actors/{actor_id}'
     metadata:
-      groupName: 'Director management'
+      groupName: 'Actor management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -147,18 +184,19 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      director_id:
-        name: director_id
-        description: 'The ID of the director.'
+      actor_id:
+        name: actor_id
+        description: 'The ID of the actor.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      director_id: 1
+      actor_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -166,23 +204,43 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl
+<<<<<<< HEAD
+        example: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
+=======
+        example: gyg
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr
+<<<<<<< HEAD
+        example: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
         type: string
         custom: []
     cleanBodyParameters:
-      name: xclalryonkyczapdlrtngwduqwrmvzjsrhxncvqavnsl
-      last_name: istvowmrsgciikxezhlqlghuoxnuropsvahjbxjoogunutqtqjhxsscwvgvgfygbcwiohfdhxdonpr
+      name: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
+      last_name: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
+=======
+        example: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: gyg
+      last_name: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer Vvafab84Ehg3e6cdZPkD156'
+=======
+      - 'Bearer hVdPcZkaD6fag3E58e16b4v'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
@@ -190,9 +248,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/directors/{director_id}'
+    uri: 'api/actors/{actor_id}'
     metadata:
-      groupName: 'Director management'
+      groupName: 'Actor management'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -201,18 +259,19 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      director_id:
-        name: director_id
-        description: 'The ID of the director.'
+      actor_id:
+        name: actor_id
+        description: 'The ID of the actor.'
         required: true
         example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      director_id: 1
+      actor_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -220,7 +279,14 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+<<<<<<< HEAD
+      - 'Bearer Z16Vgdvkf3acePa8bE6h4D5'
+=======
+      - 'Bearer 8E35a4Db6Vefcvakd1hPZg6'
+>>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
     controller: null
     method: null
     route: null
