@@ -57,7 +57,7 @@ class AuthController extends Controller
     }
 
     #[SubGroup("Auth")]
-    public function user()
+    public function users(): \Illuminate\Http\JsonResponse
     {
         $user= User::all();
         return response()->json($user);

@@ -56,7 +56,7 @@ Route::group(['middleware'=>['auth:sanctum']],function () {
     Route::post('movies/{movie}/rents', [MovieRentController::class, 'add']);
     Route::delete('movies/{movie}/rents', [MovieRentController::class, 'remove']);
 
-    Route::get('/users', [AuthController::class, 'user']);
+    Route::get('/users', [AuthController::class, 'users']);
     Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show']);
     Route::put('/auth/{user}', [AuthController::class, 'update']);
     Route::delete('/auth/{user}', [AuthController::class, 'destroy']);
