@@ -10,11 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-<<<<<<< HEAD
-        "_postman_id": "ab461c8b-61db-4e7c-8a3b-2740e2dc5363",
-=======
-        "_postman_id": "6f07b4cb-70bc-4c27-a1ac-38cf7682b200",
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        "_postman_id": "9dc31455-ac29-4556-a3c3-5b78288d7f77",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -143,11 +139,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"name\":\"hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw\",\"last_name\":\"pmrd\"}"
-=======
-                            "raw": "{\"name\":\"epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti\",\"last_name\":\"soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"name\":\"sbqqfqpvnyq\",\"last_name\":\"ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto\"}"
                         },
                         "description": ""
                     },
@@ -183,11 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"name\":\"jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf\",\"last_name\":\"xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo\"}"
-=======
-                            "raw": "{\"name\":\"gyg\",\"last_name\":\"regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"name\":\"txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco\",\"last_name\":\"ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe\"}"
                         },
                         "description": ""
                     },
@@ -352,11 +340,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"name\":\"uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn\",\"last_name\":\"imirusamqz\"}"
-=======
-                            "raw": "{\"name\":\"alwvvwifzgcbojokonwtwerslxkckhuqvuxy\",\"last_name\":\"pztusw\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"name\":\"drtfsbkyakpodonodtuzihpikvzudogihlscexdhcedzeiheta\",\"last_name\":\"iisnfsytmfoewdciofenyvqekjbagdtlorupbbcfmsakczhhabzcvmoqvl\"}"
                         },
                         "description": ""
                     },
@@ -392,11 +376,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"name\":\"ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut\",\"last_name\":\"lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom\"}"
-=======
-                            "raw": "{\"name\":\"dmidkxymzrytxql\",\"last_name\":\"cfscvhqklf\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"name\":\"sqywfzzgnmptigpitcsgypwyftfqjclybibhhmpkwuvyvyeyjgvgw\",\"last_name\":\"stbchfbearbwzhounumwyqsjqbutqlpnpsnstbwbnmpmzrroot\"}"
                         },
                         "description": ""
                     },
@@ -540,43 +520,259 @@
                                     "name": ""
                                 }
                             ]
-                        },
-                        {
-                            "name": "POST api\/register",
-                            "request": {
-                                "url": {
-                                    "host": "{{baseUrl}}",
-                                    "path": "api\/register",
-                                    "query": [],
-                                    "raw": "{{baseUrl}}\/api\/register"
-                                },
-                                "method": "POST",
-                                "header": [
-                                    {
-                                        "key": "Content-Type",
-                                        "value": "application\/json"
-                                    },
-                                    {
-                                        "key": "Accept",
-                                        "value": "application\/json"
-                                    }
-                                ],
-                                "body": {
-                                    "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"name\":\"exercitationem\",\"age\":\"nam\",\"email\":\"candida53@example.net\",\"password\":\"dolor\"}"
-=======
-                                    "raw": "{\"name\":\"laboriosam\",\"age\":\"assumenda\",\"email\":\"atremblay@example.net\",\"password\":\"aut\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
-                                },
-                                "description": "",
-                                "auth": {
-                                    "type": "noauth"
-                                }
-                            },
-                            "response": []
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Images management",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/movies\/{movie_id}\/images",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id\/images",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/images",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"url\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/images\\\/KfUC3He02fgDhqcS.gif\",\"createdAt\":\"14\\\/Aug, 2023\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/images?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/images?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/images?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/movies\\\/1\\\/images\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/movies\/{movie_id}\/images",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id\/images",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/images",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"url\":\"vel\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/movies\/{movie_id}\/images\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id\/images\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/images\/:id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the image."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"url\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/images\\\/KfUC3He02fgDhqcS.gif\",\"createdAt\":\"14\\\/Aug, 2023\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/movies\/{movie_id}\/images\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id\/images\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/images\/:id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the image."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"url\":\"amet\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/movies\/{movie_id}\/images\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:movie_id\/images\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:movie_id\/images\/:id",
+                            "variable": [
+                                {
+                                    "id": "movie_id",
+                                    "key": "movie_id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the image."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
                 }
             ]
         },
@@ -704,11 +900,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"title\":\"qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz\",\"description\":\"quia\",\"genre\":\"ubdscbhyzhhfahtmqfmbyoymmuze\",\"publish_at\":\"2023-08-09T23:13:19\",\"director_id\":\"placeat\"}"
-=======
-                            "raw": "{\"title\":\"mcsps\",\"description\":\"fugit\",\"genre\":\"blu\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"distinctio\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"title\":\"nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw\",\"description\":\"nemo\",\"genre\":\"hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw\",\"publish_at\":\"2023-08-14T19:39:35\",\"director_id\":\"explicabo\"}"
                         },
                         "description": ""
                     },
@@ -744,11 +936,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"title\":\"pqfounpeodmcuzrfywpovp\",\"description\":\"debitis\",\"genre\":\"yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk\",\"publish_at\":\"2023-08-09T23:13:19\",\"director_id\":\"odio\"}"
-=======
-                            "raw": "{\"title\":\"nhetvgmmhfztohjnoqvuxy\",\"description\":\"et\",\"genre\":\"irhjndxctefzrpkgleccrvgowxo\",\"publish_at\":\"2023-08-08T20:52:20\",\"director_id\":\"quisquam\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"title\":\"vmhflxfetjelpoyfcwatxsynfbwesmitai\",\"description\":\"id\",\"genre\":\"wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa\",\"publish_at\":\"2023-08-14T19:39:35\",\"director_id\":\"numquam\"}"
                         },
                         "description": ""
                     },
@@ -874,11 +1062,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"actors\":[\"debitis\"]}"
-=======
-                                    "raw": "{\"actors\":[\"vel\"]}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"actors\":[\"quidem\"]}"
                                 },
                                 "description": ""
                             },
@@ -914,11 +1098,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"actors\":[\"suscipit\"]}"
-=======
-                                    "raw": "{\"actors\":[\"autem\"]}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"actors\":[\"assumenda\"]}"
                                 },
                                 "description": ""
                             },
@@ -1013,11 +1193,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"rents\":[\"alias\"]}"
-=======
-                                    "raw": "{\"rents\":[\"illum\"]}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"rents\":[\"quibusdam\"]}"
                                 },
                                 "description": ""
                             },
@@ -1053,11 +1229,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"rents\":[\"quis\"]}"
-=======
-                                    "raw": "{\"rents\":[\"hic\"]}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"rents\":[\"nemo\"]}"
                                 },
                                 "description": ""
                             },
@@ -1191,11 +1363,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"deadline_at\":\"2023-08-09T23:13:19\",\"return_date_at\":\"2023-08-09T23:13:19\",\"actual_date_at\":\"2023-08-09T23:13:19\",\"user_id\":\"qui\"}"
-=======
-                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"rerum\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"deadline_at\":\"2023-08-14T19:39:35\",\"return_date_at\":\"2023-08-14T19:39:35\",\"actual_date_at\":\"2023-08-14T19:39:35\",\"user_id\":\"reprehenderit\"}"
                         },
                         "description": ""
                     },
@@ -1231,11 +1399,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-<<<<<<< HEAD
-                            "raw": "{\"deadline_at\":\"2023-08-09T23:13:19\",\"return_date_at\":\"2023-08-09T23:13:19\",\"actual_date_at\":\"2023-08-09T23:13:19\",\"user_id\":\"voluptate\"}"
-=======
-                            "raw": "{\"deadline_at\":\"2023-08-08T20:52:20\",\"return_date_at\":\"2023-08-08T20:52:20\",\"actual_date_at\":\"2023-08-08T20:52:20\",\"user_id\":\"iste\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                            "raw": "{\"deadline_at\":\"2023-08-14T19:39:35\",\"return_date_at\":\"2023-08-14T19:39:35\",\"actual_date_at\":\"2023-08-14T19:39:35\",\"user_id\":\"veniam\"}"
                         },
                         "description": ""
                     },
@@ -1306,11 +1470,38 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"email\":\"deshawn03@example.org\",\"password\":\"animi\"}"
-=======
-                                    "raw": "{\"email\":\"rstreich@example.net\",\"password\":\"doloribus\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"email\":\"lind.trenton@example.net\",\"password\":\"ut\"}"
+                                },
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST api\/register",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/register",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/register"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"ducimus\",\"age\":\"temporibus\",\"email\":\"ashleigh32@example.net\",\"password\":\"quidem\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1414,11 +1605,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-<<<<<<< HEAD
-                                    "raw": "{\"name\":\"asperiores\",\"age\":\"maiores\",\"email\":\"albin.bogan@example.net\",\"password\":\"eum\"}"
-=======
-                                    "raw": "{\"name\":\"eum\",\"age\":\"ut\",\"email\":\"oda33@example.net\",\"password\":\"quis\"}"
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                                    "raw": "{\"name\":\"eligendi\",\"age\":\"molestias\",\"email\":\"wilford.renner@example.com\",\"password\":\"quia\"}"
                                 },
                                 "description": ""
                             },

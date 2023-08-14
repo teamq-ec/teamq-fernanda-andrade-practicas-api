@@ -66,7 +66,7 @@ Route::group(['middleware'=>['auth:sanctum']],function () {
 Route::post('auth',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);
 
-
+Route::apiResource('movies/{movie}/images',\App\Http\Controllers\ImageController::class);
 
 
 

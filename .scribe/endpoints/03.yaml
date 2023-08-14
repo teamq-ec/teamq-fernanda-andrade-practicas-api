@@ -39,11 +39,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer gkc68fa64Ve31bhZEPda5Dv'
-=======
-      - 'Bearer 4Zv8k56dDEefcgP36Vbaah1'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer kvh6a4a1b8ZcVfE3P6d5geD'
     controller: null
     method: null
     route: null
@@ -94,11 +90,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer PaE654gd6Zab81f3kheDVvc'
-=======
-      - 'Bearer d3V4DefEaav5Z66cbg1Ph8k'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer Z5dD46c3gPkbha8v6aVf1eE'
     controller: null
     method: null
     route: null
@@ -129,82 +121,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
-=======
-        example: mcsps
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-<<<<<<< HEAD
-        example: quia
-=======
-        example: fugit
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: nemo
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: ubdscbhyzhhfahtmqfmbyoymmuze
-=======
-        example: blu
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-<<<<<<< HEAD
-        example: placeat
+        example: explicabo
         type: string
         custom: []
     cleanBodyParameters:
-      title: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
-      description: quia
-      genre: ubdscbhyzhhfahtmqfmbyoymmuze
-      publish_at: '2023-08-09T23:13:19'
-      director_id: placeat
-=======
-        example: distinctio
-        type: string
-        custom: []
-    cleanBodyParameters:
-      title: mcsps
-      description: fugit
-      genre: blu
-      publish_at: '2023-08-08T20:52:20'
-      director_id: distinctio
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      title: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
+      description: nemo
+      genre: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
+      publish_at: '2023-08-14T19:39:35'
+      director_id: explicabo
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 3d4hag6cPaZDek6bEfV158v'
-=======
-      - 'Bearer fdD8vPE15ea4bkV63Zahg6c'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 45eEbk318fVPZad6gvc6hDa'
     controller: null
     method: null
     route: null
@@ -243,82 +203,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: pqfounpeodmcuzrfywpovp
-=======
-        example: nhetvgmmhfztohjnoqvuxy
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: vmhflxfetjelpoyfcwatxsynfbwesmitai
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-<<<<<<< HEAD
-        example: debitis
-=======
-        example: et
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: id
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
-=======
-        example: irhjndxctefzrpkgleccrvgowxo
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-<<<<<<< HEAD
-        example: odio
+        example: numquam
         type: string
         custom: []
     cleanBodyParameters:
-      title: pqfounpeodmcuzrfywpovp
-      description: debitis
-      genre: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
-      publish_at: '2023-08-09T23:13:19'
-      director_id: odio
-=======
-        example: quisquam
-        type: string
-        custom: []
-    cleanBodyParameters:
-      title: nhetvgmmhfztohjnoqvuxy
-      description: et
-      genre: irhjndxctefzrpkgleccrvgowxo
-      publish_at: '2023-08-08T20:52:20'
-      director_id: quisquam
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      title: vmhflxfetjelpoyfcwatxsynfbwesmitai
+      description: id
+      genre: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
+      publish_at: '2023-08-14T19:39:35'
+      director_id: numquam
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer Peb166vkhaZc5gd4aE8V3fD'
-=======
-      - 'Bearer 16g48PDVecE6hvfabak3Zd5'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer k6gf1d6ZbE5V4aac3Dh8evP'
     controller: null
     method: null
     route: null
@@ -360,11 +288,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer hdZf846bVa3v5eaDc6Eg1kP'
-=======
-      - 'Bearer v46E5h1Ve6f3Zgb8dPDacka'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 6dgk3hVbvf6E8P15ZaaeD4c'
     controller: null
     method: null
     route: null
@@ -415,11 +339,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer VvE6D568beghcaPZ1f4da3k'
-=======
-      - 'Bearer 8vEb1P3khcVZ6a5gde6aDf4'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer daveVc616Z5b4hf8akDPE3g'
     controller: null
     method: null
     route: null
@@ -459,31 +379,19 @@ endpoints:
         description: ''
         required: true
         example:
-<<<<<<< HEAD
-          - debitis
-=======
-          - vel
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+          - quidem
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-<<<<<<< HEAD
-        - debitis
-=======
-        - vel
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        - quidem
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 8dfaDec5Z1vghkP6b3Va46E'
-=======
-      - 'Bearer 5VhZec4Eba368DPvadk16fg'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 81VDZ4dEvPa6egfb6akc53h'
     controller: null
     method: null
     route: null
@@ -523,31 +431,19 @@ endpoints:
         description: ''
         required: true
         example:
-<<<<<<< HEAD
-          - suscipit
-=======
-          - autem
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+          - assumenda
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-<<<<<<< HEAD
-        - suscipit
-=======
-        - autem
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        - assumenda
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer gevh6c6a8afbdD1Z5VE3kP4'
-=======
-      - 'Bearer 5kEDve36f1Zg4bV86aPhdca'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer ED156aeZkg8a3V4Pdhvbcf6'
     controller: null
     method: null
     route: null
@@ -598,11 +494,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 8Zah1fgkbaEd46VPv5ceD36'
-=======
-      - 'Bearer kcahV853Zb6g1dfaPeEv4D6'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer dE45e6kVf63gP18acZhabDv'
     controller: null
     method: null
     route: null
@@ -642,31 +534,19 @@ endpoints:
         description: ''
         required: true
         example:
-<<<<<<< HEAD
-          - alias
-=======
-          - illum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+          - quibusdam
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-<<<<<<< HEAD
-        - alias
-=======
-        - illum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        - quibusdam
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer bfhE3ekc646V8dv51aPZagD'
-=======
-      - 'Bearer bvakVfd6ca1534Z6E8PDehg'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 413PecD6v8fk6badgZVEa5h'
     controller: null
     method: null
     route: null
@@ -706,31 +586,19 @@ endpoints:
         description: ''
         required: true
         example:
-<<<<<<< HEAD
-          - quis
-=======
-          - hic
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+          - nemo
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-<<<<<<< HEAD
-        - quis
-=======
-        - hic
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        - nemo
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer Z3a6ehdE4vfb58gDck16aVP'
-=======
-      - 'Bearer E5VbPk4aev1h6ZfdDcg836a'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer D356h1Zk4dEaeVPa68gcbfv'
     controller: null
     method: null
     route: null

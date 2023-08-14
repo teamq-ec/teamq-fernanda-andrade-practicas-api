@@ -60,19 +60,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
+                  example: sbqqfqpvnyq
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: pmrd
-=======
-                  example: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
-                last_name:
-                  type: string
-                  description: 'Must be at least 3 characters.'
-                  example: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
               required:
                 - name
                 - last_name
@@ -129,19 +121,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
+                  example: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
-=======
-                  example: gyg
-                last_name:
-                  type: string
-                  description: 'Must be at least 3 characters.'
-                  example: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
               required:
                 - name
                 - last_name
@@ -222,19 +206,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: uhlgtnylcsfgyprtmfeeqxgzaknrcviedqldzsgrn
+                  example: drtfsbkyakpodonodtuzihpikvzudogihlscexdhcedzeiheta
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: imirusamqz
-=======
-                  example: alwvvwifzgcbojokonwtwerslxkckhuqvuxy
-                last_name:
-                  type: string
-                  description: 'Must be at least 3 characters.'
-                  example: pztusw
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: iisnfsytmfoewdciofenyvqekjbagdtlorupbbcfmsakczhhabzcvmoqvl
               required:
                 - name
                 - last_name
@@ -291,19 +267,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: ywbsmkwekjmwbtcioicqezhgqvmqirpkqdbinqknbkevjckjqrkmdktjasrswzdfjwsaiqtkkymoyasoubrsytut
+                  example: sqywfzzgnmptigpitcsgypwyftfqjclybibhhmpkwuvyvyeyjgvgw
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: lcvsorhhmwrkaxluxafzfagtwhjwmbchqqvom
-=======
-                  example: dmidkxymzrytxql
-                last_name:
-                  type: string
-                  description: 'Must be at least 3 characters.'
-                  example: cfscvhqklf
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: stbchfbearbwzhounumwyqsjqbutqlpnpsnstbwbnmpmzrroot
               required:
                 - name
                 - last_name
@@ -375,15 +343,161 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/register:
+  '/api/movies/{movie_id}/images':
+    get:
+      summary: ''
+      operationId: getApiMoviesMovie_idImages
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      url: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
+                      createdAt: '14/Aug, 2023'
+                  links:
+                    first: 'http://localhost:8000/api/movies/1/images?page=1'
+                    last: 'http://localhost:8000/api/movies/1/images?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies/1/images?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/movies/1/images'
+                    per_page: 15
+                    to: 1
+                    total: 1
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        url: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
+                        createdAt: '14/Aug, 2023'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        url:
+                          type: string
+                          example: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
+                        createdAt:
+                          type: string
+                          example: '14/Aug, 2023'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/images?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/images?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies/1/images?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/images'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - 'Images management'
     post:
       summary: ''
-      operationId: postApiRegister
+      operationId: postApiMoviesMovie_idImages
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Images management'
       requestBody:
         required: true
         content:
@@ -391,44 +505,121 @@ paths:
             schema:
               type: object
               properties:
-                name:
+                url:
                   type: string
                   description: ''
-<<<<<<< HEAD
-                  example: exercitationem
-                age:
-                  type: string
-                  description: ''
-                  example: nam
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: candida53@example.net
-                password:
-                  type: string
-                  description: ''
-                  example: dolor
-=======
-                  example: laboriosam
-                age:
-                  type: string
-                  description: ''
-                  example: assumenda
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: atremblay@example.net
-                password:
-                  type: string
-                  description: ''
-                  example: aut
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: vel
               required:
-                - name
-                - age
-                - email
-                - password
-      security: []
+                - url
+    parameters:
+      -
+        in: path
+        name: movie_id
+        description: 'The ID of the movie.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/movies/{movie_id}/images/{id}':
+    get:
+      summary: ''
+      operationId: getApiMoviesMovie_idImagesId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    url: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
+                    createdAt: '14/Aug, 2023'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      url:
+                        type: string
+                        example: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
+                      createdAt:
+                        type: string
+                        example: '14/Aug, 2023'
+      tags:
+        - 'Images management'
+    put:
+      summary: ''
+      operationId: putApiMoviesMovie_idImagesId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Images management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: ''
+                  example: amet
+              required:
+                - url
+    delete:
+      summary: ''
+      operationId: deleteApiMoviesMovie_idImagesId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Images management'
+    parameters:
+      -
+        in: path
+        name: movie_id
+        description: 'The ID of the movie.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: id
+        description: 'The ID of the image.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/movies:
     get:
       summary: ''
@@ -482,43 +673,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: qawmbexlowppciihzmylzjusnjosmdpnzhffvzflsbaxzrjrnyvcckzntlbhecsrqukliz
+                  example: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
                 description:
                   type: string
                   description: ''
-                  example: quia
+                  example: nemo
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: ubdscbhyzhhfahtmqfmbyoymmuze
+                  example: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 director_id:
                   type: string
                   description: ''
-                  example: placeat
-=======
-                  example: mcsps
-                description:
-                  type: string
-                  description: ''
-                  example: fugit
-                genre:
-                  type: string
-                  description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: blu
-                publish_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                director_id:
-                  type: string
-                  description: ''
-                  example: distinctio
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: explicabo
               required:
                 - title
                 - description
@@ -578,43 +749,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-<<<<<<< HEAD
-                  example: pqfounpeodmcuzrfywpovp
+                  example: vmhflxfetjelpoyfcwatxsynfbwesmitai
                 description:
                   type: string
                   description: ''
-                  example: debitis
+                  example: id
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: yxdghqndebdiiovheyfrsmefafhspxtborgstymcfvdlkbrerlltlkodpyngribhdxwk
+                  example: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 director_id:
                   type: string
                   description: ''
-                  example: odio
-=======
-                  example: nhetvgmmhfztohjnoqvuxy
-                description:
-                  type: string
-                  description: ''
-                  example: et
-                genre:
-                  type: string
-                  description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: irhjndxctefzrpkgleccrvgowxo
-                publish_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                director_id:
-                  type: string
-                  description: ''
-                  example: quisquam
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: numquam
               required:
                 - title
                 - description
@@ -709,11 +860,7 @@ paths:
                   type: array
                   description: ''
                   example:
-<<<<<<< HEAD
-                    - debitis
-=======
-                    - vel
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                    - quidem
                   items:
                     type: string
               required:
@@ -744,11 +891,7 @@ paths:
                   type: array
                   description: ''
                   example:
-<<<<<<< HEAD
-                    - suscipit
-=======
-                    - autem
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                    - assumenda
                   items:
                     type: string
               required:
@@ -816,11 +959,7 @@ paths:
                   type: array
                   description: ''
                   example:
-<<<<<<< HEAD
-                    - alias
-=======
-                    - illum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                    - quibusdam
                   items:
                     type: string
               required:
@@ -851,11 +990,7 @@ paths:
                   type: array
                   description: ''
                   example:
-<<<<<<< HEAD
-                    - quis
-=======
-                    - hic
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                    - nemo
                   items:
                     type: string
               required:
@@ -922,35 +1057,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-<<<<<<< HEAD
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 user_id:
                   type: string
                   description: ''
-                  example: qui
-=======
-                  example: '2023-08-08T20:52:20'
-                return_date_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                actual_date_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                user_id:
-                  type: string
-                  description: ''
-                  example: rerum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: reprehenderit
               required:
                 - deadline_at
                 - return_date_at
@@ -1009,35 +1128,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-<<<<<<< HEAD
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-09T23:13:19'
+                  example: '2023-08-14T19:39:35'
                 user_id:
                   type: string
                   description: ''
-                  example: voluptate
-=======
-                  example: '2023-08-08T20:52:20'
-                return_date_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                actual_date_at:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2023-08-08T20:52:20'
-                user_id:
-                  type: string
-                  description: ''
-                  example: iste
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: veniam
               required:
                 - deadline_at
                 - return_date_at
@@ -1086,20 +1189,50 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-<<<<<<< HEAD
-                  example: deshawn03@example.org
+                  example: lind.trenton@example.net
                 password:
                   type: string
                   description: ''
-                  example: animi
-=======
-                  example: rstreich@example.net
-                password:
-                  type: string
-                  description: ''
-                  example: doloribus
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: ut
               required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Security management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: ducimus
+                age:
+                  type: string
+                  description: ''
+                  example: temporibus
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ashleigh32@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: quidem
+              required:
+                - name
+                - age
                 - email
                 - password
       security: []
@@ -1166,35 +1299,19 @@ paths:
                 name:
                   type: string
                   description: ''
-<<<<<<< HEAD
-                  example: asperiores
+                  example: eligendi
                 age:
                   type: string
                   description: ''
-                  example: maiores
+                  example: molestias
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: albin.bogan@example.net
+                  example: wilford.renner@example.com
                 password:
                   type: string
                   description: ''
-                  example: eum
-=======
-                  example: eum
-                age:
-                  type: string
-                  description: ''
-                  example: ut
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: oda33@example.net
-                password:
-                  type: string
-                  description: ''
-                  example: quis
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+                  example: quia
               required:
                 - name
                 - age
@@ -1233,6 +1350,9 @@ tags:
     description: ''
   -
     name: Endpoints
+    description: ''
+  -
+    name: 'Images management'
     description: ''
   -
     name: 'Movie management'

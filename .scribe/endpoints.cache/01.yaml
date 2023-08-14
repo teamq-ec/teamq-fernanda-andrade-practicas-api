@@ -41,11 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 5hZEa6v1c3864VebfdgkPDa'
-=======
-      - 'Bearer 653bhD1faacVEP4dZvgk68e'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer akace6f5bPhE16Dd38g4ZvV'
     controller: null
     method: null
     route: null
@@ -96,11 +92,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer ch68abdZ564afEVevD3Pg1k'
-=======
-      - 'Bearer 5aZDbecE1Vga48vk3P6f6dh'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 8dbah3156VgcPekE6a4DZfv'
     controller: null
     method: null
     route: null
@@ -131,43 +123,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
-=======
-        example: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: sbqqfqpvnyq
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: pmrd
+        example: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
         type: string
         custom: []
     cleanBodyParameters:
-      name: hiptmrcozhvpoauqghsyxotevercjkmcxpdfcfbvzmbotkhbcgbilhjakw
-      last_name: pmrd
-=======
-        example: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: epnwrwxhsuntkvihwmkvgemndwftdpmhbnnftopccgowdxllzwbbwjbbmtrpdeuotdczmvdgopvmbdvntopkxti
-      last_name: soubkyqenatjktkhuneotiwwvqdrzifivfpclrcmtbomwthdwvraabqeitqlpooagehhqsominxpafhkfqkyixdmq
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      name: sbqqfqpvnyq
+      last_name: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer dVeDPa14cafbvg3685Z6Ehk'
-=======
-      - 'Bearer e1cE8f5bhVDg6Pvk36adZa4'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer b3ah4Z1vVkf6c6aE8dPe5Dg'
     controller: null
     method: null
     route: null
@@ -206,43 +181,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
-=======
-        example: gyg
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-<<<<<<< HEAD
-        example: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
+        example: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
         type: string
         custom: []
     cleanBodyParameters:
-      name: jkbnmpaeqsjtuzndejbnmtpjjxvdlbrlpwqzsbpwqnxeoullmkxwaamjdbxzgglzrqjgckqbkjwvduvmf
-      last_name: xlsejqabuadawcnhzlkfexomuwmtaadormxgwyxieahekuvozofdtyxo
-=======
-        example: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: gyg
-      last_name: regpghnplkcktnjqytbvdkxvyqudjduapksqzfovkybgdrbbwxvlzammumokksmznwwgxorwjyyyyvjwsvjfkvkn
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      name: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
+      last_name: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer Vvafab84Ehg3e6cdZPkD156'
-=======
-      - 'Bearer hVdPcZkaD6fag3E58e16b4v'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer f6ka43VdD56cEvab8geh1ZP'
     controller: null
     method: null
     route: null
@@ -284,11 +242,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer Z16Vgdvkf3acePa8bE6h4D5'
-=======
-      - 'Bearer 8E35a4Db6Vefcvakd1hPZg6'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer P8eDvagkV1Z66bcE4a3hd5f'
     controller: null
     method: null
     route: null

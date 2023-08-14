@@ -47,11 +47,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer vPheaabf61g6k48dDZ35EcV'
-=======
-      - 'Bearer E531Zc64VDhvkgebfaaP86d'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer D6Pfdb31v5k4VaZ8cegahE6'
     controller: null
     method: null
     route: null
@@ -90,69 +86,42 @@ endpoints:
         name: name
         description: ''
         required: true
-<<<<<<< HEAD
-        example: asperiores
-=======
-        example: eum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: eligendi
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-<<<<<<< HEAD
-        example: maiores
-=======
-        example: ut
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: molestias
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-<<<<<<< HEAD
-        example: albin.bogan@example.net
-=======
-        example: oda33@example.net
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: wilford.renner@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-<<<<<<< HEAD
-        example: eum
+        example: quia
         type: string
         custom: []
     cleanBodyParameters:
-      name: asperiores
-      age: maiores
-      email: albin.bogan@example.net
-      password: eum
-=======
-        example: quis
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: eum
-      age: ut
-      email: oda33@example.net
-      password: quis
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      name: eligendi
+      age: molestias
+      email: wilford.renner@example.com
+      password: quia
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer cda46DPfkbV65aZh38v1Eeg'
-=======
-      - 'Bearer gakdvc51P6b48hEZD6eVfa3'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 1Vc6kDZEbf3dh4aa5vg8Pe6'
     controller: null
     method: null
     route: null
@@ -194,11 +163,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 6E4Vf6v18PZb5ehgack3daD'
-=======
-      - 'Bearer h1bDagav3efP6VZk45E6cd8'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 65fVD3kva6gZPbhae8dE41c'
     controller: null
     method: null
     route: null

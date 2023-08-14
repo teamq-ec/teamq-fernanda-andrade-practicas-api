@@ -41,11 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer khEf1cdv63bag8DaZV6e45P'
-=======
-      - 'Bearer Pha86E56vVb3k1efD4gadZc'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer fZPdckgVa31D6evEa6hb548'
     controller: null
     method: null
     route: null
@@ -96,11 +92,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 6cDh3eaVa8kgZf6d41vb5EP'
-=======
-      - 'Bearer b64V5gkf36caeP1DhEdZva8'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer P35d4fh6aveg6E8bDck1aVZ'
     controller: null
     method: null
     route: null
@@ -131,69 +123,42 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-<<<<<<< HEAD
-        example: qui
+        example: reprehenderit
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-09T23:13:19'
-      return_date_at: '2023-08-09T23:13:19'
-      actual_date_at: '2023-08-09T23:13:19'
-      user_id: qui
-=======
-        example: rerum
-        type: string
-        custom: []
-    cleanBodyParameters:
-      deadline_at: '2023-08-08T20:52:20'
-      return_date_at: '2023-08-08T20:52:20'
-      actual_date_at: '2023-08-08T20:52:20'
-      user_id: rerum
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      deadline_at: '2023-08-14T19:39:35'
+      return_date_at: '2023-08-14T19:39:35'
+      actual_date_at: '2023-08-14T19:39:35'
+      user_id: reprehenderit
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer 6bgE18c3evZaDa6Vkh54dfP'
-=======
-      - 'Bearer ackgPvVhDf54e38E6b6Zd1a'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 6f1adg3kVeb8Zch4Pa5E6Dv'
     controller: null
     method: null
     route: null
@@ -232,69 +197,42 @@ endpoints:
         name: deadline_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       return_date_at:
         name: return_date_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       actual_date_at:
         name: actual_date_at
         description: 'Must be a valid date.'
         required: true
-<<<<<<< HEAD
-        example: '2023-08-09T23:13:19'
-=======
-        example: '2023-08-08T20:52:20'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+        example: '2023-08-14T19:39:35'
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-<<<<<<< HEAD
-        example: voluptate
+        example: veniam
         type: string
         custom: []
     cleanBodyParameters:
-      deadline_at: '2023-08-09T23:13:19'
-      return_date_at: '2023-08-09T23:13:19'
-      actual_date_at: '2023-08-09T23:13:19'
-      user_id: voluptate
-=======
-        example: iste
-        type: string
-        custom: []
-    cleanBodyParameters:
-      deadline_at: '2023-08-08T20:52:20'
-      return_date_at: '2023-08-08T20:52:20'
-      actual_date_at: '2023-08-08T20:52:20'
-      user_id: iste
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      deadline_at: '2023-08-14T19:39:35'
+      return_date_at: '2023-08-14T19:39:35'
+      actual_date_at: '2023-08-14T19:39:35'
+      user_id: veniam
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer h1c6Ve86dabD5vZE4g3akPf'
-=======
-      - 'Bearer de3Pghca46EaV1Dv6b8Z5fk'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer vZPdg4hkfb16V8aea536DEc'
     controller: null
     method: null
     route: null
@@ -336,11 +274,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-<<<<<<< HEAD
-      - 'Bearer EcZgPha3V4D8f6va61ebdk5'
-=======
-      - 'Bearer 6ka6ZE8cadv1D5gfe4P3hVb'
->>>>>>> DM2-981-crear-endpoint-para-edicion-de-usuarios
+      - 'Bearer 3658Ed46fkvD1aechVgbPaZ'
     controller: null
     method: null
     route: null

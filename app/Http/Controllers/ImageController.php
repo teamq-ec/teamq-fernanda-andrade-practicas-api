@@ -2,84 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ImageRequest;
+use App\Http\Resources\ImageResource;
 use App\Models\Image;
+use App\Models\Movie;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Subgroup;
+use Symfony\Component\HttpFoundation\Response;
 
 class ImageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    #[Group("Images management")]
+    #[Authenticated]
+
+    public function index(Movie $movie): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
-        //
+        return  ImageResource::collection(
+            $movie->images()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    #[Group("Images management")]
+    #[Authenticated]
+
+    public function store(ImageRequest $request, Movie $movie)
     {
-        //
+        $image=new Image($request->validated());
+        return new ImageResource($movie->images()->save($image));
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    #[Group("Images management")]
+    #[Authenticated]
+    public function show(Movie $movie,Image $image)
     {
-        //
+        abort_if($movie->id!==$image->movie_id,Response::HTTP_NOT_FOUND);//validamos si se esta pasando una imagen que no este asociada a la pelicula
+        return new ImageResource($image);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Image $image)
+    #[Group("Images management")]
+    #[Authenticated]
+
+    public function update(Movie $movie,Image $image,ImageRequest $request,)
     {
-        //
+        abort_if($movie->id!==$image->movie_id,Response::HTTP_NOT_FOUND);
+        $image->fill($request->validated());
+        $image->save();
+        return new ImageResource($image);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Image $image)
+    #[Group("Images management")]
+    #[Authenticated]
+    public function destroy(Image $image,Movie $movie)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Image $image)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Image $image)
-    {
-        //
+        abort_if($movie->id!==$image->movie_id,Response::HTTP_NOT_FOUND);
+        $image->delete();
+        return response()->json(null,Response::HTTP_NO_CONTENT);
     }
 }
