@@ -22,18 +22,36 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: true
+        example: 17
+        type: integer
+        custom: []
+      page:
+        name: page
+        description: ''
+        required: true
+        example: 8
+        type: integer
+        custom: []
+    cleanQueryParameters:
+      per_page: 17
+      page: 8
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"data":[{"id":108,"name":"Lukas West","lastName":"Farrell","createdAt":"2023-08-15T18:03:24.000000Z"},{"id":109,"name":"John Turcotte","lastName":"Hansen","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":110,"name":"Prof. Brando Hirthe","lastName":"Cassin","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":111,"name":"Davin Bogan","lastName":"Green","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":112,"name":"Shanel Terry","lastName":"O''Conner","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":113,"name":"Ada Marquardt","lastName":"Dach","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":114,"name":"Betsy Krajcik","lastName":"Romaguera","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":115,"name":"Dr. Hal Feest","lastName":"Lebsack","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":116,"name":"Raul Hettinger","lastName":"Bahringer","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":117,"name":"Ms. Mozelle Thiel","lastName":"Lehner","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":118,"name":"Julio Funk","lastName":"Miller","createdAt":"2023-08-15T18:03:26.000000Z"},{"id":119,"name":"Mr. Wyman Corwin II","lastName":"Mayer","createdAt":"2023-08-15T18:03:27.000000Z"},{"id":120,"name":"Mrs. Abby Ward","lastName":"Lesch","createdAt":"2023-08-15T18:03:27.000000Z"},{"id":121,"name":"Mrs. Madeline Macejkovic","lastName":"Okuneva","createdAt":"2023-08-15T18:03:27.000000Z"},{"id":122,"name":"Elenor Hansen","lastName":"Denesik","createdAt":"2023-08-15T18:03:27.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/actors?page=1","last":"http:\/\/localhost:8000\/api\/actors?page=10","prev":"http:\/\/localhost:8000\/api\/actors?page=7","next":"http:\/\/localhost:8000\/api\/actors?page=9"},"meta":{"current_page":8,"from":106,"last_page":10,"links":[{"url":"http:\/\/localhost:8000\/api\/actors?page=7","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=1","label":"1","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=5","label":"5","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=6","label":"6","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=7","label":"7","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=8","label":"8","active":true},{"url":"http:\/\/localhost:8000\/api\/actors?page=9","label":"9","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=10","label":"10","active":false},{"url":"http:\/\/localhost:8000\/api\/actors?page=9","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/actors","per_page":15,"to":120,"total":146}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -41,7 +59,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer akace6f5bPhE16Dd38g4ZvV'
+      - 'Bearer cePEZ34fgkdV1h65b6aDv8a'
     controller: null
     method: null
     route: null
@@ -80,11 +98,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"id":1,"name":"Tom","last_name":"Holland","created_at":"2023-08-03T16:17:31.000000Z","updated_at":"2023-08-03T16:17:34.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -92,7 +112,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8dbah3156VgcPekE6a4DZfv'
+      - 'Bearer kd6abh4E6ZDV8P3fgacev15'
     controller: null
     method: null
     route: null
@@ -123,26 +143,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: sbqqfqpvnyq
+        example: juxotzcfjsxassdhb
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
+        example: ewfhjmexwzhrxqvlkl
         type: string
         custom: []
     cleanBodyParameters:
-      name: sbqqfqpvnyq
-      last_name: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
+      name: juxotzcfjsxassdhb
+      last_name: ewfhjmexwzhrxqvlkl
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer b3ah4Z1vVkf6c6aE8dPe5Dg'
+      - 'Bearer b8PZVcvf3g5a61dk4eEha6D'
     controller: null
     method: null
     route: null
@@ -181,26 +201,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
+        example: vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
+        example: ewnh
         type: string
         custom: []
     cleanBodyParameters:
-      name: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
-      last_name: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
+      name: vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx
+      last_name: ewnh
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer f6ka43VdD56cEvab8geh1ZP'
+      - 'Bearer egVkZ61avbfa64hdc5DE83P'
     controller: null
     method: null
     route: null
@@ -242,7 +262,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer P8eDvagkV1Z66bcE4a3hd5f'
+      - 'Bearer cPD6dh5k4ve6Z8gaaEb1Vf3'
     controller: null
     method: null
     route: null

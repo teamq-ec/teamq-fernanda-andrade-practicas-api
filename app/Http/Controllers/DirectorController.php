@@ -9,16 +9,24 @@ use App\Models\Director;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 use Symfony\Component\HttpFoundation\Response;
 
 class DirectorController extends Controller
 {
     #[Group("Director management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
     public function index()
     {
-        $director= Director::all();
-        return response()->json($director);
+        $this->authorize('actor-index');
+        return  DirectorResource::collection(
+            Director::query()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
 

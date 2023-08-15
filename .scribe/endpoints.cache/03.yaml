@@ -22,18 +22,36 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        custom: []
+      page:
+        name: page
+        description: ''
+        required: true
+        example: 18
+        type: integer
+        custom: []
+    cleanQueryParameters:
+      per_page: 5
+      page: 18
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/localhost:8000\/api\/movies?page=1","last":"http:\/\/localhost:8000\/api\/movies?page=9","prev":"http:\/\/localhost:8000\/api\/movies?page=17","next":null},"meta":{"current_page":18,"from":null,"last_page":9,"links":[{"url":"http:\/\/localhost:8000\/api\/movies?page=17","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=1","label":"1","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=5","label":"5","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=6","label":"6","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=7","label":"7","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=8","label":"8","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=9","label":"9","active":false},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies","per_page":15,"to":null,"total":123}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -41,7 +59,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kvh6a4a1b8ZcVfE3P6d5geD'
+      - 'Bearer 6Pv68ehZa5D341baVEcgdkf'
     controller: null
     method: null
     route: null
@@ -80,11 +98,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"id":1,"title":"Spider-Man","description":"Welcome home","genre":"ACCION","publish_at":"2023-08-03","director_id":1,"created_at":"2023-08-03T19:59:01.000000Z","updated_at":"2023-08-03T19:59:02.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -92,7 +112,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z5dD46c3gPkbha8v6aVf1eE'
+      - 'Bearer aekvgPED5adc3b6186VZf4h'
     controller: null
     method: null
     route: null
@@ -123,50 +143,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-        example: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
+        example: iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: nemo
+        example: est
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-        example: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
+        example: bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-14T19:39:35'
+        example: '2023-08-15T21:29:16'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-        example: explicabo
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      title: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
-      description: nemo
-      genre: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
-      publish_at: '2023-08-14T19:39:35'
-      director_id: explicabo
+      title: iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz
+      description: est
+      genre: bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj
+      publish_at: '2023-08-15T21:29:16'
+      director_id: rerum
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 45eEbk318fVPZad6gvc6hDa'
+      - 'Bearer 1kEfgZ8aP5avV6bd6Dhec34'
     controller: null
     method: null
     route: null
@@ -205,50 +225,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-        example: vmhflxfetjelpoyfcwatxsynfbwesmitai
+        example: xalwwsfuwkxinkjhsoysqfyzw
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: id
+        example: quis
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-        example: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
+        example: sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-14T19:39:35'
+        example: '2023-08-15T21:29:16'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-        example: numquam
+        example: voluptates
         type: string
         custom: []
     cleanBodyParameters:
-      title: vmhflxfetjelpoyfcwatxsynfbwesmitai
-      description: id
-      genre: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
-      publish_at: '2023-08-14T19:39:35'
-      director_id: numquam
+      title: xalwwsfuwkxinkjhsoysqfyzw
+      description: quis
+      genre: sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq
+      publish_at: '2023-08-15T21:29:16'
+      director_id: voluptates
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer k6gf1d6ZbE5V4aac3Dh8evP'
+      - 'Bearer evPfd6DZ86a3h5k41agEcbV'
     controller: null
     method: null
     route: null
@@ -290,7 +310,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6dgk3hVbvf6E8P15ZaaeD4c'
+      - 'Bearer kcDd1eP64h3Zva586aVEfbg'
     controller: null
     method: null
     route: null
@@ -329,11 +349,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"data":[{"id":1,"name":"Tom","lastName":"Holland","createdAt":"2023-08-03T16:17:31.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/actors","per_page":15,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '51'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -341,7 +363,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer daveVc616Z5b4hf8akDPE3g'
+      - 'Bearer 5ahPedZEgD3bvVck66f18a4'
     controller: null
     method: null
     route: null
@@ -381,19 +403,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - quidem
+          - pariatur
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-        - quidem
+        - pariatur
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 81VDZ4dEvPa6egfb6akc53h'
+      - 'Bearer 158hEeZa6Va6fDkdPv4b3cg'
     controller: null
     method: null
     route: null
@@ -433,19 +455,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - assumenda
+          - saepe
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-        - assumenda
+        - saepe
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer ED156aeZkg8a3V4Pdhvbcf6'
+      - 'Bearer 356Pacfgeb1a6kVdhD8Z4vE'
     controller: null
     method: null
     route: null
@@ -484,11 +506,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"data":[{"id":1,"deadlineAt":"2023-08-03","returnDateAt":"2023-08-03","actualDateAt":"2023-08-03","userId":1}],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/rents","per_page":15,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -496,7 +520,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dE45e6kVf63gP18acZhabDv'
+      - 'Bearer E5Z6egPda4h8bcaVk631vfD'
     controller: null
     method: null
     route: null
@@ -536,19 +560,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - quibusdam
+          - quam
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-        - quibusdam
+        - quam
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 413PecD6v8fk6badgZVEa5h'
+      - 'Bearer 1v3gVh54cae8PZafdk66DEb'
     controller: null
     method: null
     route: null
@@ -588,19 +612,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - nemo
+          - ut
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-        - nemo
+        - ut
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer D356h1Zk4dEaeVPa68gcbfv'
+      - 'Bearer Va63fkhv86c5bDEe41ZgPad'
     controller: null
     method: null
     route: null

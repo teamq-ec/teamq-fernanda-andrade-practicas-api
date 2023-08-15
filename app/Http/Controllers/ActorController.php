@@ -8,17 +8,25 @@ use App\Models\Actor;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
 
 class ActorController extends Controller
 {
     #[Group("Actor management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
+
     public function index()
     {
-        $actor= Actor::all();
-        return response()->json($actor);
+        return  ActorResource::collection(
+            Actor::query()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
     #[Group("Actor management")]

@@ -8,16 +8,23 @@ use App\Models\Movie;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 use Symfony\Component\HttpFoundation\Response;
 
 class MovieController extends Controller
 {
     #[Group("Movie management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
     public function index()
     {
-        $movie= Movie::all();
-        return response()->json($movie);
+        return  MovieResource::collection(
+            Movie::query()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
 

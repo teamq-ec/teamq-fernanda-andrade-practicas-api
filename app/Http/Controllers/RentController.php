@@ -8,16 +8,23 @@ use App\Models\Rent;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 use Symfony\Component\HttpFoundation\Response;
 
 class RentController extends Controller
 {
     #[Group("Rent management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
     public function index()
     {
-        $rent= Rent::all();
-        return response()->json($rent);
+        return  RentResource::collection(
+            Rent::query()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
     #[Group("Rent management")]

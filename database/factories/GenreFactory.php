@@ -17,7 +17,7 @@ class GenreFactory extends Factory
     public function definition()
     {
         return [
-                'Genre' => fake()->boolean()
+                'genre' => fake()->boolean()
         ];
     }
 }

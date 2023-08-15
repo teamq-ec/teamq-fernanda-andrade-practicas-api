@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware'=>['auth:sanctum']],function () {
+//Route::group(['middleware'=>['auth:sanctum']],function () {
 
     Route::get('/actors', [\App\Http\Controllers\ActorController::class, 'index']);
     Route::get('/actors/{actor}', [\App\Http\Controllers\ActorController::class, 'show']);
@@ -61,12 +61,13 @@ Route::group(['middleware'=>['auth:sanctum']],function () {
     Route::put('/auth/{user}', [AuthController::class, 'update']);
     Route::delete('/auth/{user}', [AuthController::class, 'destroy']);
 
-});
+    Route::apiResource('movies/{movie}/images',\App\Http\Controllers\ImageController::class);
+//});
 
 Route::post('auth',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);
 
-Route::apiResource('movies/{movie}/images',\App\Http\Controllers\ImageController::class);
+
 
 
 

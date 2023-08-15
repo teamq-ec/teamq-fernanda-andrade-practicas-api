@@ -37,11 +37,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"id":1,"name":"Juan","age":32,"email":"juan.hahn@example.com","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-05T00:47:59.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '48'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -49,7 +51,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D6Pfdb31v5k4VaZ8cegahE6'
+      - 'Bearer 64adkEvc3bPehf8VZga15D6'
     controller: null
     method: null
     route: null
@@ -88,42 +90,42 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: eligendi
+        example: voluptas
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-        example: molestias
+        example: quo
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: wilford.renner@example.com
+        example: fmorar@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: quia
+        example: sed
         type: string
         custom: []
     cleanBodyParameters:
-      name: eligendi
-      age: molestias
-      email: wilford.renner@example.com
-      password: quia
+      name: voluptas
+      age: quo
+      email: fmorar@example.org
+      password: sed
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Vc6kDZEbf3dh4aa5vg8Pe6'
+      - 'Bearer Vfge453dh61k6PacZaEvD8b'
     controller: null
     method: null
     route: null
@@ -165,7 +167,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 65fVD3kva6gZPbhae8dE41c'
+      - 'Bearer Ev1PhgVDbaZcf4k685a63ed'
     controller: null
     method: null
     route: null

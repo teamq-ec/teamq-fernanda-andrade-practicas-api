@@ -9,12 +9,15 @@ use App\Models\Movie;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\Subgroup;
 use Symfony\Component\HttpFoundation\Response;
 
 class ImageController extends Controller
 {
     #[Group("Images management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
 
     public function index(Movie $movie): \Illuminate\Http\Resources\Json\AnonymousResourceCollection

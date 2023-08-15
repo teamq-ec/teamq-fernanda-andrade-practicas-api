@@ -8,15 +8,22 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 
 class UserController extends Controller
 {
     #[Group("User management")]
+    #[QueryParam("per_page", "int")]
+    #[QueryParam("page", "int")]
     #[Authenticated]
     public function index()
     {
-        $user= User::all();
-        return response()->json($user);
+        return  UserResource::collection(
+            User::query()->paginate(
+                perPage: \request('perPage'),
+                page: \request('page')
+            )
+        );
     }
 
     #[Group("User management")]

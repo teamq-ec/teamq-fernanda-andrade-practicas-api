@@ -14,6 +14,26 @@ paths:
       description: ''
       parameters:
         -
+          in: query
+          name: per_page
+          description: ''
+          example: 17
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 17
+        -
+          in: query
+          name: page
+          description: ''
+          example: 8
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 8
+        -
           in: header
           name: Authorization
           description: ''
@@ -21,18 +41,347 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 108
+                      name: 'Lukas West'
+                      lastName: Farrell
+                      createdAt: '2023-08-15T18:03:24.000000Z'
+                    -
+                      id: 109
+                      name: 'John Turcotte'
+                      lastName: Hansen
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 110
+                      name: 'Prof. Brando Hirthe'
+                      lastName: Cassin
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 111
+                      name: 'Davin Bogan'
+                      lastName: Green
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 112
+                      name: 'Shanel Terry'
+                      lastName: 'O''Conner'
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 113
+                      name: 'Ada Marquardt'
+                      lastName: Dach
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 114
+                      name: 'Betsy Krajcik'
+                      lastName: Romaguera
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 115
+                      name: 'Dr. Hal Feest'
+                      lastName: Lebsack
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 116
+                      name: 'Raul Hettinger'
+                      lastName: Bahringer
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 117
+                      name: 'Ms. Mozelle Thiel'
+                      lastName: Lehner
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 118
+                      name: 'Julio Funk'
+                      lastName: Miller
+                      createdAt: '2023-08-15T18:03:26.000000Z'
+                    -
+                      id: 119
+                      name: 'Mr. Wyman Corwin II'
+                      lastName: Mayer
+                      createdAt: '2023-08-15T18:03:27.000000Z'
+                    -
+                      id: 120
+                      name: 'Mrs. Abby Ward'
+                      lastName: Lesch
+                      createdAt: '2023-08-15T18:03:27.000000Z'
+                    -
+                      id: 121
+                      name: 'Mrs. Madeline Macejkovic'
+                      lastName: Okuneva
+                      createdAt: '2023-08-15T18:03:27.000000Z'
+                    -
+                      id: 122
+                      name: 'Elenor Hansen'
+                      lastName: Denesik
+                      createdAt: '2023-08-15T18:03:27.000000Z'
+                  links:
+                    first: 'http://localhost:8000/api/actors?page=1'
+                    last: 'http://localhost:8000/api/actors?page=10'
+                    prev: 'http://localhost:8000/api/actors?page=7'
+                    next: 'http://localhost:8000/api/actors?page=9'
+                  meta:
+                    current_page: 8
+                    from: 106
+                    last_page: 10
+                    links:
+                      -
+                        url: 'http://localhost:8000/api/actors?page=7'
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=1'
+                        label: '1'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=8'
+                        label: '8'
+                        active: true
+                      -
+                        url: 'http://localhost:8000/api/actors?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/actors?page=9'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/actors'
+                    per_page: 15
+                    to: 120
+                    total: 146
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 108
+                        name: 'Lukas West'
+                        lastName: Farrell
+                        createdAt: '2023-08-15T18:03:24.000000Z'
+                      -
+                        id: 109
+                        name: 'John Turcotte'
+                        lastName: Hansen
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 110
+                        name: 'Prof. Brando Hirthe'
+                        lastName: Cassin
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 111
+                        name: 'Davin Bogan'
+                        lastName: Green
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 112
+                        name: 'Shanel Terry'
+                        lastName: 'O''Conner'
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 113
+                        name: 'Ada Marquardt'
+                        lastName: Dach
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 114
+                        name: 'Betsy Krajcik'
+                        lastName: Romaguera
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 115
+                        name: 'Dr. Hal Feest'
+                        lastName: Lebsack
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 116
+                        name: 'Raul Hettinger'
+                        lastName: Bahringer
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 117
+                        name: 'Ms. Mozelle Thiel'
+                        lastName: Lehner
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 118
+                        name: 'Julio Funk'
+                        lastName: Miller
+                        createdAt: '2023-08-15T18:03:26.000000Z'
+                      -
+                        id: 119
+                        name: 'Mr. Wyman Corwin II'
+                        lastName: Mayer
+                        createdAt: '2023-08-15T18:03:27.000000Z'
+                      -
+                        id: 120
+                        name: 'Mrs. Abby Ward'
+                        lastName: Lesch
+                        createdAt: '2023-08-15T18:03:27.000000Z'
+                      -
+                        id: 121
+                        name: 'Mrs. Madeline Macejkovic'
+                        lastName: Okuneva
+                        createdAt: '2023-08-15T18:03:27.000000Z'
+                      -
+                        id: 122
+                        name: 'Elenor Hansen'
+                        lastName: Denesik
+                        createdAt: '2023-08-15T18:03:27.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 108
+                        name:
+                          type: string
+                          example: 'Lukas West'
+                        lastName:
+                          type: string
+                          example: Farrell
+                        createdAt:
+                          type: string
+                          example: '2023-08-15T18:03:24.000000Z'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/actors?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/actors?page=10'
+                      prev:
+                        type: string
+                        example: 'http://localhost:8000/api/actors?page=7'
+                      next:
+                        type: string
+                        example: 'http://localhost:8000/api/actors?page=9'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 8
+                      from:
+                        type: integer
+                        example: 106
+                      last_page:
+                        type: integer
+                        example: 10
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: 'http://localhost:8000/api/actors?page=7'
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=1'
+                            label: '1'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=8'
+                            label: '8'
+                            active: true
+                          -
+                            url: 'http://localhost:8000/api/actors?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/actors?page=9'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: 'http://localhost:8000/api/actors?page=7'
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/actors'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 120
+                      total:
+                        type: integer
+                        example: 146
       tags:
         - 'Actor management'
     post:
@@ -60,11 +409,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: sbqqfqpvnyq
+                  example: juxotzcfjsxassdhb
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ostulxpfybjajoxmfupuwdbxxvexzelzacalpeczxto
+                  example: ewfhjmexwzhrxqvlkl
               required:
                 - name
                 - last_name
@@ -82,18 +431,34 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 1
+                  name: Tom
+                  last_name: Holland
+                  created_at: '2023-08-03T16:17:31.000000Z'
+                  updated_at: '2023-08-03T16:17:34.000000Z'
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
                     type: string
-                    example: Unauthenticated.
+                    example: Tom
+                  last_name:
+                    type: string
+                    example: Holland
+                  created_at:
+                    type: string
+                    example: '2023-08-03T16:17:31.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-08-03T16:17:34.000000Z'
       tags:
         - 'Actor management'
     put:
@@ -121,11 +486,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: txhkrfphbuonvbojlulowbfmyhebiwkifugwsqvdfrxuhmbybvadrsviikgdcejnlpkejgghfzshetco
+                  example: vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ehdppscoxuuilbbfdtpaqtgeqeifxurdzmrpdbfbonunzfxhckzkewjrlafalxfelqbe
+                  example: ewnh
               required:
                 - name
                 - last_name
@@ -160,6 +525,26 @@ paths:
       description: ''
       parameters:
         -
+          in: query
+          name: per_page
+          description: ''
+          example: 7
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 7
+        -
+          in: query
+          name: page
+          description: ''
+          example: 9
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 9
+        -
           in: header
           name: Authorization
           description: ''
@@ -167,18 +552,772 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        403:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  message: 'This action is unauthorized.'
+                  exception: Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+                  file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line: 395
+                  trace:
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                      line: 367
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php'
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 143
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 126
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 102
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 54
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 799
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 776
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 740
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 729
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 190
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 165
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 134
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 92
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 209
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 166
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 124
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 71
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 49
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
+                      line: 51
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\Util.php'
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\Container.php'
+                      line: 661
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                      line: 183
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Command\Command.php'
+                      line: 291
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                      line: 153
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                      line: 1014
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                      line: 301
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                      line: 171
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Application.php'
+                      line: 102
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
+                      line: 155
+                      function: run
+                      class: Illuminate\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\Users\User\Documents\movie-api-rest\artisan'
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
                 properties:
                   message:
                     type: string
-                    example: Unauthenticated.
+                    example: 'This action is unauthorized.'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+                  file:
+                    type: string
+                    example: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line:
+                    type: integer
+                    example: 395
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                        line: 367
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php'
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 143
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 126
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 102
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 54
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 799
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 776
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 740
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 729
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 190
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 165
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 134
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 92
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 209
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 166
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 124
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 71
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 49
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
+                        line: 51
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\Util.php'
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Container\Container.php'
+                        line: 661
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                        line: 183
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Command\Command.php'
+                        line: 291
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                        line: 153
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                        line: 1014
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                        line: 301
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\symfony\console\Application.php'
+                        line: 171
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Console\Application.php'
+                        line: 102
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
+                        line: 155
+                        function: run
+                        class: Illuminate\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\Users\User\Documents\movie-api-rest\artisan'
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: 'C:\Users\User\Documents\movie-api-rest\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                        line:
+                          type: integer
+                          example: 367
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
       tags:
         - 'Director management'
     post:
@@ -206,11 +1345,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: drtfsbkyakpodonodtuzihpikvzudogihlscexdhcedzeiheta
+                  example: dycbdqhuwtgvdrnscjhqdirukt
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: iisnfsytmfoewdciofenyvqekjbagdtlorupbbcfmsakczhhabzcvmoqvl
+                  example: yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif
               required:
                 - name
                 - last_name
@@ -228,18 +1367,34 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 1
+                  name: Jon
+                  last_name: Watts
+                  created_at: '2023-08-03T19:57:29.000000Z'
+                  updated_at: '2023-08-03T19:57:31.000000Z'
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
                     type: string
-                    example: Unauthenticated.
+                    example: Jon
+                  last_name:
+                    type: string
+                    example: Watts
+                  created_at:
+                    type: string
+                    example: '2023-08-03T19:57:29.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-08-03T19:57:31.000000Z'
       tags:
         - 'Director management'
     put:
@@ -267,11 +1422,11 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: sqywfzzgnmptigpitcsgypwyftfqjclybibhhmpkwuvyvyeyjgvgw
+                  example: jrukqepsctnheqtxtairtufcxynchbmqutdbzk
                 last_name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: stbchfbearbwzhounumwyqsjqbutqlpnpsnstbwbnmpmzrroot
+                  example: omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy
               required:
                 - name
                 - last_name
@@ -328,18 +1483,687 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
-                type: object
+                type: array
+                items:
+                  type: object
                 example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  -
+                    id: 1
+                    name: Juan
+                    age: 32
+                    email: juan.hahn@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-05T00:47:59.000000Z'
+                  -
+                    id: 2
+                    name: Marta
+                    age: 23
+                    email: marta.devora@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-05T00:49:21.000000Z'
+                  -
+                    id: 3
+                    name: 'Willy Effertz'
+                    age: 45
+                    email: chandler23@example.net
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 4
+                    name: 'Gail Koch'
+                    age: 56
+                    email: uhartmann@example.com
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 5
+                    name: 'Pete Boehm'
+                    age: 56
+                    email: dillon.smitham@example.net
+                    email_verified_at: '2023-08-04T01:12:20.000000Z'
+                    created_at: '2023-08-04T01:12:20.000000Z'
+                    updated_at: '2023-08-04T01:12:20.000000Z'
+                  -
+                    id: 6
+                    name: 'Raul Padberg'
+                    age: 34
+                    email: mboyle@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 7
+                    name: 'Katelin Casper'
+                    age: 23
+                    email: desiree61@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 8
+                    name: 'Bryce Cummerata I'
+                    age: 23
+                    email: lswift@example.org
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 9
+                    name: 'Murray Auer'
+                    age: 23
+                    email: uschmeler@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 10
+                    name: 'Prof. Loren Flatley MD'
+                    age: 23
+                    email: dolores.schoen@example.net
+                    email_verified_at: '2023-08-04T20:29:30.000000Z'
+                    created_at: '2023-08-04T20:29:30.000000Z'
+                    updated_at: '2023-08-04T20:29:30.000000Z'
+                  -
+                    id: 13
+                    name: Joselyn
+                    age: 19
+                    email: joselyn19@example.com
+                    email_verified_at: '2023-08-08T14:27:36.000000Z'
+                    created_at: '2023-08-05T01:31:18.000000Z'
+                    updated_at: '2023-08-05T01:31:18.000000Z'
+                  -
+                    id: 14
+                    name: fernanda
+                    age: 19
+                    email: fernanda@gmail.com
+                    email_verified_at: '2023-08-08T14:27:38.000000Z'
+                    created_at: '2023-08-07T20:26:55.000000Z'
+                    updated_at: '2023-08-07T20:26:55.000000Z'
+                  -
+                    id: 15
+                    name: Postman
+                    age: 29
+                    email: postman@example.com
+                    email_verified_at: null
+                    created_at: '2023-08-09T23:14:19.000000Z'
+                    updated_at: '2023-08-09T23:14:19.000000Z'
+                  -
+                    id: 17
+                    name: Postman
+                    age: 29
+                    email: rincon_postman@example.com
+                    email_verified_at: null
+                    created_at: '2023-08-09T23:17:07.000000Z'
+                    updated_at: '2023-08-09T23:17:07.000000Z'
+                  -
+                    id: 18
+                    name: 'Annamarie Boehm'
+                    age: null
+                    email: marquardt.carmine@example.net
+                    email_verified_at: '2023-08-15T17:54:01.000000Z'
+                    created_at: '2023-08-15T17:54:01.000000Z'
+                    updated_at: '2023-08-15T17:54:01.000000Z'
+                  -
+                    id: 19
+                    name: 'Dr. Micah Ryan Jr.'
+                    age: null
+                    email: klocko.noe@example.org
+                    email_verified_at: '2023-08-15T17:54:01.000000Z'
+                    created_at: '2023-08-15T17:54:01.000000Z'
+                    updated_at: '2023-08-15T17:54:01.000000Z'
+                  -
+                    id: 20
+                    name: 'Mary Beier DVM'
+                    age: null
+                    email: ecollier@example.com
+                    email_verified_at: '2023-08-15T17:54:01.000000Z'
+                    created_at: '2023-08-15T17:54:01.000000Z'
+                    updated_at: '2023-08-15T17:54:01.000000Z'
+                  -
+                    id: 21
+                    name: 'Nikita Ziemann'
+                    age: null
+                    email: wyman.jarred@example.org
+                    email_verified_at: '2023-08-15T17:54:01.000000Z'
+                    created_at: '2023-08-15T17:54:01.000000Z'
+                    updated_at: '2023-08-15T17:54:01.000000Z'
+                  -
+                    id: 22
+                    name: 'Miss Dandre Boyer'
+                    age: null
+                    email: micheal67@example.com
+                    email_verified_at: '2023-08-15T17:54:01.000000Z'
+                    created_at: '2023-08-15T17:54:01.000000Z'
+                    updated_at: '2023-08-15T17:54:01.000000Z'
+                  -
+                    id: 23
+                    name: 'Ms. Carley Rau'
+                    age: null
+                    email: hirthe.angela@example.net
+                    email_verified_at: '2023-08-15T17:59:02.000000Z'
+                    created_at: '2023-08-15T17:59:02.000000Z'
+                    updated_at: '2023-08-15T17:59:02.000000Z'
+                  -
+                    id: 24
+                    name: 'Jeffery Greenholt'
+                    age: null
+                    email: felicia.hamill@example.net
+                    email_verified_at: '2023-08-15T17:59:02.000000Z'
+                    created_at: '2023-08-15T17:59:02.000000Z'
+                    updated_at: '2023-08-15T17:59:02.000000Z'
+                  -
+                    id: 25
+                    name: 'Abigale Hamill'
+                    age: null
+                    email: damion04@example.com
+                    email_verified_at: '2023-08-15T17:59:02.000000Z'
+                    created_at: '2023-08-15T17:59:02.000000Z'
+                    updated_at: '2023-08-15T17:59:02.000000Z'
+                  -
+                    id: 26
+                    name: 'Miss Addison Paucek I'
+                    age: null
+                    email: preston91@example.org
+                    email_verified_at: '2023-08-15T17:59:02.000000Z'
+                    created_at: '2023-08-15T17:59:02.000000Z'
+                    updated_at: '2023-08-15T17:59:02.000000Z'
+                  -
+                    id: 27
+                    name: 'Jaylan Gleichner'
+                    age: null
+                    email: quigley.fidel@example.net
+                    email_verified_at: '2023-08-15T17:59:02.000000Z'
+                    created_at: '2023-08-15T17:59:02.000000Z'
+                    updated_at: '2023-08-15T17:59:02.000000Z'
+                  -
+                    id: 28
+                    name: 'Mr. Gillian Zboncak II'
+                    age: null
+                    email: mireille54@example.com
+                    email_verified_at: '2023-08-15T18:03:11.000000Z'
+                    created_at: '2023-08-15T18:03:11.000000Z'
+                    updated_at: '2023-08-15T18:03:11.000000Z'
+                  -
+                    id: 29
+                    name: 'Margarette Kozey'
+                    age: null
+                    email: birdie.lehner@example.com
+                    email_verified_at: '2023-08-15T18:03:11.000000Z'
+                    created_at: '2023-08-15T18:03:11.000000Z'
+                    updated_at: '2023-08-15T18:03:11.000000Z'
+                  -
+                    id: 30
+                    name: 'Taya O''Reilly'
+                    age: null
+                    email: max46@example.net
+                    email_verified_at: '2023-08-15T18:03:11.000000Z'
+                    created_at: '2023-08-15T18:03:11.000000Z'
+                    updated_at: '2023-08-15T18:03:11.000000Z'
+                  -
+                    id: 31
+                    name: 'Alison Medhurst'
+                    age: null
+                    email: kariane46@example.net
+                    email_verified_at: '2023-08-15T18:03:11.000000Z'
+                    created_at: '2023-08-15T18:03:11.000000Z'
+                    updated_at: '2023-08-15T18:03:11.000000Z'
+                  -
+                    id: 32
+                    name: 'Nikolas Schmidt'
+                    age: null
+                    email: markus38@example.com
+                    email_verified_at: '2023-08-15T18:03:11.000000Z'
+                    created_at: '2023-08-15T18:03:11.000000Z'
+                    updated_at: '2023-08-15T18:03:11.000000Z'
+                  -
+                    id: 33
+                    name: 'Mallory Jacobson'
+                    age: null
+                    email: wunsch.giovanni@example.com
+                    email_verified_at: '2023-08-15T18:03:14.000000Z'
+                    created_at: '2023-08-15T18:03:14.000000Z'
+                    updated_at: '2023-08-15T18:03:14.000000Z'
+                  -
+                    id: 34
+                    name: 'Russ Medhurst'
+                    age: null
+                    email: fzemlak@example.com
+                    email_verified_at: '2023-08-15T18:03:14.000000Z'
+                    created_at: '2023-08-15T18:03:14.000000Z'
+                    updated_at: '2023-08-15T18:03:14.000000Z'
+                  -
+                    id: 35
+                    name: 'Mr. Davon Wiza IV'
+                    age: null
+                    email: oaltenwerth@example.com
+                    email_verified_at: '2023-08-15T18:03:14.000000Z'
+                    created_at: '2023-08-15T18:03:14.000000Z'
+                    updated_at: '2023-08-15T18:03:14.000000Z'
+                  -
+                    id: 36
+                    name: 'Dr. Xavier Bode'
+                    age: null
+                    email: taurean77@example.com
+                    email_verified_at: '2023-08-15T18:03:14.000000Z'
+                    created_at: '2023-08-15T18:03:14.000000Z'
+                    updated_at: '2023-08-15T18:03:14.000000Z'
+                  -
+                    id: 37
+                    name: 'Vesta Wintheiser'
+                    age: null
+                    email: jeff.skiles@example.org
+                    email_verified_at: '2023-08-15T18:03:14.000000Z'
+                    created_at: '2023-08-15T18:03:14.000000Z'
+                    updated_at: '2023-08-15T18:03:14.000000Z'
+                  -
+                    id: 38
+                    name: 'Maybell Daniel'
+                    age: null
+                    email: ola85@example.net
+                    email_verified_at: '2023-08-15T18:03:16.000000Z'
+                    created_at: '2023-08-15T18:03:16.000000Z'
+                    updated_at: '2023-08-15T18:03:16.000000Z'
+                  -
+                    id: 39
+                    name: 'Mr. Seth Von PhD'
+                    age: null
+                    email: monty.hodkiewicz@example.com
+                    email_verified_at: '2023-08-15T18:03:16.000000Z'
+                    created_at: '2023-08-15T18:03:16.000000Z'
+                    updated_at: '2023-08-15T18:03:16.000000Z'
+                  -
+                    id: 40
+                    name: 'Rita Mante'
+                    age: null
+                    email: taylor99@example.net
+                    email_verified_at: '2023-08-15T18:03:16.000000Z'
+                    created_at: '2023-08-15T18:03:16.000000Z'
+                    updated_at: '2023-08-15T18:03:16.000000Z'
+                  -
+                    id: 41
+                    name: 'Adan Hodkiewicz'
+                    age: null
+                    email: fanny15@example.com
+                    email_verified_at: '2023-08-15T18:03:16.000000Z'
+                    created_at: '2023-08-15T18:03:16.000000Z'
+                    updated_at: '2023-08-15T18:03:16.000000Z'
+                  -
+                    id: 42
+                    name: 'Theodore Volkman'
+                    age: null
+                    email: vbarrows@example.net
+                    email_verified_at: '2023-08-15T18:03:16.000000Z'
+                    created_at: '2023-08-15T18:03:16.000000Z'
+                    updated_at: '2023-08-15T18:03:16.000000Z'
+                  -
+                    id: 43
+                    name: 'Dr. Emiliano Ernser DVM'
+                    age: null
+                    email: paucek.luisa@example.com
+                    email_verified_at: '2023-08-15T18:03:17.000000Z'
+                    created_at: '2023-08-15T18:03:17.000000Z'
+                    updated_at: '2023-08-15T18:03:17.000000Z'
+                  -
+                    id: 44
+                    name: 'Columbus Spencer'
+                    age: null
+                    email: qhilpert@example.com
+                    email_verified_at: '2023-08-15T18:03:17.000000Z'
+                    created_at: '2023-08-15T18:03:17.000000Z'
+                    updated_at: '2023-08-15T18:03:17.000000Z'
+                  -
+                    id: 45
+                    name: 'Prof. Zoila Ratke'
+                    age: null
+                    email: felicia.kulas@example.net
+                    email_verified_at: '2023-08-15T18:03:17.000000Z'
+                    created_at: '2023-08-15T18:03:17.000000Z'
+                    updated_at: '2023-08-15T18:03:17.000000Z'
+                  -
+                    id: 46
+                    name: 'Johann Zemlak'
+                    age: null
+                    email: sadie.labadie@example.net
+                    email_verified_at: '2023-08-15T18:03:17.000000Z'
+                    created_at: '2023-08-15T18:03:17.000000Z'
+                    updated_at: '2023-08-15T18:03:17.000000Z'
+                  -
+                    id: 47
+                    name: 'Prof. Nathaniel Terry'
+                    age: null
+                    email: nina12@example.com
+                    email_verified_at: '2023-08-15T18:03:17.000000Z'
+                    created_at: '2023-08-15T18:03:17.000000Z'
+                    updated_at: '2023-08-15T18:03:17.000000Z'
+                  -
+                    id: 48
+                    name: 'Christa Bergstrom'
+                    age: null
+                    email: dax81@example.net
+                    email_verified_at: '2023-08-15T18:03:20.000000Z'
+                    created_at: '2023-08-15T18:03:20.000000Z'
+                    updated_at: '2023-08-15T18:03:20.000000Z'
+                  -
+                    id: 49
+                    name: 'Rhea Bogan'
+                    age: null
+                    email: madison.spencer@example.org
+                    email_verified_at: '2023-08-15T18:03:20.000000Z'
+                    created_at: '2023-08-15T18:03:20.000000Z'
+                    updated_at: '2023-08-15T18:03:20.000000Z'
+                  -
+                    id: 50
+                    name: 'Ms. Lera Schinner'
+                    age: null
+                    email: obeahan@example.com
+                    email_verified_at: '2023-08-15T18:03:20.000000Z'
+                    created_at: '2023-08-15T18:03:20.000000Z'
+                    updated_at: '2023-08-15T18:03:20.000000Z'
+                  -
+                    id: 51
+                    name: 'Abigale Walter'
+                    age: null
+                    email: aschumm@example.org
+                    email_verified_at: '2023-08-15T18:03:20.000000Z'
+                    created_at: '2023-08-15T18:03:20.000000Z'
+                    updated_at: '2023-08-15T18:03:20.000000Z'
+                  -
+                    id: 52
+                    name: 'Wava Crona'
+                    age: null
+                    email: ethelyn.gulgowski@example.org
+                    email_verified_at: '2023-08-15T18:03:20.000000Z'
+                    created_at: '2023-08-15T18:03:20.000000Z'
+                    updated_at: '2023-08-15T18:03:20.000000Z'
+                  -
+                    id: 53
+                    name: 'Wilfred Jacobi PhD'
+                    age: null
+                    email: astanton@example.org
+                    email_verified_at: '2023-08-15T18:03:21.000000Z'
+                    created_at: '2023-08-15T18:03:21.000000Z'
+                    updated_at: '2023-08-15T18:03:21.000000Z'
+                  -
+                    id: 54
+                    name: 'Adele Willms'
+                    age: null
+                    email: jesse58@example.org
+                    email_verified_at: '2023-08-15T18:03:21.000000Z'
+                    created_at: '2023-08-15T18:03:21.000000Z'
+                    updated_at: '2023-08-15T18:03:21.000000Z'
+                  -
+                    id: 55
+                    name: 'Melyna Torphy'
+                    age: null
+                    email: betty.bruen@example.org
+                    email_verified_at: '2023-08-15T18:03:21.000000Z'
+                    created_at: '2023-08-15T18:03:21.000000Z'
+                    updated_at: '2023-08-15T18:03:21.000000Z'
+                  -
+                    id: 56
+                    name: 'Dr. Hilda Conn'
+                    age: null
+                    email: alexzander.kihn@example.com
+                    email_verified_at: '2023-08-15T18:03:21.000000Z'
+                    created_at: '2023-08-15T18:03:21.000000Z'
+                    updated_at: '2023-08-15T18:03:21.000000Z'
+                  -
+                    id: 57
+                    name: 'Reuben Mitchell'
+                    age: null
+                    email: guiseppe.bartell@example.net
+                    email_verified_at: '2023-08-15T18:03:21.000000Z'
+                    created_at: '2023-08-15T18:03:21.000000Z'
+                    updated_at: '2023-08-15T18:03:21.000000Z'
+                  -
+                    id: 58
+                    name: 'Keith Halvorson'
+                    age: null
+                    email: newton.sauer@example.org
+                    email_verified_at: '2023-08-15T18:03:23.000000Z'
+                    created_at: '2023-08-15T18:03:23.000000Z'
+                    updated_at: '2023-08-15T18:03:23.000000Z'
+                  -
+                    id: 59
+                    name: 'Prof. Alexandro Smith'
+                    age: null
+                    email: haag.ludwig@example.com
+                    email_verified_at: '2023-08-15T18:03:23.000000Z'
+                    created_at: '2023-08-15T18:03:23.000000Z'
+                    updated_at: '2023-08-15T18:03:23.000000Z'
+                  -
+                    id: 60
+                    name: 'Newell Jones'
+                    age: null
+                    email: clehner@example.net
+                    email_verified_at: '2023-08-15T18:03:23.000000Z'
+                    created_at: '2023-08-15T18:03:23.000000Z'
+                    updated_at: '2023-08-15T18:03:23.000000Z'
+                  -
+                    id: 61
+                    name: 'Ms. Maxie Auer'
+                    age: null
+                    email: pturcotte@example.com
+                    email_verified_at: '2023-08-15T18:03:23.000000Z'
+                    created_at: '2023-08-15T18:03:23.000000Z'
+                    updated_at: '2023-08-15T18:03:23.000000Z'
+                  -
+                    id: 62
+                    name: 'Aliya Schmidt'
+                    age: null
+                    email: sallie66@example.com
+                    email_verified_at: '2023-08-15T18:03:23.000000Z'
+                    created_at: '2023-08-15T18:03:23.000000Z'
+                    updated_at: '2023-08-15T18:03:23.000000Z'
+                  -
+                    id: 63
+                    name: 'Duncan Zemlak'
+                    age: null
+                    email: coleman13@example.net
+                    email_verified_at: '2023-08-15T18:03:24.000000Z'
+                    created_at: '2023-08-15T18:03:24.000000Z'
+                    updated_at: '2023-08-15T18:03:24.000000Z'
+                  -
+                    id: 64
+                    name: 'Giovanna Bartell'
+                    age: null
+                    email: kory.schuppe@example.org
+                    email_verified_at: '2023-08-15T18:03:24.000000Z'
+                    created_at: '2023-08-15T18:03:24.000000Z'
+                    updated_at: '2023-08-15T18:03:24.000000Z'
+                  -
+                    id: 65
+                    name: 'Hal Rippin'
+                    age: null
+                    email: mraz.triston@example.org
+                    email_verified_at: '2023-08-15T18:03:24.000000Z'
+                    created_at: '2023-08-15T18:03:24.000000Z'
+                    updated_at: '2023-08-15T18:03:24.000000Z'
+                  -
+                    id: 66
+                    name: 'Loyce Glover'
+                    age: null
+                    email: olson.eldon@example.org
+                    email_verified_at: '2023-08-15T18:03:24.000000Z'
+                    created_at: '2023-08-15T18:03:24.000000Z'
+                    updated_at: '2023-08-15T18:03:24.000000Z'
+                  -
+                    id: 67
+                    name: 'Merlin Stanton'
+                    age: null
+                    email: goyette.jett@example.net
+                    email_verified_at: '2023-08-15T18:03:24.000000Z'
+                    created_at: '2023-08-15T18:03:24.000000Z'
+                    updated_at: '2023-08-15T18:03:24.000000Z'
+                  -
+                    id: 68
+                    name: 'Toney Schimmel'
+                    age: null
+                    email: libby06@example.net
+                    email_verified_at: '2023-08-15T18:03:26.000000Z'
+                    created_at: '2023-08-15T18:03:26.000000Z'
+                    updated_at: '2023-08-15T18:03:26.000000Z'
+                  -
+                    id: 69
+                    name: 'Franco O''Connell'
+                    age: null
+                    email: dameon.jakubowski@example.net
+                    email_verified_at: '2023-08-15T18:03:26.000000Z'
+                    created_at: '2023-08-15T18:03:26.000000Z'
+                    updated_at: '2023-08-15T18:03:26.000000Z'
+                  -
+                    id: 70
+                    name: 'Dr. Lauryn O''Kon MD'
+                    age: null
+                    email: heather85@example.net
+                    email_verified_at: '2023-08-15T18:03:26.000000Z'
+                    created_at: '2023-08-15T18:03:26.000000Z'
+                    updated_at: '2023-08-15T18:03:26.000000Z'
+                  -
+                    id: 71
+                    name: 'Alexa Koch'
+                    age: null
+                    email: pfannerstill.darion@example.org
+                    email_verified_at: '2023-08-15T18:03:26.000000Z'
+                    created_at: '2023-08-15T18:03:26.000000Z'
+                    updated_at: '2023-08-15T18:03:26.000000Z'
+                  -
+                    id: 72
+                    name: 'Henri Osinski'
+                    age: null
+                    email: abbigail57@example.org
+                    email_verified_at: '2023-08-15T18:03:26.000000Z'
+                    created_at: '2023-08-15T18:03:26.000000Z'
+                    updated_at: '2023-08-15T18:03:26.000000Z'
+                  -
+                    id: 73
+                    name: 'Audie Volkman IV'
+                    age: null
+                    email: msporer@example.net
+                    email_verified_at: '2023-08-15T18:03:27.000000Z'
+                    created_at: '2023-08-15T18:03:27.000000Z'
+                    updated_at: '2023-08-15T18:03:27.000000Z'
+                  -
+                    id: 74
+                    name: 'Emmie Lind'
+                    age: null
+                    email: jailyn.beatty@example.org
+                    email_verified_at: '2023-08-15T18:03:27.000000Z'
+                    created_at: '2023-08-15T18:03:27.000000Z'
+                    updated_at: '2023-08-15T18:03:27.000000Z'
+                  -
+                    id: 75
+                    name: 'Walker Carter'
+                    age: null
+                    email: samson50@example.com
+                    email_verified_at: '2023-08-15T18:03:27.000000Z'
+                    created_at: '2023-08-15T18:03:27.000000Z'
+                    updated_at: '2023-08-15T18:03:27.000000Z'
+                  -
+                    id: 76
+                    name: 'Dr. Kennedy Schamberger PhD'
+                    age: null
+                    email: wilburn.heathcote@example.com
+                    email_verified_at: '2023-08-15T18:03:27.000000Z'
+                    created_at: '2023-08-15T18:03:27.000000Z'
+                    updated_at: '2023-08-15T18:03:27.000000Z'
+                  -
+                    id: 77
+                    name: 'Jaleel Farrell'
+                    age: null
+                    email: jast.garnett@example.com
+                    email_verified_at: '2023-08-15T18:03:27.000000Z'
+                    created_at: '2023-08-15T18:03:27.000000Z'
+                    updated_at: '2023-08-15T18:03:27.000000Z'
+                  -
+                    id: 78
+                    name: 'Nathaniel Quitzon II'
+                    age: null
+                    email: hartmann.dorris@example.org
+                    email_verified_at: '2023-08-15T18:03:29.000000Z'
+                    created_at: '2023-08-15T18:03:29.000000Z'
+                    updated_at: '2023-08-15T18:03:29.000000Z'
+                  -
+                    id: 79
+                    name: 'Jadon Roberts II'
+                    age: null
+                    email: christina.mraz@example.com
+                    email_verified_at: '2023-08-15T18:03:29.000000Z'
+                    created_at: '2023-08-15T18:03:29.000000Z'
+                    updated_at: '2023-08-15T18:03:29.000000Z'
+                  -
+                    id: 80
+                    name: 'Prof. Earline Dare'
+                    age: null
+                    email: burdette85@example.com
+                    email_verified_at: '2023-08-15T18:03:29.000000Z'
+                    created_at: '2023-08-15T18:03:29.000000Z'
+                    updated_at: '2023-08-15T18:03:29.000000Z'
+                  -
+                    id: 81
+                    name: 'Dr. Virgil Spencer III'
+                    age: null
+                    email: zchamplin@example.org
+                    email_verified_at: '2023-08-15T18:03:29.000000Z'
+                    created_at: '2023-08-15T18:03:29.000000Z'
+                    updated_at: '2023-08-15T18:03:29.000000Z'
+                  -
+                    id: 82
+                    name: 'Brando Romaguera Sr.'
+                    age: null
+                    email: elinor.douglas@example.com
+                    email_verified_at: '2023-08-15T18:03:29.000000Z'
+                    created_at: '2023-08-15T18:03:29.000000Z'
+                    updated_at: '2023-08-15T18:03:29.000000Z'
+                  -
+                    id: 83
+                    name: 'Destiney Simonis'
+                    age: null
+                    email: lgleichner@example.com
+                    email_verified_at: '2023-08-15T18:03:49.000000Z'
+                    created_at: '2023-08-15T18:03:49.000000Z'
+                    updated_at: '2023-08-15T18:03:49.000000Z'
+                  -
+                    id: 84
+                    name: 'Cleo Kerluke'
+                    age: null
+                    email: deion.smitham@example.org
+                    email_verified_at: '2023-08-15T18:03:49.000000Z'
+                    created_at: '2023-08-15T18:03:49.000000Z'
+                    updated_at: '2023-08-15T18:03:49.000000Z'
+                  -
+                    id: 85
+                    name: 'Mr. Enid Beier Sr.'
+                    age: null
+                    email: larson.jay@example.net
+                    email_verified_at: '2023-08-15T18:03:49.000000Z'
+                    created_at: '2023-08-15T18:03:49.000000Z'
+                    updated_at: '2023-08-15T18:03:49.000000Z'
+                  -
+                    id: 86
+                    name: 'Mozell Kemmer Sr.'
+                    age: null
+                    email: ernest13@example.com
+                    email_verified_at: '2023-08-15T18:03:49.000000Z'
+                    created_at: '2023-08-15T18:03:49.000000Z'
+                    updated_at: '2023-08-15T18:03:49.000000Z'
+                  -
+                    id: 87
+                    name: 'Joseph Zemlak'
+                    age: null
+                    email: roslyn17@example.com
+                    email_verified_at: '2023-08-15T18:03:49.000000Z'
+                    created_at: '2023-08-15T18:03:49.000000Z'
+                    updated_at: '2023-08-15T18:03:49.000000Z'
       tags:
         - Endpoints
       security: []
@@ -349,6 +2173,26 @@ paths:
       operationId: getApiMoviesMovie_idImages
       description: ''
       parameters:
+        -
+          in: query
+          name: per_page
+          description: ''
+          example: 10
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 10
+        -
+          in: query
+          name: page
+          description: ''
+          example: 10
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 10
         -
           in: header
           name: Authorization
@@ -364,57 +2208,37 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    -
-                      id: 1
-                      url: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
-                      createdAt: '14/Aug, 2023'
+                  data: []
                   links:
                     first: 'http://localhost:8000/api/movies/1/images?page=1'
                     last: 'http://localhost:8000/api/movies/1/images?page=1'
-                    prev: null
+                    prev: 'http://localhost:8000/api/movies/1/images?page=9'
                     next: null
                   meta:
-                    current_page: 1
-                    from: 1
+                    current_page: 10
+                    from: null
                     last_page: 1
                     links:
                       -
-                        url: null
+                        url: 'http://localhost:8000/api/movies/1/images?page=9'
                         label: '&laquo; Previous'
                         active: false
                       -
                         url: 'http://localhost:8000/api/movies/1/images?page=1'
                         label: '1'
-                        active: true
+                        active: false
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
                     path: 'http://localhost:8000/api/movies/1/images'
                     per_page: 15
-                    to: 1
+                    to: null
                     total: 1
                 properties:
                   data:
                     type: array
-                    example:
-                      -
-                        id: 1
-                        url: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
-                        createdAt: '14/Aug, 2023'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        url:
-                          type: string
-                          example: 'http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif'
-                        createdAt:
-                          type: string
-                          example: '14/Aug, 2023'
+                    example: []
                   links:
                     type: object
                     properties:
@@ -426,7 +2250,7 @@ paths:
                         example: 'http://localhost:8000/api/movies/1/images?page=1'
                       prev:
                         type: string
-                        example: null
+                        example: 'http://localhost:8000/api/movies/1/images?page=9'
                       next:
                         type: string
                         example: null
@@ -435,10 +2259,10 @@ paths:
                     properties:
                       current_page:
                         type: integer
-                        example: 1
+                        example: 10
                       from:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       last_page:
                         type: integer
                         example: 1
@@ -446,13 +2270,13 @@ paths:
                         type: array
                         example:
                           -
-                            url: null
+                            url: 'http://localhost:8000/api/movies/1/images?page=9'
                             label: '&laquo; Previous'
                             active: false
                           -
                             url: 'http://localhost:8000/api/movies/1/images?page=1'
                             label: '1'
-                            active: true
+                            active: false
                           -
                             url: null
                             label: 'Next &raquo;'
@@ -462,7 +2286,7 @@ paths:
                           properties:
                             url:
                               type: string
-                              example: null
+                              example: 'http://localhost:8000/api/movies/1/images?page=9'
                             label:
                               type: string
                               example: '&laquo; Previous'
@@ -476,8 +2300,8 @@ paths:
                         type: integer
                         example: 15
                       to:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       total:
                         type: integer
                         example: 1
@@ -508,7 +2332,7 @@ paths:
                 url:
                   type: string
                   description: ''
-                  example: vel
+                  example: quis
               required:
                 - url
     parameters:
@@ -585,7 +2409,7 @@ paths:
                 url:
                   type: string
                   description: ''
-                  example: amet
+                  example: et
               required:
                 - url
     delete:
@@ -627,6 +2451,26 @@ paths:
       description: ''
       parameters:
         -
+          in: query
+          name: per_page
+          description: ''
+          example: 5
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 5
+        -
+          in: query
+          name: page
+          description: ''
+          example: 18
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 18
+        -
           in: header
           name: Authorization
           description: ''
@@ -634,18 +2478,174 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data: []
+                  links:
+                    first: 'http://localhost:8000/api/movies?page=1'
+                    last: 'http://localhost:8000/api/movies?page=9'
+                    prev: 'http://localhost:8000/api/movies?page=17'
+                    next: null
+                  meta:
+                    current_page: 18
+                    from: null
+                    last_page: 9
+                    links:
+                      -
+                        url: 'http://localhost:8000/api/movies?page=17'
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=1'
+                        label: '1'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/movies'
+                    per_page: 15
+                    to: null
+                    total: 123
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/movies?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/movies?page=9'
+                      prev:
+                        type: string
+                        example: 'http://localhost:8000/api/movies?page=17'
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 18
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 9
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: 'http://localhost:8000/api/movies?page=17'
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=1'
+                            label: '1'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: 'http://localhost:8000/api/movies?page=17'
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/movies'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 123
       tags:
         - 'Movie management'
     post:
@@ -673,23 +2673,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: nbtewmmqwccnhkpqxleayzewclsnivafxetkyonidwayhjpgovgzzqijosigdsapetwxwwuktjasfcwvbvsosukw
+                  example: iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz
                 description:
                   type: string
                   description: ''
-                  example: nemo
+                  example: est
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: hqrjrwqimaqkuasascvfkwllacbhpytmikxmwrjicarjbkvekshbzqatkkgjykcxlxbetbyegdidsikyahwzaolbxw
+                  example: bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 director_id:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: rerum
               required:
                 - title
                 - description
@@ -710,18 +2710,46 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 1
+                  title: Spider-Man
+                  description: 'Welcome home'
+                  genre: ACCION
+                  publish_at: '2023-08-03'
+                  director_id: 1
+                  created_at: '2023-08-03T19:59:01.000000Z'
+                  updated_at: '2023-08-03T19:59:02.000000Z'
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 1
+                  title:
                     type: string
-                    example: Unauthenticated.
+                    example: Spider-Man
+                  description:
+                    type: string
+                    example: 'Welcome home'
+                  genre:
+                    type: string
+                    example: ACCION
+                  publish_at:
+                    type: string
+                    example: '2023-08-03'
+                  director_id:
+                    type: integer
+                    example: 1
+                  created_at:
+                    type: string
+                    example: '2023-08-03T19:59:01.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-08-03T19:59:02.000000Z'
       tags:
         - 'Movie management'
     put:
@@ -749,23 +2777,23 @@ paths:
                 title:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: vmhflxfetjelpoyfcwatxsynfbwesmitai
+                  example: xalwwsfuwkxinkjhsoysqfyzw
                 description:
                   type: string
                   description: ''
-                  example: id
+                  example: quis
                 genre:
                   type: string
                   description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
-                  example: wzjzxjtvvpdabgthdhrjbdoyowefmseetbtyizfgdnmunkciixrfmobuaa
+                  example: sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq
                 publish_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 director_id:
                   type: string
                   description: ''
-                  example: numquam
+                  example: voluptates
               required:
                 - title
                 - description
@@ -820,18 +2848,135 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 1
+                      name: Tom
+                      lastName: Holland
+                      createdAt: '2023-08-03T16:17:31.000000Z'
+                  links:
+                    first: 'http://localhost:8000/api/movies/1/actors?page=1'
+                    last: 'http://localhost:8000/api/movies/1/actors?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies/1/actors?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/movies/1/actors'
+                    per_page: 15
+                    to: 1
+                    total: 1
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Tom
+                        lastName: Holland
+                        createdAt: '2023-08-03T16:17:31.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: Tom
+                        lastName:
+                          type: string
+                          example: Holland
+                        createdAt:
+                          type: string
+                          example: '2023-08-03T16:17:31.000000Z'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/actors?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/actors?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies/1/actors?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/actors'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
       tags:
         - 'Movie management'
     post:
@@ -860,7 +3005,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - quidem
+                    - pariatur
                   items:
                     type: string
               required:
@@ -891,7 +3036,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - assumenda
+                    - saepe
                   items:
                     type: string
               required:
@@ -919,18 +3064,140 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 1
+                      deadlineAt: '2023-08-03'
+                      returnDateAt: '2023-08-03'
+                      actualDateAt: '2023-08-03'
+                      userId: 1
+                  links:
+                    first: 'http://localhost:8000/api/movies/1/rents?page=1'
+                    last: 'http://localhost:8000/api/movies/1/rents?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/movies/1/rents?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/movies/1/rents'
+                    per_page: 15
+                    to: 1
+                    total: 1
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        deadlineAt: '2023-08-03'
+                        returnDateAt: '2023-08-03'
+                        actualDateAt: '2023-08-03'
+                        userId: 1
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        deadlineAt:
+                          type: string
+                          example: '2023-08-03'
+                        returnDateAt:
+                          type: string
+                          example: '2023-08-03'
+                        actualDateAt:
+                          type: string
+                          example: '2023-08-03'
+                        userId:
+                          type: integer
+                          example: 1
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/rents?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/rents?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/movies/1/rents?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/movies/1/rents'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
       tags:
         - 'Movie management'
     post:
@@ -959,7 +3226,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - quibusdam
+                    - quam
                   items:
                     type: string
               required:
@@ -990,7 +3257,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - nemo
+                    - ut
                   items:
                     type: string
               required:
@@ -1011,6 +3278,26 @@ paths:
       description: ''
       parameters:
         -
+          in: query
+          name: per_page
+          description: ''
+          example: 10
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 10
+        -
+          in: query
+          name: page
+          description: ''
+          example: 7
+          required: true
+          schema:
+            type: integer
+            description: ''
+            example: 7
+        -
           in: header
           name: Authorization
           description: ''
@@ -1018,18 +3305,110 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data: []
+                  links:
+                    first: 'http://localhost:8000/api/rents?page=1'
+                    last: 'http://localhost:8000/api/rents?page=1'
+                    prev: 'http://localhost:8000/api/rents?page=6'
+                    next: null
+                  meta:
+                    current_page: 7
+                    from: null
+                    last_page: 1
+                    links:
+                      -
+                        url: 'http://localhost:8000/api/rents?page=6'
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/rents?page=1'
+                        label: '1'
+                        active: false
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/rents'
+                    per_page: 15
+                    to: null
+                    total: 1
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/rents?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/rents?page=1'
+                      prev:
+                        type: string
+                        example: 'http://localhost:8000/api/rents?page=6'
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 7
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: 'http://localhost:8000/api/rents?page=6'
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/rents?page=1'
+                            label: '1'
+                            active: false
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: 'http://localhost:8000/api/rents?page=6'
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/rents'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 1
       tags:
         - 'Rent management'
     post:
@@ -1057,19 +3436,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 user_id:
                   type: string
                   description: ''
-                  example: reprehenderit
+                  example: aut
               required:
                 - deadline_at
                 - return_date_at
@@ -1089,18 +3468,42 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 1
+                  deadline_at: '2023-08-03'
+                  return_date_at: '2023-08-03'
+                  actual_date_at: '2023-08-03'
+                  user_id: 1
+                  created_at: null
+                  updated_at: null
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 1
+                  deadline_at:
                     type: string
-                    example: Unauthenticated.
+                    example: '2023-08-03'
+                  return_date_at:
+                    type: string
+                    example: '2023-08-03'
+                  actual_date_at:
+                    type: string
+                    example: '2023-08-03'
+                  user_id:
+                    type: integer
+                    example: 1
+                  created_at:
+                    type: string
+                    example: null
+                  updated_at:
+                    type: string
+                    example: null
       tags:
         - 'Rent management'
     put:
@@ -1128,19 +3531,19 @@ paths:
                 deadline_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 return_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 actual_date_at:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-08-14T19:39:35'
+                  example: '2023-08-15T21:29:16'
                 user_id:
                   type: string
                   description: ''
-                  example: veniam
+                  example: eligendi
               required:
                 - deadline_at
                 - return_date_at
@@ -1189,7 +3592,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lind.trenton@example.net
+                  example: matilde.boehm@example.net
                 password:
                   type: string
                   description: ''
@@ -1217,19 +3620,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: consequatur
                 age:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: eos
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ashleigh32@example.net
+                  example: zmarvin@example.org
                 password:
                   type: string
                   description: ''
-                  example: quidem
+                  example: dolor
               required:
                 - name
                 - age
@@ -1250,18 +3653,42 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 1
+                  name: Juan
+                  age: 32
+                  email: juan.hahn@example.com
+                  email_verified_at: '2023-08-04T01:12:20.000000Z'
+                  created_at: '2023-08-04T01:12:20.000000Z'
+                  updated_at: '2023-08-05T00:47:59.000000Z'
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
                     type: string
-                    example: Unauthenticated.
+                    example: Juan
+                  age:
+                    type: integer
+                    example: 32
+                  email:
+                    type: string
+                    example: juan.hahn@example.com
+                  email_verified_at:
+                    type: string
+                    example: '2023-08-04T01:12:20.000000Z'
+                  created_at:
+                    type: string
+                    example: '2023-08-04T01:12:20.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-08-05T00:47:59.000000Z'
       tags:
         - 'User management'
     parameters:
@@ -1299,19 +3726,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: voluptas
                 age:
                   type: string
                   description: ''
-                  example: molestias
+                  example: quo
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: wilford.renner@example.com
+                  example: fmorar@example.org
                 password:
                   type: string
                   description: ''
-                  example: quia
+                  example: sed
               required:
                 - name
                 - age

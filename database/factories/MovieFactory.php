@@ -22,9 +22,8 @@ class MovieFactory extends Factory
         return [
                 'title' => fake()->title(),
                 'description' => fake()->text(),
-                'adult' => fake()->boolean(),
-                'release_date_at' => fake()->date(),
-                'genre_id'=> Genre::all()->random()->id,
+                'publish_at' => fake()->date(),
+                'genre'=> fake()->boolean(),
                 'director_id'=> Director::all()->random()->id
         ];
     }
