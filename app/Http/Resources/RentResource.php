@@ -19,7 +19,8 @@ class RentResource extends JsonResource
         'deadlineAt'=>$this->deadline_at,
         'returnDateAt'=>$this->return_date_at,
         'actualDateAt'=>$this->actual_date_at,
-        'userId'=>$this->user_id
+        'userId'=>$this->user_id,
+           'createdAt'=>$this->created_at->format('d/M, Y'),
         ];
     }
 }

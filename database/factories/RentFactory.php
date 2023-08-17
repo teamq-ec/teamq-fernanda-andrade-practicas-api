@@ -2,12 +2,15 @@
 
 namespace Database\Factories;
 
+use App\Models\Actor;
+use App\Models\Movie;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Movie>
  */
-class GenreFactory extends Factory
+class RentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +20,11 @@ class GenreFactory extends Factory
     public function definition()
     {
         return [
-                'genre' => fake()->boolean()
+            'deadline_at' => fake()->date(),
+            'return_date_at' => fake()->date(),
+            'actual_date_at' => fake()->date(),
+            'user_id' => User::all()->random()->id,
         ];
     }
+
 }

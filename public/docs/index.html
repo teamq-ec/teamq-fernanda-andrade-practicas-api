@@ -118,6 +118,9 @@
                                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
                                 <a href="#endpoints-GETapi-user">GET api/user</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-filter">
+                                <a href="#endpoints-POSTapi-filter">Filtra películas según los parámetros proporcionados en la solicitud.</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-auth">
                                 <a href="#endpoints-auth">Auth</a>
                             </li>
@@ -270,7 +273,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 15, 2023</li>
+        <li>Last updated: August 17, 2023</li>
     </ul>
 </div>
 
@@ -316,8 +319,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '17',
-            'page' =&gt; '8',
+            'per_page' =&gt; '14',
+            'page' =&gt; '16',
         ],
     ]
 );
@@ -331,8 +334,8 @@ print_r(json_decode((string) $body));</code></pre></div>
 );
 
 const params = {
-    "per_page": "17",
-    "page": "8",
+    "per_page": "14",
+    "page": "16",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -366,111 +369,20 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 108,
-            &quot;name&quot;: &quot;Lukas West&quot;,
-            &quot;lastName&quot;: &quot;Farrell&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 109,
-            &quot;name&quot;: &quot;John Turcotte&quot;,
-            &quot;lastName&quot;: &quot;Hansen&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 110,
-            &quot;name&quot;: &quot;Prof. Brando Hirthe&quot;,
-            &quot;lastName&quot;: &quot;Cassin&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 111,
-            &quot;name&quot;: &quot;Davin Bogan&quot;,
-            &quot;lastName&quot;: &quot;Green&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 112,
-            &quot;name&quot;: &quot;Shanel Terry&quot;,
-            &quot;lastName&quot;: &quot;O'Conner&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 113,
-            &quot;name&quot;: &quot;Ada Marquardt&quot;,
-            &quot;lastName&quot;: &quot;Dach&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 114,
-            &quot;name&quot;: &quot;Betsy Krajcik&quot;,
-            &quot;lastName&quot;: &quot;Romaguera&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 115,
-            &quot;name&quot;: &quot;Dr. Hal Feest&quot;,
-            &quot;lastName&quot;: &quot;Lebsack&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 116,
-            &quot;name&quot;: &quot;Raul Hettinger&quot;,
-            &quot;lastName&quot;: &quot;Bahringer&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 117,
-            &quot;name&quot;: &quot;Ms. Mozelle Thiel&quot;,
-            &quot;lastName&quot;: &quot;Lehner&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 118,
-            &quot;name&quot;: &quot;Julio Funk&quot;,
-            &quot;lastName&quot;: &quot;Miller&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 119,
-            &quot;name&quot;: &quot;Mr. Wyman Corwin II&quot;,
-            &quot;lastName&quot;: &quot;Mayer&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 120,
-            &quot;name&quot;: &quot;Mrs. Abby Ward&quot;,
-            &quot;lastName&quot;: &quot;Lesch&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 121,
-            &quot;name&quot;: &quot;Mrs. Madeline Macejkovic&quot;,
-            &quot;lastName&quot;: &quot;Okuneva&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 122,
-            &quot;name&quot;: &quot;Elenor Hansen&quot;,
-            &quot;lastName&quot;: &quot;Denesik&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-        }
-    ],
+    &quot;data&quot;: [],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/actors?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/actors?page=10&quot;,
-        &quot;prev&quot;: &quot;http://localhost:8000/api/actors?page=7&quot;,
-        &quot;next&quot;: &quot;http://localhost:8000/api/actors?page=9&quot;
+        &quot;last&quot;: &quot;http://localhost:8000/api/actors?page=3&quot;,
+        &quot;prev&quot;: &quot;http://localhost:8000/api/actors?page=15&quot;,
+        &quot;next&quot;: null
     },
     &quot;meta&quot;: {
-        &quot;current_page&quot;: 8,
-        &quot;from&quot;: 106,
-        &quot;last_page&quot;: 10,
+        &quot;current_page&quot;: 16,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 3,
         &quot;links&quot;: [
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=7&quot;,
+                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=15&quot;,
                 &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
                 &quot;active&quot;: false
             },
@@ -490,50 +402,15 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=5&quot;,
-                &quot;label&quot;: &quot;5&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=6&quot;,
-                &quot;label&quot;: &quot;6&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=7&quot;,
-                &quot;label&quot;: &quot;7&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=8&quot;,
-                &quot;label&quot;: &quot;8&quot;,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=9&quot;,
-                &quot;label&quot;: &quot;9&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=10&quot;,
-                &quot;label&quot;: &quot;10&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/actors?page=9&quot;,
+                &quot;url&quot;: null,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/actors&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 120,
-        &quot;total&quot;: 146
+        &quot;to&quot;: null,
+        &quot;total&quot;: 40
     }
 }</code>
  </pre>
@@ -625,10 +502,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-actors"
-               value="17"
+               value="14"
                data-component="query">
     <br>
-<p>Example: <code>17</code></p>
+<p>Example: <code>14</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -636,10 +513,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-actors"
-               value="8"
+               value="16"
                data-component="query">
     <br>
-<p>Example: <code>8</code></p>
+<p>Example: <code>16</code></p>
             </div>
                 </form>
 
@@ -706,10 +583,10 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Tom&quot;,
-    &quot;last_name&quot;: &quot;Holland&quot;,
-    &quot;created_at&quot;: &quot;2023-08-03T16:17:31.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T16:17:34.000000Z&quot;
+    &quot;name&quot;: &quot;Kallie Abernathy&quot;,
+    &quot;last_name&quot;: &quot;Koelpin&quot;,
+    &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
 }</code>
  </pre>
     </span>
@@ -830,8 +707,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'juxotzcfjsxassdhb',
-            'last_name' =&gt; 'ewfhjmexwzhrxqvlkl',
+            'name' =&gt; 'otveicaowkambgdapaqgyafqymmgwyyoahisxg',
+            'last_name' =&gt; 'rmgwckkfnpyhcrlriygdelwqksypfqmhmsqbnjscyibhrbsravgqirgfnuvntcgcnliyjiqrb',
         ],
     ]
 );
@@ -851,8 +728,8 @@ const headers = {
 };
 
 let body = {
-    "name": "juxotzcfjsxassdhb",
-    "last_name": "ewfhjmexwzhrxqvlkl"
+    "name": "otveicaowkambgdapaqgyafqymmgwyyoahisxg",
+    "last_name": "rmgwckkfnpyhcrlriygdelwqksypfqmhmsqbnjscyibhrbsravgqirgfnuvntcgcnliyjiqrb"
 };
 
 fetch(url, {
@@ -952,10 +829,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-actors"
-               value="juxotzcfjsxassdhb"
+               value="otveicaowkambgdapaqgyafqymmgwyyoahisxg"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>juxotzcfjsxassdhb</code></p>
+<p>Must be at least 3 characters. Example: <code>otveicaowkambgdapaqgyafqymmgwyyoahisxg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -963,10 +840,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-actors"
-               value="ewfhjmexwzhrxqvlkl"
+               value="rmgwckkfnpyhcrlriygdelwqksypfqmhmsqbnjscyibhrbsravgqirgfnuvntcgcnliyjiqrb"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>ewfhjmexwzhrxqvlkl</code></p>
+<p>Must be at least 3 characters. Example: <code>rmgwckkfnpyhcrlriygdelwqksypfqmhmsqbnjscyibhrbsravgqirgfnuvntcgcnliyjiqrb</code></p>
         </div>
         </form>
 
@@ -993,8 +870,8 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx',
-            'last_name' =&gt; 'ewnh',
+            'name' =&gt; 'wyncupzfoqafdqcvb',
+            'last_name' =&gt; 'vivdlxcfxvivzczcgemzgxvqhdzjmsbwucuxkwcbalyqbvocfonocvjosjeugpqdodcglzu',
         ],
     ]
 );
@@ -1014,8 +891,8 @@ const headers = {
 };
 
 let body = {
-    "name": "vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx",
-    "last_name": "ewnh"
+    "name": "wyncupzfoqafdqcvb",
+    "last_name": "vivdlxcfxvivzczcgemzgxvqhdzjmsbwucuxkwcbalyqbvocfonocvjosjeugpqdodcglzu"
 };
 
 fetch(url, {
@@ -1127,10 +1004,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx"
+               value="wyncupzfoqafdqcvb"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>vnwnrcnwmkopctlusvxrrfcpujwsawhuzqxhoeepcjutfx</code></p>
+<p>Must be at least 3 characters. Example: <code>wyncupzfoqafdqcvb</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1138,10 +1015,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-actors--actor_id-"
-               value="ewnh"
+               value="vivdlxcfxvivzczcgemzgxvqhdzjmsbwucuxkwcbalyqbvocfonocvjosjeugpqdodcglzu"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>ewnh</code></p>
+<p>Must be at least 3 characters. Example: <code>vivdlxcfxvivzczcgemzgxvqhdzjmsbwucuxkwcbalyqbvocfonocvjosjeugpqdodcglzu</code></p>
         </div>
         </form>
 
@@ -1314,8 +1191,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '7',
-            'page' =&gt; '9',
+            'per_page' =&gt; '12',
+            'page' =&gt; '19',
         ],
     ]
 );
@@ -1329,8 +1206,8 @@ print_r(json_decode((string) $body));</code></pre></div>
 );
 
 const params = {
-    "per_page": "7",
-    "page": "9",
+    "per_page": "12",
+    "page": "19",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1880,10 +1757,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-directors"
-               value="7"
+               value="12"
                data-component="query">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>12</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -1891,10 +1768,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-directors"
-               value="9"
+               value="19"
                data-component="query">
     <br>
-<p>Example: <code>9</code></p>
+<p>Example: <code>19</code></p>
             </div>
                 </form>
 
@@ -1961,10 +1838,10 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Jon&quot;,
-    &quot;last_name&quot;: &quot;Watts&quot;,
-    &quot;created_at&quot;: &quot;2023-08-03T19:57:29.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T19:57:31.000000Z&quot;
+    &quot;name&quot;: &quot;Prof. Julius Ferry&quot;,
+    &quot;last_name&quot;: &quot;Dicki&quot;,
+    &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
 }</code>
  </pre>
     </span>
@@ -2085,8 +1962,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'dycbdqhuwtgvdrnscjhqdirukt',
-            'last_name' =&gt; 'yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif',
+            'name' =&gt; 'mniypxxvgqrsdxwgdlcls',
+            'last_name' =&gt; 'ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh',
         ],
     ]
 );
@@ -2106,8 +1983,8 @@ const headers = {
 };
 
 let body = {
-    "name": "dycbdqhuwtgvdrnscjhqdirukt",
-    "last_name": "yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif"
+    "name": "mniypxxvgqrsdxwgdlcls",
+    "last_name": "ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh"
 };
 
 fetch(url, {
@@ -2207,10 +2084,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-directors"
-               value="dycbdqhuwtgvdrnscjhqdirukt"
+               value="mniypxxvgqrsdxwgdlcls"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>dycbdqhuwtgvdrnscjhqdirukt</code></p>
+<p>Must be at least 3 characters. Example: <code>mniypxxvgqrsdxwgdlcls</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -2218,10 +2095,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-directors"
-               value="yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif"
+               value="ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif</code></p>
+<p>Must be at least 3 characters. Example: <code>ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh</code></p>
         </div>
         </form>
 
@@ -2248,8 +2125,8 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'jrukqepsctnheqtxtairtufcxynchbmqutdbzk',
-            'last_name' =&gt; 'omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy',
+            'name' =&gt; 'squpzogddrwqo',
+            'last_name' =&gt; 'nuarjwktxpfspittzpofjjlmalgfojjreiumm',
         ],
     ]
 );
@@ -2269,8 +2146,8 @@ const headers = {
 };
 
 let body = {
-    "name": "jrukqepsctnheqtxtairtufcxynchbmqutdbzk",
-    "last_name": "omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy"
+    "name": "squpzogddrwqo",
+    "last_name": "nuarjwktxpfspittzpofjjlmalgfojjreiumm"
 };
 
 fetch(url, {
@@ -2382,10 +2259,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-directors--director_id-"
-               value="jrukqepsctnheqtxtairtufcxynchbmqutdbzk"
+               value="squpzogddrwqo"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>jrukqepsctnheqtxtairtufcxynchbmqutdbzk</code></p>
+<p>Must be at least 3 characters. Example: <code>squpzogddrwqo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -2393,10 +2270,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-directors--director_id-"
-               value="omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy"
+               value="nuarjwktxpfspittzpofjjlmalgfojjreiumm"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy</code></p>
+<p>Must be at least 3 characters. Example: <code>nuarjwktxpfspittzpofjjlmalgfojjreiumm</code></p>
         </div>
         </form>
 
@@ -2678,6 +2555,147 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
+                    <h2 id="endpoints-POSTapi-filter">Filtra películas según los parámetros proporcionados en la solicitud.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-filter">
+<blockquote>Example request:</blockquote>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/filter',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'query' =&gt; [
+            '(' =&gt; 'eum',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/filter"
+);
+
+const params = {
+    "(": "eum",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-filter">
+</span>
+<span id="execution-results-POSTapi-filter" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-filter"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-filter"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-filter" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-filter">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-filter" data-method="POST"
+      data-path="api/filter"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-filter', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-filter"
+                    onclick="tryItOut('POSTapi-filter');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-filter"
+                    onclick="cancelTryOut('POSTapi-filter');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-filter"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/filter</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-filter"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-filter"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>(</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="("                data-endpoint="POSTapi-filter"
+               value="eum"
+               data-component="query">
+    <br>
+<p>name=&quot;filters[title]&quot;,
+description=&quot;Filter by title.&quot;,
+required=false,
+example=&quot;&quot;
+) Example: <code>eum</code></p>
+            </div>
+                </form>
+
                                 <h2 id="endpoints-auth">Auth</h2>
                                                     <h2 id="endpoints-GETapi-users">GET api/users</h2>
 
@@ -2740,759 +2758,183 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">[
     {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Juan&quot;,
-        &quot;age&quot;: 32,
-        &quot;email&quot;: &quot;juan.hahn@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T00:47:59.000000Z&quot;
+        &quot;name&quot;: &quot;Juanita Gleason&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;schaefer.lorna@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
     },
     {
         &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Marta&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;marta.devora@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T00:49:21.000000Z&quot;
+        &quot;name&quot;: &quot;Prof. Denis Heathcote MD&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;maxime53@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
     },
     {
         &quot;id&quot;: 3,
-        &quot;name&quot;: &quot;Willy Effertz&quot;,
-        &quot;age&quot;: 45,
-        &quot;email&quot;: &quot;chandler23@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
+        &quot;name&quot;: &quot;Geovanny Miller&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;chanel36@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
     },
     {
         &quot;id&quot;: 4,
-        &quot;name&quot;: &quot;Gail Koch&quot;,
-        &quot;age&quot;: 56,
-        &quot;email&quot;: &quot;uhartmann@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
+        &quot;name&quot;: &quot;Prof. Eric Balistreri Sr.&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;akuvalis@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
     },
     {
         &quot;id&quot;: 5,
-        &quot;name&quot;: &quot;Pete Boehm&quot;,
-        &quot;age&quot;: 56,
-        &quot;email&quot;: &quot;dillon.smitham@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;
+        &quot;name&quot;: &quot;Helmer Stark&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;botsford.neha@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
     },
     {
         &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Raul Padberg&quot;,
-        &quot;age&quot;: 34,
-        &quot;email&quot;: &quot;mboyle@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
+        &quot;name&quot;: &quot;Claire Hyatt&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;kamren99@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
     },
     {
         &quot;id&quot;: 7,
-        &quot;name&quot;: &quot;Katelin Casper&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;desiree61@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
+        &quot;name&quot;: &quot;Martina Lind&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;rodger.mclaughlin@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
     },
     {
         &quot;id&quot;: 8,
-        &quot;name&quot;: &quot;Bryce Cummerata I&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;lswift@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
+        &quot;name&quot;: &quot;Keaton Streich&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;emmitt24@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
     },
     {
         &quot;id&quot;: 9,
-        &quot;name&quot;: &quot;Murray Auer&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;uschmeler@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
+        &quot;name&quot;: &quot;Genevieve Hand&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;doyle.cordell@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
     },
     {
         &quot;id&quot;: 10,
-        &quot;name&quot;: &quot;Prof. Loren Flatley MD&quot;,
-        &quot;age&quot;: 23,
-        &quot;email&quot;: &quot;dolores.schoen@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-04T20:29:30.000000Z&quot;
+        &quot;name&quot;: &quot;Dr. Tracey Jaskolski PhD&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;ali16@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Dr. Mervin Greenfelder IV&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;benton.shanahan@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Trinity Dickens IV&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;leonie.shanahan@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
     },
     {
         &quot;id&quot;: 13,
-        &quot;name&quot;: &quot;Joselyn&quot;,
-        &quot;age&quot;: 19,
-        &quot;email&quot;: &quot;joselyn19@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-08T14:27:36.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-05T01:31:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-05T01:31:18.000000Z&quot;
+        &quot;name&quot;: &quot;Annette Haley V&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;coy.nikolaus@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
     },
     {
         &quot;id&quot;: 14,
-        &quot;name&quot;: &quot;fernanda&quot;,
-        &quot;age&quot;: 19,
-        &quot;email&quot;: &quot;fernanda@gmail.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-08T14:27:38.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-07T20:26:55.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-07T20:26:55.000000Z&quot;
+        &quot;name&quot;: &quot;Jordi Keeling&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;kattie.connelly@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
     },
     {
         &quot;id&quot;: 15,
-        &quot;name&quot;: &quot;Postman&quot;,
-        &quot;age&quot;: 29,
-        &quot;email&quot;: &quot;postman@example.com&quot;,
-        &quot;email_verified_at&quot;: null,
-        &quot;created_at&quot;: &quot;2023-08-09T23:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-09T23:14:19.000000Z&quot;
+        &quot;name&quot;: &quot;Lawson Graham&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;jfunk@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;name&quot;: &quot;Roslyn Kreiger&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;schmidt.domenica@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;
     },
     {
         &quot;id&quot;: 17,
-        &quot;name&quot;: &quot;Postman&quot;,
-        &quot;age&quot;: 29,
-        &quot;email&quot;: &quot;rincon_postman@example.com&quot;,
-        &quot;email_verified_at&quot;: null,
-        &quot;created_at&quot;: &quot;2023-08-09T23:17:07.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-09T23:17:07.000000Z&quot;
+        &quot;name&quot;: &quot;Amiya Goodwin&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;brady.herman@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;
     },
     {
         &quot;id&quot;: 18,
-        &quot;name&quot;: &quot;Annamarie Boehm&quot;,
+        &quot;name&quot;: &quot;Camron Hansen&quot;,
         &quot;age&quot;: null,
-        &quot;email&quot;: &quot;marquardt.carmine@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;
+        &quot;email&quot;: &quot;cblick@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;
     },
     {
         &quot;id&quot;: 19,
-        &quot;name&quot;: &quot;Dr. Micah Ryan Jr.&quot;,
+        &quot;name&quot;: &quot;Maynard Gusikowski DVM&quot;,
         &quot;age&quot;: null,
-        &quot;email&quot;: &quot;klocko.noe@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;
+        &quot;email&quot;: &quot;jlehner@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;
     },
     {
         &quot;id&quot;: 20,
-        &quot;name&quot;: &quot;Mary Beier DVM&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;ecollier@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 21,
-        &quot;name&quot;: &quot;Nikita Ziemann&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;wyman.jarred@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 22,
-        &quot;name&quot;: &quot;Miss Dandre Boyer&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;micheal67@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:54:01.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 23,
-        &quot;name&quot;: &quot;Ms. Carley Rau&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;hirthe.angela@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 24,
-        &quot;name&quot;: &quot;Jeffery Greenholt&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;felicia.hamill@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 25,
-        &quot;name&quot;: &quot;Abigale Hamill&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;damion04@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 26,
-        &quot;name&quot;: &quot;Miss Addison Paucek I&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;preston91@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 27,
-        &quot;name&quot;: &quot;Jaylan Gleichner&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;quigley.fidel@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T17:59:02.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 28,
-        &quot;name&quot;: &quot;Mr. Gillian Zboncak II&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;mireille54@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 29,
-        &quot;name&quot;: &quot;Margarette Kozey&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;birdie.lehner@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 30,
-        &quot;name&quot;: &quot;Taya O'Reilly&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;max46@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 31,
-        &quot;name&quot;: &quot;Alison Medhurst&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;kariane46@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 32,
-        &quot;name&quot;: &quot;Nikolas Schmidt&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;markus38@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:11.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 33,
-        &quot;name&quot;: &quot;Mallory Jacobson&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;wunsch.giovanni@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 34,
-        &quot;name&quot;: &quot;Russ Medhurst&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;fzemlak@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 35,
-        &quot;name&quot;: &quot;Mr. Davon Wiza IV&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;oaltenwerth@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 36,
-        &quot;name&quot;: &quot;Dr. Xavier Bode&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;taurean77@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 37,
-        &quot;name&quot;: &quot;Vesta Wintheiser&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;jeff.skiles@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:14.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 38,
-        &quot;name&quot;: &quot;Maybell Daniel&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;ola85@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 39,
-        &quot;name&quot;: &quot;Mr. Seth Von PhD&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;monty.hodkiewicz@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 40,
-        &quot;name&quot;: &quot;Rita Mante&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;taylor99@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 41,
-        &quot;name&quot;: &quot;Adan Hodkiewicz&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;fanny15@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 42,
-        &quot;name&quot;: &quot;Theodore Volkman&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;vbarrows@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:16.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 43,
-        &quot;name&quot;: &quot;Dr. Emiliano Ernser DVM&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;paucek.luisa@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 44,
-        &quot;name&quot;: &quot;Columbus Spencer&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;qhilpert@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 45,
-        &quot;name&quot;: &quot;Prof. Zoila Ratke&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;felicia.kulas@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 46,
-        &quot;name&quot;: &quot;Johann Zemlak&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;sadie.labadie@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 47,
-        &quot;name&quot;: &quot;Prof. Nathaniel Terry&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;nina12@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:17.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 48,
-        &quot;name&quot;: &quot;Christa Bergstrom&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;dax81@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 49,
-        &quot;name&quot;: &quot;Rhea Bogan&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;madison.spencer@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 50,
-        &quot;name&quot;: &quot;Ms. Lera Schinner&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;obeahan@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 51,
-        &quot;name&quot;: &quot;Abigale Walter&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;aschumm@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 52,
-        &quot;name&quot;: &quot;Wava Crona&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;ethelyn.gulgowski@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:20.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 53,
-        &quot;name&quot;: &quot;Wilfred Jacobi PhD&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;astanton@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 54,
-        &quot;name&quot;: &quot;Adele Willms&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;jesse58@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 55,
-        &quot;name&quot;: &quot;Melyna Torphy&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;betty.bruen@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 56,
-        &quot;name&quot;: &quot;Dr. Hilda Conn&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;alexzander.kihn@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 57,
-        &quot;name&quot;: &quot;Reuben Mitchell&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;guiseppe.bartell@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:21.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 58,
-        &quot;name&quot;: &quot;Keith Halvorson&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;newton.sauer@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 59,
-        &quot;name&quot;: &quot;Prof. Alexandro Smith&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;haag.ludwig@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 60,
-        &quot;name&quot;: &quot;Newell Jones&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;clehner@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 61,
-        &quot;name&quot;: &quot;Ms. Maxie Auer&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;pturcotte@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 62,
-        &quot;name&quot;: &quot;Aliya Schmidt&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;sallie66@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:23.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 63,
-        &quot;name&quot;: &quot;Duncan Zemlak&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;coleman13@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 64,
-        &quot;name&quot;: &quot;Giovanna Bartell&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;kory.schuppe@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 65,
-        &quot;name&quot;: &quot;Hal Rippin&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;mraz.triston@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 66,
-        &quot;name&quot;: &quot;Loyce Glover&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;olson.eldon@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 67,
-        &quot;name&quot;: &quot;Merlin Stanton&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;goyette.jett@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:24.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 68,
-        &quot;name&quot;: &quot;Toney Schimmel&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;libby06@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 69,
-        &quot;name&quot;: &quot;Franco O'Connell&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;dameon.jakubowski@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 70,
-        &quot;name&quot;: &quot;Dr. Lauryn O'Kon MD&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;heather85@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 71,
-        &quot;name&quot;: &quot;Alexa Koch&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;pfannerstill.darion@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 72,
-        &quot;name&quot;: &quot;Henri Osinski&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;abbigail57@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:26.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 73,
-        &quot;name&quot;: &quot;Audie Volkman IV&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;msporer@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 74,
-        &quot;name&quot;: &quot;Emmie Lind&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;jailyn.beatty@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 75,
-        &quot;name&quot;: &quot;Walker Carter&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;samson50@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 76,
-        &quot;name&quot;: &quot;Dr. Kennedy Schamberger PhD&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;wilburn.heathcote@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 77,
-        &quot;name&quot;: &quot;Jaleel Farrell&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;jast.garnett@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:27.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 78,
-        &quot;name&quot;: &quot;Nathaniel Quitzon II&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;hartmann.dorris@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 79,
-        &quot;name&quot;: &quot;Jadon Roberts II&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;christina.mraz@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 80,
-        &quot;name&quot;: &quot;Prof. Earline Dare&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;burdette85@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 81,
-        &quot;name&quot;: &quot;Dr. Virgil Spencer III&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;zchamplin@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 82,
-        &quot;name&quot;: &quot;Brando Romaguera Sr.&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;elinor.douglas@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:29.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 83,
-        &quot;name&quot;: &quot;Destiney Simonis&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;lgleichner@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 84,
-        &quot;name&quot;: &quot;Cleo Kerluke&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;deion.smitham@example.org&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 85,
-        &quot;name&quot;: &quot;Mr. Enid Beier Sr.&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;larson.jay@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 86,
-        &quot;name&quot;: &quot;Mozell Kemmer Sr.&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;ernest13@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;
-    },
-    {
-        &quot;id&quot;: 87,
-        &quot;name&quot;: &quot;Joseph Zemlak&quot;,
-        &quot;age&quot;: null,
-        &quot;email&quot;: &quot;roslyn17@example.com&quot;,
-        &quot;email_verified_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-08-15T18:03:49.000000Z&quot;
+        &quot;name&quot;: &quot;Eino Eichmann&quot;,
+        &quot;age&quot;: null,
+        &quot;email&quot;: &quot;price.eula@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-08-17T20:45:15.000000Z&quot;
     }
 ]</code>
  </pre>
@@ -3595,8 +3037,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '10',
-            'page' =&gt; '10',
+            'per_page' =&gt; '20',
+            'page' =&gt; '19',
         ],
     ]
 );
@@ -3610,8 +3052,8 @@ print_r(json_decode((string) $body));</code></pre></div>
 );
 
 const params = {
-    "per_page": "10",
-    "page": "10",
+    "per_page": "20",
+    "page": "19",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -3649,16 +3091,16 @@ access-control-allow-origin: *
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/movies/1/images?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/movies/1/images?page=1&quot;,
-        &quot;prev&quot;: &quot;http://localhost:8000/api/movies/1/images?page=9&quot;,
+        &quot;prev&quot;: &quot;http://localhost:8000/api/movies/1/images?page=18&quot;,
         &quot;next&quot;: null
     },
     &quot;meta&quot;: {
-        &quot;current_page&quot;: 10,
+        &quot;current_page&quot;: 19,
         &quot;from&quot;: null,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies/1/images?page=9&quot;,
+                &quot;url&quot;: &quot;http://localhost:8000/api/movies/1/images?page=18&quot;,
                 &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
                 &quot;active&quot;: false
             },
@@ -3676,7 +3118,7 @@ access-control-allow-origin: *
         &quot;path&quot;: &quot;http://localhost:8000/api/movies/1/images&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
-        &quot;total&quot;: 1
+        &quot;total&quot;: 0
     }
 }</code>
  </pre>
@@ -3780,10 +3222,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-movies--movie_id--images"
-               value="10"
+               value="20"
                data-component="query">
     <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>20</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -3791,10 +3233,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-movies--movie_id--images"
-               value="10"
+               value="19"
                data-component="query">
     <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>19</code></p>
             </div>
                 </form>
 
@@ -3821,7 +3263,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'url' =&gt; 'quis',
+            'url' =&gt; 'qui',
         ],
     ]
 );
@@ -3841,7 +3283,7 @@ const headers = {
 };
 
 let body = {
-    "url": "quis"
+    "url": "qui"
 };
 
 fetch(url, {
@@ -3953,10 +3395,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="url"                data-endpoint="POSTapi-movies--movie_id--images"
-               value="quis"
+               value="qui"
                data-component="body">
     <br>
-<p>Example: <code>quis</code></p>
+<p>Example: <code>qui</code></p>
         </div>
         </form>
 
@@ -3975,7 +3417,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/movies/1/images/1',
+    'http://localhost:8000/api/movies/1/images/15',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -3990,7 +3432,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/movies/1/images/1"
+    "http://localhost:8000/api/movies/1/images/15"
 );
 
 const headers = {
@@ -4008,7 +3450,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-movies--movie_id--images--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4022,11 +3464,418 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;url&quot;: &quot;http://localhost:8000/storage/images/KfUC3He02fgDhqcS.gif&quot;,
-        &quot;createdAt&quot;: &quot;14/Aug, 2023&quot;
-    }
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Image] 15&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+    &quot;line&quot;: 391,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+            &quot;line&quot;: 367,
+            &quot;function&quot;: &quot;prepareException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 185,
+            &quot;function&quot;: &quot;handleException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 799,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 776,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 740,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 729,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 190,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 165,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 134,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 166,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 661,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 291,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 153,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1014,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 301,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 155,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -4128,10 +3977,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-movies--movie_id--images--id-"
-               value="1"
+               value="15"
                data-component="url">
     <br>
-<p>The ID of the image. Example: <code>1</code></p>
+<p>The ID of the image. Example: <code>15</code></p>
             </div>
                     </form>
 
@@ -4150,7 +3999,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/movies/1/images/1',
+    'http://localhost:8000/api/movies/1/images/15',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -4158,7 +4007,7 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'url' =&gt; 'et',
+            'url' =&gt; 'praesentium',
         ],
     ]
 );
@@ -4168,7 +4017,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/movies/1/images/1"
+    "http://localhost:8000/api/movies/1/images/15"
 );
 
 const headers = {
@@ -4178,7 +4027,7 @@ const headers = {
 };
 
 let body = {
-    "url": "et"
+    "url": "praesentium"
 };
 
 fetch(url, {
@@ -4293,10 +4142,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-movies--movie_id--images--id-"
-               value="1"
+               value="15"
                data-component="url">
     <br>
-<p>The ID of the image. Example: <code>1</code></p>
+<p>The ID of the image. Example: <code>15</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -4305,10 +4154,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="url"                data-endpoint="PUTapi-movies--movie_id--images--id-"
-               value="et"
+               value="praesentium"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>praesentium</code></p>
         </div>
         </form>
 
@@ -4327,7 +4176,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/movies/1/images/1',
+    'http://localhost:8000/api/movies/1/images/19',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -4342,7 +4191,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/movies/1/images/1"
+    "http://localhost:8000/api/movies/1/images/19"
 );
 
 const headers = {
@@ -4458,10 +4307,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-movies--movie_id--images--id-"
-               value="1"
+               value="19"
                data-component="url">
     <br>
-<p>The ID of the image. Example: <code>1</code></p>
+<p>The ID of the image. Example: <code>19</code></p>
             </div>
                     </form>
 
@@ -4492,8 +4341,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '5',
-            'page' =&gt; '18',
+            'per_page' =&gt; '8',
+            'page' =&gt; '16',
         ],
     ]
 );
@@ -4507,8 +4356,8 @@ print_r(json_decode((string) $body));</code></pre></div>
 );
 
 const params = {
-    "per_page": "5",
-    "page": "18",
+    "per_page": "8",
+    "page": "16",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -4545,17 +4394,17 @@ access-control-allow-origin: *
     &quot;data&quot;: [],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/movies?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/movies?page=9&quot;,
-        &quot;prev&quot;: &quot;http://localhost:8000/api/movies?page=17&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/movies?page=3&quot;,
+        &quot;prev&quot;: &quot;http://localhost:8000/api/movies?page=15&quot;,
         &quot;next&quot;: null
     },
     &quot;meta&quot;: {
-        &quot;current_page&quot;: 18,
+        &quot;current_page&quot;: 16,
         &quot;from&quot;: null,
-        &quot;last_page&quot;: 9,
+        &quot;last_page&quot;: 3,
         &quot;links&quot;: [
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=17&quot;,
+                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=15&quot;,
                 &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
                 &quot;active&quot;: false
             },
@@ -4575,36 +4424,6 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=5&quot;,
-                &quot;label&quot;: &quot;5&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=6&quot;,
-                &quot;label&quot;: &quot;6&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=7&quot;,
-                &quot;label&quot;: &quot;7&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=8&quot;,
-                &quot;label&quot;: &quot;8&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost:8000/api/movies?page=9&quot;,
-                &quot;label&quot;: &quot;9&quot;,
-                &quot;active&quot;: false
-            },
-            {
                 &quot;url&quot;: null,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
@@ -4613,7 +4432,7 @@ access-control-allow-origin: *
         &quot;path&quot;: &quot;http://localhost:8000/api/movies&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
-        &quot;total&quot;: 123
+        &quot;total&quot;: 40
     }
 }</code>
  </pre>
@@ -4705,10 +4524,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-movies"
-               value="5"
+               value="8"
                data-component="query">
     <br>
-<p>Example: <code>5</code></p>
+<p>perPage Example: <code>8</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -4716,10 +4535,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-movies"
-               value="18"
+               value="16"
                data-component="query">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>16</code></p>
             </div>
                 </form>
 
@@ -4786,13 +4605,13 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
-    &quot;title&quot;: &quot;Spider-Man&quot;,
-    &quot;description&quot;: &quot;Welcome home&quot;,
-    &quot;genre&quot;: &quot;ACCION&quot;,
-    &quot;publish_at&quot;: &quot;2023-08-03&quot;,
-    &quot;director_id&quot;: 1,
-    &quot;created_at&quot;: &quot;2023-08-03T19:59:01.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-03T19:59:02.000000Z&quot;
+    &quot;title&quot;: &quot;Dr.&quot;,
+    &quot;description&quot;: &quot;Qui esse quis labore nesciunt praesentium voluptatum consequatur. Officiis et aut veniam sed. Quae autem neque architecto voluptas consectetur. Doloremque sunt ut est facere voluptatem.&quot;,
+    &quot;genre&quot;: &quot;1&quot;,
+    &quot;publish_at&quot;: &quot;1977-08-21&quot;,
+    &quot;director_id&quot;: 10,
+    &quot;created_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2023-08-17T20:45:09.000000Z&quot;
 }</code>
  </pre>
     </span>
@@ -4913,11 +4732,11 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'title' =&gt; 'iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz',
-            'description' =&gt; 'est',
-            'genre' =&gt; 'bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj',
-            'publish_at' =&gt; '2023-08-15T21:29:16',
-            'director_id' =&gt; 'rerum',
+            'title' =&gt; 'hoyunqgyajjdwayubhgphleaqbilrnqgslbt',
+            'description' =&gt; 'non',
+            'genre' =&gt; 'qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn',
+            'publish_at' =&gt; '2023-08-17T21:07:30',
+            'director_id' =&gt; 'in',
         ],
     ]
 );
@@ -4937,11 +4756,11 @@ const headers = {
 };
 
 let body = {
-    "title": "iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz",
-    "description": "est",
-    "genre": "bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj",
-    "publish_at": "2023-08-15T21:29:16",
-    "director_id": "rerum"
+    "title": "hoyunqgyajjdwayubhgphleaqbilrnqgslbt",
+    "description": "non",
+    "genre": "qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn",
+    "publish_at": "2023-08-17T21:07:30",
+    "director_id": "in"
 };
 
 fetch(url, {
@@ -5041,10 +4860,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-movies"
-               value="iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz"
+               value="hoyunqgyajjdwayubhgphleaqbilrnqgslbt"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz</code></p>
+<p>Must be at least 3 characters. Example: <code>hoyunqgyajjdwayubhgphleaqbilrnqgslbt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -5052,10 +4871,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-movies"
-               value="est"
+               value="non"
                data-component="body">
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>non</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -5063,10 +4882,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="POSTapi-movies"
-               value="bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj"
+               value="qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -5074,10 +4893,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="POSTapi-movies"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -5085,10 +4904,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="POSTapi-movies"
-               value="rerum"
+               value="in"
                data-component="body">
     <br>
-<p>Example: <code>rerum</code></p>
+<p>Example: <code>in</code></p>
         </div>
         </form>
 
@@ -5115,11 +4934,11 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'title' =&gt; 'xalwwsfuwkxinkjhsoysqfyzw',
-            'description' =&gt; 'quis',
-            'genre' =&gt; 'sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq',
-            'publish_at' =&gt; '2023-08-15T21:29:16',
-            'director_id' =&gt; 'voluptates',
+            'title' =&gt; 'mrgpjsjejtof',
+            'description' =&gt; 'quam',
+            'genre' =&gt; 'kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl',
+            'publish_at' =&gt; '2023-08-17T21:07:30',
+            'director_id' =&gt; 'in',
         ],
     ]
 );
@@ -5139,11 +4958,11 @@ const headers = {
 };
 
 let body = {
-    "title": "xalwwsfuwkxinkjhsoysqfyzw",
-    "description": "quis",
-    "genre": "sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq",
-    "publish_at": "2023-08-15T21:29:16",
-    "director_id": "voluptates"
+    "title": "mrgpjsjejtof",
+    "description": "quam",
+    "genre": "kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl",
+    "publish_at": "2023-08-17T21:07:30",
+    "director_id": "in"
 };
 
 fetch(url, {
@@ -5255,10 +5074,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-movies--movie_id-"
-               value="xalwwsfuwkxinkjhsoysqfyzw"
+               value="mrgpjsjejtof"
                data-component="body">
     <br>
-<p>Must be at least 3 characters. Example: <code>xalwwsfuwkxinkjhsoysqfyzw</code></p>
+<p>Must be at least 3 characters. Example: <code>mrgpjsjejtof</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -5266,10 +5085,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-movies--movie_id-"
-               value="quis"
+               value="quam"
                data-component="body">
     <br>
-<p>Example: <code>quis</code></p>
+<p>Example: <code>quam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre</code></b>&nbsp;&nbsp;
@@ -5277,10 +5096,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="genre"                data-endpoint="PUTapi-movies--movie_id-"
-               value="sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq"
+               value="kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl"
                data-component="body">
     <br>
-<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq</code></p>
+<p>Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters. Example: <code>kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>publish_at</code></b>&nbsp;&nbsp;
@@ -5288,10 +5107,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="publish_at"                data-endpoint="PUTapi-movies--movie_id-"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>director_id</code></b>&nbsp;&nbsp;
@@ -5299,10 +5118,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="director_id"                data-endpoint="PUTapi-movies--movie_id-"
-               value="voluptates"
+               value="in"
                data-component="body">
     <br>
-<p>Example: <code>voluptates</code></p>
+<p>Example: <code>in</code></p>
         </div>
         </form>
 
@@ -5513,10 +5332,34 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Tom&quot;,
-            &quot;lastName&quot;: &quot;Holland&quot;,
-            &quot;createdAt&quot;: &quot;2023-08-03T16:17:31.000000Z&quot;
+            &quot;id&quot;: 16,
+            &quot;name&quot;: &quot;Jammie Cormier MD&quot;,
+            &quot;lastName&quot;: &quot;Considine&quot;,
+            &quot;createdAt&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;name&quot;: &quot;Lisette Treutel&quot;,
+            &quot;lastName&quot;: &quot;Bins&quot;,
+            &quot;createdAt&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;name&quot;: &quot;Lisette Treutel&quot;,
+            &quot;lastName&quot;: &quot;Bins&quot;,
+            &quot;createdAt&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;name&quot;: &quot;Jammie Cormier MD&quot;,
+            &quot;lastName&quot;: &quot;Considine&quot;,
+            &quot;createdAt&quot;: &quot;2023-08-17T20:43:36.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Mckenna Quitzon IV&quot;,
+            &quot;lastName&quot;: &quot;Fritsch&quot;,
+            &quot;createdAt&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
@@ -5548,8 +5391,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/movies/1/actors&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
+        &quot;to&quot;: 5,
+        &quot;total&quot;: 5
     }
 }</code>
  </pre>
@@ -5672,7 +5515,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'actors' =&gt; [
-                'pariatur',
+                'quasi',
             ],
         ],
     ]
@@ -5694,7 +5537,7 @@ const headers = {
 
 let body = {
     "actors": [
-        "pariatur"
+        "quasi"
     ]
 };
 
@@ -5840,7 +5683,7 @@ $response = $client-&gt;delete(
         ],
         'json' =&gt; [
             'actors' =&gt; [
-                'saepe',
+                'aut',
             ],
         ],
     ]
@@ -5862,7 +5705,7 @@ const headers = {
 
 let body = {
     "actors": [
-        "saepe"
+        "aut"
     ]
 };
 
@@ -6047,15 +5890,7 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;deadlineAt&quot;: &quot;2023-08-03&quot;,
-            &quot;returnDateAt&quot;: &quot;2023-08-03&quot;,
-            &quot;actualDateAt&quot;: &quot;2023-08-03&quot;,
-            &quot;userId&quot;: 1
-        }
-    ],
+    &quot;data&quot;: [],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/movies/1/rents?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/movies/1/rents?page=1&quot;,
@@ -6064,7 +5899,7 @@ access-control-allow-origin: *
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
+        &quot;from&quot;: null,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -6085,8 +5920,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/movies/1/rents&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
     }
 }</code>
  </pre>
@@ -6209,7 +6044,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'rents' =&gt; [
-                'quam',
+                'consequatur',
             ],
         ],
     ]
@@ -6231,7 +6066,7 @@ const headers = {
 
 let body = {
     "rents": [
-        "quam"
+        "consequatur"
     ]
 };
 
@@ -6377,7 +6212,7 @@ $response = $client-&gt;delete(
         ],
         'json' =&gt; [
             'rents' =&gt; [
-                'ut',
+                'quaerat',
             ],
         ],
     ]
@@ -6399,7 +6234,7 @@ const headers = {
 
 let body = {
     "rents": [
-        "ut"
+        "quaerat"
     ]
 };
 
@@ -6549,7 +6384,7 @@ $response = $client-&gt;get(
         ],
         'query' =&gt; [
             'per_page' =&gt; '10',
-            'page' =&gt; '7',
+            'page' =&gt; '17',
         ],
     ]
 );
@@ -6564,7 +6399,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 const params = {
     "per_page": "10",
-    "page": "7",
+    "page": "17",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -6602,16 +6437,16 @@ access-control-allow-origin: *
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/rents?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/rents?page=1&quot;,
-        &quot;prev&quot;: &quot;http://localhost:8000/api/rents?page=6&quot;,
+        &quot;prev&quot;: &quot;http://localhost:8000/api/rents?page=16&quot;,
         &quot;next&quot;: null
     },
     &quot;meta&quot;: {
-        &quot;current_page&quot;: 7,
+        &quot;current_page&quot;: 17,
         &quot;from&quot;: null,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/rents?page=6&quot;,
+                &quot;url&quot;: &quot;http://localhost:8000/api/rents?page=16&quot;,
                 &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
                 &quot;active&quot;: false
             },
@@ -6629,7 +6464,7 @@ access-control-allow-origin: *
         &quot;path&quot;: &quot;http://localhost:8000/api/rents&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
-        &quot;total&quot;: 1
+        &quot;total&quot;: 0
     }
 }</code>
  </pre>
@@ -6732,10 +6567,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-rents"
-               value="7"
+               value="17"
                data-component="query">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>17</code></p>
             </div>
                 </form>
 
@@ -6754,7 +6589,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/rents/1',
+    'http://localhost:8000/api/rents/14',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -6769,7 +6604,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/rents/1"
+    "http://localhost:8000/api/rents/14"
 );
 
 const headers = {
@@ -6787,7 +6622,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-rents--rent_id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -6801,13 +6636,418 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;deadline_at&quot;: &quot;2023-08-03&quot;,
-    &quot;return_date_at&quot;: &quot;2023-08-03&quot;,
-    &quot;actual_date_at&quot;: &quot;2023-08-03&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;created_at&quot;: null,
-    &quot;updated_at&quot;: null
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Rent] 14&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+    &quot;line&quot;: 391,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+            &quot;line&quot;: 367,
+            &quot;function&quot;: &quot;prepareException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 185,
+            &quot;function&quot;: &quot;handleException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 799,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 776,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 740,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 729,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 190,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 165,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 134,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 166,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 661,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 291,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 153,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1014,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 301,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 155,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\User\\Documents\\movie-api-rest\\artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -6898,10 +7138,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="rent_id"                data-endpoint="GETapi-rents--rent_id-"
-               value="1"
+               value="14"
                data-component="url">
     <br>
-<p>The ID of the rent. Example: <code>1</code></p>
+<p>The ID of the rent. Example: <code>14</code></p>
             </div>
                     </form>
 
@@ -6928,10 +7168,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'deadline_at' =&gt; '2023-08-15T21:29:16',
-            'return_date_at' =&gt; '2023-08-15T21:29:16',
-            'actual_date_at' =&gt; '2023-08-15T21:29:16',
-            'user_id' =&gt; 'aut',
+            'deadline_at' =&gt; '2023-08-17T21:07:30',
+            'return_date_at' =&gt; '2023-08-17T21:07:30',
+            'actual_date_at' =&gt; '2023-08-17T21:07:30',
+            'user_id' =&gt; 'provident',
         ],
     ]
 );
@@ -6951,10 +7191,10 @@ const headers = {
 };
 
 let body = {
-    "deadline_at": "2023-08-15T21:29:16",
-    "return_date_at": "2023-08-15T21:29:16",
-    "actual_date_at": "2023-08-15T21:29:16",
-    "user_id": "aut"
+    "deadline_at": "2023-08-17T21:07:30",
+    "return_date_at": "2023-08-17T21:07:30",
+    "actual_date_at": "2023-08-17T21:07:30",
+    "user_id": "provident"
 };
 
 fetch(url, {
@@ -7054,10 +7294,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -7065,10 +7305,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -7076,10 +7316,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="POSTapi-rents"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -7087,10 +7327,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-rents"
-               value="aut"
+               value="provident"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>provident</code></p>
         </div>
         </form>
 
@@ -7109,7 +7349,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/rents/1',
+    'http://localhost:8000/api/rents/15',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -7117,10 +7357,10 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'deadline_at' =&gt; '2023-08-15T21:29:16',
-            'return_date_at' =&gt; '2023-08-15T21:29:16',
-            'actual_date_at' =&gt; '2023-08-15T21:29:16',
-            'user_id' =&gt; 'eligendi',
+            'deadline_at' =&gt; '2023-08-17T21:07:30',
+            'return_date_at' =&gt; '2023-08-17T21:07:30',
+            'actual_date_at' =&gt; '2023-08-17T21:07:30',
+            'user_id' =&gt; 'dicta',
         ],
     ]
 );
@@ -7130,7 +7370,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/rents/1"
+    "http://localhost:8000/api/rents/15"
 );
 
 const headers = {
@@ -7140,10 +7380,10 @@ const headers = {
 };
 
 let body = {
-    "deadline_at": "2023-08-15T21:29:16",
-    "return_date_at": "2023-08-15T21:29:16",
-    "actual_date_at": "2023-08-15T21:29:16",
-    "user_id": "eligendi"
+    "deadline_at": "2023-08-17T21:07:30",
+    "return_date_at": "2023-08-17T21:07:30",
+    "actual_date_at": "2023-08-17T21:07:30",
+    "user_id": "dicta"
 };
 
 fetch(url, {
@@ -7243,10 +7483,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="rent_id"                data-endpoint="PUTapi-rents--rent_id-"
-               value="1"
+               value="15"
                data-component="url">
     <br>
-<p>The ID of the rent. Example: <code>1</code></p>
+<p>The ID of the rent. Example: <code>15</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -7255,10 +7495,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="deadline_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>return_date_at</code></b>&nbsp;&nbsp;
@@ -7266,10 +7506,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="return_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>actual_date_at</code></b>&nbsp;&nbsp;
@@ -7277,10 +7517,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="actual_date_at"                data-endpoint="PUTapi-rents--rent_id-"
-               value="2023-08-15T21:29:16"
+               value="2023-08-17T21:07:30"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2023-08-15T21:29:16</code></p>
+<p>Must be a valid date. Example: <code>2023-08-17T21:07:30</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -7288,10 +7528,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="PUTapi-rents--rent_id-"
-               value="eligendi"
+               value="dicta"
                data-component="body">
     <br>
-<p>Example: <code>eligendi</code></p>
+<p>Example: <code>dicta</code></p>
         </div>
         </form>
 
@@ -7310,7 +7550,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/rents/1',
+    'http://localhost:8000/api/rents/6',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -7325,7 +7565,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/rents/1"
+    "http://localhost:8000/api/rents/6"
 );
 
 const headers = {
@@ -7430,10 +7670,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="rent_id"                data-endpoint="DELETEapi-rents--rent_id-"
-               value="1"
+               value="6"
                data-component="url">
     <br>
-<p>The ID of the rent. Example: <code>1</code></p>
+<p>The ID of the rent. Example: <code>6</code></p>
             </div>
                     </form>
 
@@ -7463,8 +7703,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'matilde.boehm@example.net',
-            'password' =&gt; 'ut',
+            'email' =&gt; 'chadrick.wolff@example.com',
+            'password' =&gt; 'sunt',
         ],
     ]
 );
@@ -7483,8 +7723,8 @@ const headers = {
 };
 
 let body = {
-    "email": "matilde.boehm@example.net",
-    "password": "ut"
+    "email": "chadrick.wolff@example.com",
+    "password": "sunt"
 };
 
 fetch(url, {
@@ -7573,10 +7813,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth"
-               value="matilde.boehm@example.net"
+               value="chadrick.wolff@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>matilde.boehm@example.net</code></p>
+<p>Must be a valid email address. Example: <code>chadrick.wolff@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -7584,10 +7824,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth"
-               value="ut"
+               value="sunt"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>sunt</code></p>
         </div>
         </form>
 
@@ -7612,10 +7852,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'consequatur',
-            'age' =&gt; 'eos',
-            'email' =&gt; 'zmarvin@example.org',
-            'password' =&gt; 'dolor',
+            'name' =&gt; 'aliquid',
+            'age' =&gt; 'quo',
+            'email' =&gt; 'hudson.camila@example.org',
+            'password' =&gt; 'omnis',
         ],
     ]
 );
@@ -7634,10 +7874,10 @@ const headers = {
 };
 
 let body = {
-    "name": "consequatur",
-    "age": "eos",
-    "email": "zmarvin@example.org",
-    "password": "dolor"
+    "name": "aliquid",
+    "age": "quo",
+    "email": "hudson.camila@example.org",
+    "password": "omnis"
 };
 
 fetch(url, {
@@ -7726,10 +7966,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="consequatur"
+               value="aliquid"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Example: <code>aliquid</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -7737,10 +7977,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="POSTapi-register"
-               value="eos"
+               value="quo"
                data-component="body">
     <br>
-<p>Example: <code>eos</code></p>
+<p>Example: <code>quo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -7748,10 +7988,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="zmarvin@example.org"
+               value="hudson.camila@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>zmarvin@example.org</code></p>
+<p>Must be a valid email address. Example: <code>hudson.camila@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -7759,10 +7999,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="dolor"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>dolor</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
         </form>
 
@@ -7833,12 +8073,12 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Juan&quot;,
-    &quot;age&quot;: 32,
-    &quot;email&quot;: &quot;juan.hahn@example.com&quot;,
-    &quot;email_verified_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-    &quot;created_at&quot;: &quot;2023-08-04T01:12:20.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-08-05T00:47:59.000000Z&quot;
+    &quot;name&quot;: &quot;Juanita Gleason&quot;,
+    &quot;age&quot;: null,
+    &quot;email&quot;: &quot;schaefer.lorna@example.net&quot;,
+    &quot;email_verified_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+    &quot;created_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2023-08-17T20:42:54.000000Z&quot;
 }</code>
  </pre>
     </span>
@@ -7960,10 +8200,10 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'voluptas',
-            'age' =&gt; 'quo',
-            'email' =&gt; 'fmorar@example.org',
-            'password' =&gt; 'sed',
+            'name' =&gt; 'alias',
+            'age' =&gt; 'deleniti',
+            'email' =&gt; 'kherman@example.net',
+            'password' =&gt; 'placeat',
         ],
     ]
 );
@@ -7983,10 +8223,10 @@ const headers = {
 };
 
 let body = {
-    "name": "voluptas",
-    "age": "quo",
-    "email": "fmorar@example.org",
-    "password": "sed"
+    "name": "alias",
+    "age": "deleniti",
+    "email": "kherman@example.net",
+    "password": "placeat"
 };
 
 fetch(url, {
@@ -8098,10 +8338,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-auth--user_id-"
-               value="voluptas"
+               value="alias"
                data-component="body">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>alias</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>age</code></b>&nbsp;&nbsp;
@@ -8109,10 +8349,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="age"                data-endpoint="PUTapi-auth--user_id-"
-               value="quo"
+               value="deleniti"
                data-component="body">
     <br>
-<p>Example: <code>quo</code></p>
+<p>Example: <code>deleniti</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -8120,10 +8360,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-auth--user_id-"
-               value="fmorar@example.org"
+               value="kherman@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>fmorar@example.org</code></p>
+<p>Must be a valid email address. Example: <code>kherman@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -8131,10 +8371,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTapi-auth--user_id-"
-               value="sed"
+               value="placeat"
                data-component="body">
     <br>
-<p>Example: <code>sed</code></p>
+<p>Example: <code>placeat</code></p>
         </div>
         </form>
 

@@ -25,28 +25,28 @@ endpoints:
     queryParameters:
       per_page:
         name: per_page
-        description: ''
+        description: perPage
         required: true
-        example: 5
+        example: 8
         type: integer
         custom: []
       page:
         name: page
         description: ''
         required: true
-        example: 18
+        example: 16
         type: integer
         custom: []
     cleanQueryParameters:
-      per_page: 5
-      page: 18
+      per_page: 8
+      page: 16
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost:8000\/api\/movies?page=1","last":"http:\/\/localhost:8000\/api\/movies?page=9","prev":"http:\/\/localhost:8000\/api\/movies?page=17","next":null},"meta":{"current_page":18,"from":null,"last_page":9,"links":[{"url":"http:\/\/localhost:8000\/api\/movies?page=17","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=1","label":"1","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=5","label":"5","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=6","label":"6","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=7","label":"7","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=8","label":"8","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=9","label":"9","active":false},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies","per_page":15,"to":null,"total":123}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost:8000\/api\/movies?page=1","last":"http:\/\/localhost:8000\/api\/movies?page=3","prev":"http:\/\/localhost:8000\/api\/movies?page=15","next":null},"meta":{"current_page":16,"from":null,"last_page":3,"links":[{"url":"http:\/\/localhost:8000\/api\/movies?page=15","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=1","label":"1","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=3","label":"3","active":false},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies","per_page":15,"to":null,"total":40}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -59,7 +59,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6Pv68ehZa5D341baVEcgdkf'
+      - 'Bearer kE8P6vD4a5cfgVd6Z1he3ba'
     controller: null
     method: null
     route: null
@@ -99,7 +99,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":1,"title":"Spider-Man","description":"Welcome home","genre":"ACCION","publish_at":"2023-08-03","director_id":1,"created_at":"2023-08-03T19:59:01.000000Z","updated_at":"2023-08-03T19:59:02.000000Z"}'
+        content: '{"id":1,"title":"Dr.","description":"Qui esse quis labore nesciunt praesentium voluptatum consequatur. Officiis et aut veniam sed. Quae autem neque architecto voluptas consectetur. Doloremque sunt ut est facere voluptatem.","genre":"1","publish_at":"1977-08-21","director_id":10,"created_at":"2023-08-17T20:45:09.000000Z","updated_at":"2023-08-17T20:45:09.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -112,7 +112,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aekvgPED5adc3b6186VZf4h'
+      - 'Bearer fhbZad1Vvg643cEk8aD6eP5'
     controller: null
     method: null
     route: null
@@ -143,50 +143,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-        example: iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz
+        example: hoyunqgyajjdwayubhgphleaqbilrnqgslbt
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: est
+        example: non
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-        example: bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj
+        example: qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-15T21:29:16'
+        example: '2023-08-17T21:07:30'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-        example: rerum
+        example: in
         type: string
         custom: []
     cleanBodyParameters:
-      title: iielabovkmwunwbwfraofieeanwhivnaurqxjsvbmtfkvuuqbcnfszygbhxyfkuitqokxvqwvabjzuwyz
-      description: est
-      genre: bndggvtjeialdffhtlpduypjaaazcavxrqylxdtdyuootagqcfwwmogikovelcgrznrrqhznvfaazyvemj
-      publish_at: '2023-08-15T21:29:16'
-      director_id: rerum
+      title: hoyunqgyajjdwayubhgphleaqbilrnqgslbt
+      description: non
+      genre: qvvdjdoshyaclpwhszrnfaawgxberjypdqrvbhvpnroppphqqayyfrqbnztwpgpvgzfrlmfzxiskhyblwn
+      publish_at: '2023-08-17T21:07:30'
+      director_id: in
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1kEfgZ8aP5avV6bd6Dhec34'
+      - 'Bearer 6a6hVZPgvcebkDE8f4a3d51'
     controller: null
     method: null
     route: null
@@ -225,50 +225,50 @@ endpoints:
         name: title
         description: 'Must be at least 3 characters.'
         required: true
-        example: xalwwsfuwkxinkjhsoysqfyzw
+        example: mrgpjsjejtof
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: quis
+        example: quam
         type: string
         custom: []
       genre:
         name: genre
         description: 'Must be one of <code>TERROR</code>, <code>ACCION</code>, <code>COMEDIA</code>, or <code>ROMANCE</code> Must be at least 3 characters.'
         required: true
-        example: sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq
+        example: kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl
         type: string
         custom: []
       publish_at:
         name: publish_at
         description: 'Must be a valid date.'
         required: true
-        example: '2023-08-15T21:29:16'
+        example: '2023-08-17T21:07:30'
         type: string
         custom: []
       director_id:
         name: director_id
         description: ''
         required: true
-        example: voluptates
+        example: in
         type: string
         custom: []
     cleanBodyParameters:
-      title: xalwwsfuwkxinkjhsoysqfyzw
-      description: quis
-      genre: sipoacnpugtsvaefkmluxtbgqosnvwxemoervmxufzteskhafqoblgtcckfpbtjmrvlrjdhwq
-      publish_at: '2023-08-15T21:29:16'
-      director_id: voluptates
+      title: mrgpjsjejtof
+      description: quam
+      genre: kbbtulzdkmjsxpuisclwdzwaeespzzpczojdazopsokpukueqsuedwybhybxopshbzkpeutzuwscmhxpxceuxl
+      publish_at: '2023-08-17T21:07:30'
+      director_id: in
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer evPfd6DZ86a3h5k41agEcbV'
+      - 'Bearer ZbE3gd6c4aVkvh86Pefa51D'
     controller: null
     method: null
     route: null
@@ -310,7 +310,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kcDd1eP64h3Zva586aVEfbg'
+      - 'Bearer 3a1ZP5vfE6h8kDcga6d4eVb'
     controller: null
     method: null
     route: null
@@ -350,7 +350,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"name":"Tom","lastName":"Holland","createdAt":"2023-08-03T16:17:31.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/actors","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"id":16,"name":"Jammie Cormier MD","lastName":"Considine","createdAt":"2023-08-17T20:43:36.000000Z"},{"id":15,"name":"Lisette Treutel","lastName":"Bins","createdAt":"2023-08-17T20:43:36.000000Z"},{"id":15,"name":"Lisette Treutel","lastName":"Bins","createdAt":"2023-08-17T20:43:36.000000Z"},{"id":16,"name":"Jammie Cormier MD","lastName":"Considine","createdAt":"2023-08-17T20:43:36.000000Z"},{"id":3,"name":"Mckenna Quitzon IV","lastName":"Fritsch","createdAt":"2023-08-17T20:42:54.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/actors?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/actors","per_page":15,"to":5,"total":5}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -363,7 +363,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5ahPedZEgD3bvVck66f18a4'
+      - 'Bearer Egc1eZPV8bvd5Da3hk64af6'
     controller: null
     method: null
     route: null
@@ -403,19 +403,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - pariatur
+          - quasi
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-        - pariatur
+        - quasi
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 158hEeZa6Va6fDkdPv4b3cg'
+      - 'Bearer gaV6ZEf364vek1PD5acd8bh'
     controller: null
     method: null
     route: null
@@ -455,19 +455,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - saepe
+          - aut
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       actors:
-        - saepe
+        - aut
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 356Pacfgeb1a6kVdhD8Z4vE'
+      - 'Bearer h6VPfk3cvda6abeZ8gD514E'
     controller: null
     method: null
     route: null
@@ -507,7 +507,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"deadlineAt":"2023-08-03","returnDateAt":"2023-08-03","actualDateAt":"2023-08-03","userId":1}],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/rents","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","last":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies\/1\/rents?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies\/1\/rents","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -520,7 +520,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E5Z6egPda4h8bcaVk631vfD'
+      - 'Bearer 38Dekc651Pv4gdfhbaaV6EZ'
     controller: null
     method: null
     route: null
@@ -560,19 +560,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - quam
+          - consequatur
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-        - quam
+        - consequatur
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1v3gVh54cae8PZafdk66DEb'
+      - 'Bearer k6ZDP6fca48b31agVEv5edh'
     controller: null
     method: null
     route: null
@@ -612,19 +612,19 @@ endpoints:
         description: ''
         required: true
         example:
-          - ut
+          - quaerat
         type: 'string[]'
         custom: []
     cleanBodyParameters:
       rents:
-        - ut
+        - quaerat
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Va63fkhv86c5bDEe41ZgPad'
+      - 'Bearer ZP6c4aVbEfD1aghedkv3856'
     controller: null
     method: null
     route: null

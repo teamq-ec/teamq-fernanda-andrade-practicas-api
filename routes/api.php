@@ -67,7 +67,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('auth',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);
 
-
+Route::post('filter',[MovieController::class,'filter']);
 
 
 

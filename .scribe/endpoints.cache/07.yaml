@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: matilde.boehm@example.net
+        example: chadrick.wolff@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: ut
+        example: sunt
         type: string
         custom: []
     cleanBodyParameters:
-      email: matilde.boehm@example.net
-      password: ut
+      email: chadrick.wolff@example.com
+      password: sunt
     fileParameters: []
     responses: []
     responseFields: []
@@ -74,35 +74,35 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: consequatur
+        example: aliquid
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-        example: eos
+        example: quo
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: zmarvin@example.org
+        example: hudson.camila@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: dolor
+        example: omnis
         type: string
         custom: []
     cleanBodyParameters:
-      name: consequatur
-      age: eos
-      email: zmarvin@example.org
-      password: dolor
+      name: aliquid
+      age: quo
+      email: hudson.camila@example.org
+      password: omnis
     fileParameters: []
     responses: []
     responseFields: []

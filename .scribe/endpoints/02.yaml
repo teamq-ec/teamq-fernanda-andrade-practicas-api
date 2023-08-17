@@ -25,19 +25,19 @@ endpoints:
         name: per_page
         description: ''
         required: true
-        example: 7
+        example: 12
         type: integer
         custom: []
       page:
         name: page
         description: ''
         required: true
-        example: 9
+        example: 19
         type: integer
         custom: []
     cleanQueryParameters:
-      per_page: 7
-      page: 9
+      per_page: 12
+      page: 19
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -485,7 +485,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vebZc5aVg3hE81a6d4fk6DP'
+      - 'Bearer 1VbEfgPcvDk36a4d5h6eZ8a'
     controller: null
     method: null
     route: null
@@ -525,7 +525,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":1,"name":"Jon","last_name":"Watts","created_at":"2023-08-03T19:57:29.000000Z","updated_at":"2023-08-03T19:57:31.000000Z"}'
+        content: '{"id":1,"name":"Prof. Julius Ferry","last_name":"Dicki","created_at":"2023-08-17T20:45:09.000000Z","updated_at":"2023-08-17T20:45:09.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -538,7 +538,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f6bVeP3gkv4DhE61Za5acd8'
+      - 'Bearer Ve6E416fPZ8bagv3d5Dhakc'
     controller: null
     method: null
     route: null
@@ -569,26 +569,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: dycbdqhuwtgvdrnscjhqdirukt
+        example: mniypxxvgqrsdxwgdlcls
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif
+        example: ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh
         type: string
         custom: []
     cleanBodyParameters:
-      name: dycbdqhuwtgvdrnscjhqdirukt
-      last_name: yrwaxufavefviilzosduntumyswxhhxqmqdawukupugfybif
+      name: mniypxxvgqrsdxwgdlcls
+      last_name: ltgfexqlbdwikqztcxblftyhxnjfbcoclxeeqzakyaukdwywpxzpqpobnthgoghwrggqhgkxcylxh
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 4Da5kh6ZVPEv1cfb86gd3ea'
+      - 'Bearer 4gk5vD616hVEZe3adf8Pacb'
     controller: null
     method: null
     route: null
@@ -627,26 +627,26 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: jrukqepsctnheqtxtairtufcxynchbmqutdbzk
+        example: squpzogddrwqo
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must be at least 3 characters.'
         required: true
-        example: omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy
+        example: nuarjwktxpfspittzpofjjlmalgfojjreiumm
         type: string
         custom: []
     cleanBodyParameters:
-      name: jrukqepsctnheqtxtairtufcxynchbmqutdbzk
-      last_name: omoasgtefuliadmvyeiwtovmkeackhnkznzvxdaodubowdmhilsxfonxlkerlzuuwcfdtqvapcfztapdwyy
+      name: squpzogddrwqo
+      last_name: nuarjwktxpfspittzpofjjlmalgfojjreiumm
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6ch561bV34ZaDkagE8dfvPe'
+      - 'Bearer kfbdEa68DaZvh63P4gV5e1c'
     controller: null
     method: null
     route: null
@@ -688,7 +688,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D3ge6bZ16dE8hc45PakvaVf'
+      - 'Bearer 6aaDc6EgevfbV54Zd8k1P3h'
     controller: null
     method: null
     route: null

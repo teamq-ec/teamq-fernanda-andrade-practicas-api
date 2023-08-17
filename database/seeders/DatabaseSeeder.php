@@ -15,10 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([ActorSeeder::class,
+        $this->call([
+            ActorSeeder::class,
             UserSeeder::class,
+            DirectorSeeder::class,
+            RentSeeder::class,
             MovieSeeder::class,
-            DirectorSeeder::class
+            MovieRentSeeder::class,
+            ActorMovieSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 

@@ -36,7 +36,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":1,"name":"Juan","age":32,"email":"juan.hahn@example.com","email_verified_at":"2023-08-04T01:12:20.000000Z","created_at":"2023-08-04T01:12:20.000000Z","updated_at":"2023-08-05T00:47:59.000000Z"}'
+        content: '{"id":1,"name":"Juanita Gleason","age":null,"email":"schaefer.lorna@example.net","email_verified_at":"2023-08-17T20:42:54.000000Z","created_at":"2023-08-17T20:42:54.000000Z","updated_at":"2023-08-17T20:42:54.000000Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -49,7 +49,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 64adkEvc3bPehf8VZga15D6'
+      - 'Bearer hfc6d8a65gEb3D1ek4aPZVv'
     controller: null
     method: null
     route: null
@@ -88,42 +88,42 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: voluptas
+        example: alias
         type: string
         custom: []
       age:
         name: age
         description: ''
         required: true
-        example: quo
+        example: deleniti
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: fmorar@example.org
+        example: kherman@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: sed
+        example: placeat
         type: string
         custom: []
     cleanBodyParameters:
-      name: voluptas
-      age: quo
-      email: fmorar@example.org
-      password: sed
+      name: alias
+      age: deleniti
+      email: kherman@example.net
+      password: placeat
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Vfge453dh61k6PacZaEvD8b'
+      - 'Bearer Pa16hefg5bVD6vc3adE4Zk8'
     controller: null
     method: null
     route: null
@@ -165,7 +165,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Ev1PhgVDbaZcf4k685a63ed'
+      - 'Bearer E4a5ePh6ck8dD3bZ6Vav1gf'
     controller: null
     method: null
     route: null
